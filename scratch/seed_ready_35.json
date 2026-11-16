@@ -1,0 +1,1569 @@
+{
+  "ADE IRMA": {
+    "file": "ADE IRMA.xlsx",
+    "archetype": "dynamic_rows",
+    "judul": "",
+    "numerator": "",
+    "denominator": "",
+    "target": "100%",
+    "headers_sample": [
+      [
+        "Formulir observasi gelang identitas",
+        "Formulir Ketercukupan tenaga"
+      ],
+      [
+        "Tanggal",
+        "Nomor RM",
+        "Jumlah pasien",
+        "Jelas terbaca",
+        "Tidak jelas Terbaca",
+        "Observer",
+        "No",
+        "Tanggal audit",
+        "No.RM",
+        "Nama pasien",
+        "Elemen 1\n(jam)",
+        "Elemen 2\n(input)",
+        "Elemen 3\n(output)",
+        "Elemen 4\n(Hutingan)",
+        "Hasil akhir\n(Tepat 1, tidak 0)",
+        "Keterangan",
+        "Tanggal",
+        "Jumlah pasien",
+        "Jumlah Perawat"
+      ],
+      [
+        "1",
+        "46041",
+        "tidak ada sesuai kriteria pasien",
+        "1"
+      ]
+    ]
+  },
+  "AKRI": {
+    "file": "AKRI.xlsx",
+    "archetype": "monthly_summary",
+    "judul": "TERLAKSANANYA VERIFIKASI BILLING HARIAN",
+    "numerator": "Jumlah billing  harian yang diverifikasi dalam 1 bulan.",
+    "denominator": "Jumlah billing harian dalam 1 bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "TGL",
+        "Januari",
+        "Februari",
+        "Maret",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Agustus",
+        "Sept",
+        "Okt",
+        "Nov",
+        "Des"
+      ],
+      [
+        "JLH",
+        "V",
+        "JLH",
+        "V",
+        "JLH",
+        "V",
+        "JLH",
+        "V",
+        "JLH",
+        "V",
+        "JLH",
+        "V",
+        "JLH",
+        "V",
+        "JLH",
+        "V",
+        "JLH",
+        "V",
+        "JLH",
+        "V",
+        "JLH",
+        "V",
+        "JLH",
+        "V"
+      ]
+    ]
+  },
+  "AKUTANSI": {
+    "file": "AKUTANSI.xlsx",
+    "archetype": "monthly_summary",
+    "judul": "KETEPATAN WAKTU PELAKSANAAN VERIFIKASI SETORAN KASIR",
+    "numerator": "Jumlah setoran kasir yang sesuai standar waktu dalam 1 bulan",
+    "denominator": "jumlah hari pelaksanaan setoran kasir dalam 1 bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "TGL",
+        "Januari",
+        "Februari",
+        "Maret",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Agustus",
+        "September",
+        "Oktober",
+        "November",
+        "Desember"
+      ],
+      [
+        "Sesuai",
+        "Tidak sesuai",
+        "Sesuai",
+        "Tidak sesuai",
+        "Sesuai",
+        "Tidak sesuai",
+        "Sesuai",
+        "Tidak sesuai",
+        "Sesuai",
+        "Tidak sesuai",
+        "Sesuai",
+        "Tidak sesuai",
+        "Sesuai",
+        "Tidak sesuai",
+        "Sesuai",
+        "Tidak sesuai",
+        "Sesuai",
+        "Tidak sesuai",
+        "Sesuai",
+        "Tidak sesuai",
+        "Sesuai",
+        "Tidak sesuai",
+        "Sesuai",
+        "Tidak sesuai"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    ]
+  },
+  "BENDAHARA": {
+    "file": "BENDAHARA.xlsx",
+    "archetype": "monthly_summary",
+    "judul": "KETEPATAN DATA PENERIMA PEMBAYARAN TRANSAKSI MELALUI TRANSFER",
+    "numerator": "Jumlah data penerima pembayaran transaksi yang tepat dalam 1 bulan",
+    "denominator": "Jumlah data penerima pembayaran transaksi dalam 1 bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Ketepatan",
+        "Jumlah",
+        "Ket Benar",
+        "Ket Salah"
+      ],
+      [
+        "Januari",
+        "1511",
+        "1461",
+        "50"
+      ],
+      [
+        "Februari",
+        "984",
+        "979",
+        "5"
+      ]
+    ]
+  },
+  "CASEMIX": {
+    "file": "CASEMIX.xlsx",
+    "archetype": "monthly_summary",
+    "judul": "KETEPATAN KODING KLAIM BPJS RAJAL PADA PEMERIKSAAN INTERNAL",
+    "numerator": "Jumlah data klaim rawat jalan yang layak/tepat pada pengajuan klaim reguler dalam 1 bulan",
+    "denominator": "Jumlah seluruh data klaim rawat jalan pada pengajuan klaim reguler dalam 1 bulan.",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Bulan",
+        "Tepat Koding",
+        "Seluruh klaim rawat jalan 1 bulan"
+      ],
+      [
+        "Januari",
+        "11096",
+        "11108"
+      ],
+      [
+        "Februari",
+        "11877",
+        "11905"
+      ]
+    ]
+  },
+  "CUCI JAHIT": {
+    "file": "CUCI JAHIT.xlsx",
+    "archetype": "monthly_summary",
+    "judul": "KETEPATAN LINEN MASUK DAN KELUAR",
+    "numerator": "Jumlah dokumen linen masuk yang sesuai dengan catatan linen keluar dalam satu bulan",
+    "denominator": "jumlah semua linen masuk dalam satu bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Tgl",
+        "Januari",
+        "Februari",
+        "Maret",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Agustus",
+        "September",
+        "Oktober",
+        "November",
+        "Desember"
+      ],
+      [
+        "INT",
+        "IBS",
+        "JLH",
+        "INT",
+        "IBS",
+        "JLH",
+        "INT",
+        "IBS",
+        "JLH",
+        "INT",
+        "IBS",
+        "JLH",
+        "INT",
+        "IBS",
+        "JLH",
+        "INT",
+        "IBS",
+        "JLH",
+        "INT",
+        "IBS",
+        "JLH",
+        "INT",
+        "IBS",
+        "JLH",
+        "INT",
+        "IBS",
+        "JLH",
+        "INT",
+        "IBS",
+        "JLH",
+        "INT",
+        "IBS",
+        "JLH",
+        "INT",
+        "IBS",
+        "JLH"
+      ],
+      [
+        "1",
+        "1",
+        "0"
+      ]
+    ]
+  },
+  "CUSTOMER CARE": {
+    "file": "CUSTOMER CARE.xlsx",
+    "archetype": "monthly_summary",
+    "judul": "TERPENUHINYA LAYANAN CUSTOMER CARE DI RAWAT JALAN",
+    "numerator": "Jumlah pasien yang dibantu oleh petugas customer care dalam 1 bulan.",
+    "denominator": "Jumlah pasien yang dibantu oleh petugas CC dan Satpam dalam 1 bulan.",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Tgl",
+        "JANUARI"
+      ],
+      [
+        "C. Care  ( Agus ,Unika, Riko )",
+        "JLH",
+        "SATPAM\nJLH",
+        "JLH",
+        "JLH Ke 2"
+      ],
+      [
+        "Karcis",
+        "Mobile JKN",
+        "Pasien Prioritas",
+        "Maxim",
+        "Antar Tamu, Buat surat Kronologis, Layanan Jadwal dokter",
+        "Stiker RJ",
+        "Karcis",
+        "Mobile JKN",
+        "Pasien Prioritas",
+        "Maxim",
+        "Antar Tamu, Buat surat Kronologis, Layanan Jadwal dokter",
+        "Stiker RJ"
+      ]
+    ]
+  },
+  "DEWI SARTIKA": {
+    "file": "DEWI SARTIKA.xlsx",
+    "archetype": "dynamic_rows",
+    "judul": "Kepatuhan penginputan billing terapi insulin di Ruang Dewi Sartika",
+    "numerator": "Jumlah terapi insulin yang terdokumentasi  di billing pasien sampai tanggal 20 setiap bulan",
+    "denominator": "Jumlah terapi insulin yang diberikan pada pasien sampai tgl 20 setiap bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Kepatuhan penginputan billing terapi insulin di Ruang Dewi Sartika",
+        "Kepatuhan melakukan verifikasi oleh PPJA/K.Tim pada pengkajian pasien baru di Ruang Dewi Sartika sesuai regulasi 1 x 24 jam",
+        "Ketepatan PPJA/K.Tim melakukan Hand Over Antar Shiff secara SBAR"
+      ],
+      [
+        "No",
+        "Nama Pasien",
+        "RM",
+        "Tindakan Billing",
+        "Nama Petugas",
+        "TGL",
+        "Nama",
+        "Masuk",
+        "RM",
+        "Verifikasi 1 x 24 Jam",
+        "Nama Petugas",
+        "NO",
+        "Tanggal",
+        "Nama PPJA/K.Tim",
+        "Nama Pasien",
+        "No RM",
+        "S",
+        "B",
+        "A",
+        "R"
+      ],
+      [
+        "Dilakukan",
+        "Tidak dilakukan",
+        "Jam",
+        "Dilakukan",
+        "Tidak Dilakukan",
+        "Sesuai",
+        "Tidak Sesuai",
+        "Sesuai",
+        "Tidak Sesuai",
+        "Sesuai",
+        "Tidak Sesuai",
+        "Sesuai",
+        "Tidak Sesuai"
+      ]
+    ]
+  },
+  "DIKLIT": {
+    "file": "DIKLIT.xlsx",
+    "archetype": "monthly_summary",
+    "judul": "Terlaksananya Proses Pemberian Feedback dari Diklat untuk kelengkapan Pelaksanaan Pelatihan",
+    "numerator": "Jumlah Pelatihan yang diberikan Feedback selama satu bulan",
+    "denominator": "Jumlah Pelatihan yang direncanakan dalam satu bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "No",
+        "Bulan",
+        "Jumlah IHT Dalam Bulan",
+        "Jumlah IHT yang ter Feedback"
+      ],
+      [
+        "1",
+        "Januari",
+        "1",
+        "1"
+      ],
+      [
+        "2",
+        "Februari",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "FARMASI RAJAL": {
+    "file": "FARMASI RAJAL.xlsx",
+    "archetype": "dynamic_rows",
+    "judul": "",
+    "numerator": "",
+    "denominator": "",
+    "target": "100%",
+    "headers_sample": [
+      [
+        "KETEPATAN WAKTU TUNGGU PELAYANAN FARMASI",
+        "KETEPATAN PENGISIAN ATURAN PAKAI OBAT DI EMR OLEH MEDIS",
+        "KEPATUHAN PENGGUNAAN FORMULARIUM NASIONAL"
+      ],
+      [
+        "46266",
+        "No",
+        "Nama Dokter",
+        "jumlah sampel",
+        "Nama Pasien",
+        "Tgl Lahir Pasien",
+        "No. RM",
+        "Nama Obat",
+        "Dosis Obat",
+        "Aturan Pakai",
+        "Formularium Nasional",
+        "Generik",
+        "Total (generik+ Fornas+ Non Generik+ non Formularium )"
+      ],
+      [
+        "Standar Waktu",
+        "Jumlah sampel",
+        "Sesuai Waktu",
+        "Total waktu",
+        "1",
+        "IGD dan Poli Umum",
+        "25",
+        "25",
+        "25",
+        "25",
+        "IGD",
+        "8421",
+        "7878",
+        "18719"
+      ]
+    ]
+  },
+  "GIZI": {
+    "file": "GIZI.xlsx",
+    "archetype": "daily_grid",
+    "judul": "KEPATUHAN PELABELAN PROTEIN HEWANI",
+    "numerator": "Jumlah protein hewani yang diberi label dalam 1 bulan",
+    "denominator": "Jumlah protein hewani yang disimpan di freezer Instalasi Gizi dalam 1 bulan.",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "TGL",
+        "Jan",
+        "Februari",
+        "Maret",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Agustus",
+        "September",
+        "Oktober",
+        "November",
+        "Desember"
+      ],
+      [
+        "Daging",
+        "Ayam",
+        "Ikan",
+        "Daging",
+        "Ayam",
+        "Ikan",
+        "Daging",
+        "Ayam",
+        "Ikan",
+        "Daging",
+        "Ayam",
+        "Ikan",
+        "Daging",
+        "Ayam",
+        "Ikan",
+        "Daging",
+        "Ayam",
+        "Ikan",
+        "Daging",
+        "Ayam",
+        "Ikan",
+        "Daging",
+        "Ayam",
+        "Ikan",
+        "Daging",
+        "Ayam",
+        "Ikan",
+        "Daging",
+        "Ayam",
+        "Ikan",
+        "Daging",
+        "Ayam",
+        "Ikan",
+        "Daging",
+        "Ayam",
+        "Ikan"
+      ],
+      [
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL",
+        "JLH",
+        "TL"
+      ]
+    ]
+  },
+  "GUDANG UMUM": {
+    "file": "GUDANG UMUM.xlsx",
+    "archetype": "monthly_summary",
+    "judul": "KETEPATAN PEMILIHAN GUDANG SAAT PENGENTRIAN BARANG",
+    "numerator": "Jumlah Faktur yang di Entri tanpa kesalahan",
+    "denominator": "Jumlah Semua Faktur yang di entri dalam satu bulan",
+    "target": "IMP-U1",
+    "headers_sample": []
+  },
+  "HERLINA": {
+    "file": "HERLINA.xlsx",
+    "archetype": "dynamic_rows",
+    "judul": "",
+    "numerator": "",
+    "denominator": "",
+    "target": "100%",
+    "headers_sample": [
+      [
+        "Tanggal 01-25 Jan 26",
+        "Nilai",
+        "VALIDASI",
+        "oleh Juliawati"
+      ],
+      [
+        "No",
+        "Tanggal",
+        "Identitas",
+        "Petugas",
+        "ptgas 1",
+        "ptgas 2",
+        "ptgas 1",
+        "ptgas 2"
+      ],
+      [
+        "Nama pasien",
+        "RM",
+        "Nama Obat",
+        "Dosis ( volume)",
+        "Cara pemberian",
+        "Indikasi Pemberian",
+        "Doeble cek 1",
+        "Doeble cek 2",
+        "Pasien",
+        "RM",
+        "Nama Obat",
+        "dosis obat",
+        "Cara Pemberian",
+        "Indikasi Pemberian",
+        "Pasien",
+        "RM",
+        "Nama Obat",
+        "dosis obat",
+        "Cara pemberian",
+        "indikasi pemberian",
+        "Pasien",
+        "RM",
+        "Nama Obat",
+        "dosis obat",
+        "Cara Pemberian",
+        "Indikasi Pemberian",
+        "Pasien",
+        "RM",
+        "Nama Obat",
+        "dosis obat",
+        "Cara pemberian",
+        "indikasi pemberian"
+      ]
+    ]
+  },
+  "HOME CARE": {
+    "file": "HOME CARE.xlsx",
+    "archetype": "dynamic_rows",
+    "judul": "KEPUASAN PELANGGAN TERHADAP PETUGAS HOMECARE",
+    "numerator": "Jumlah petugas per pelanggan yang tidak mendapat komplain dalam 1 bulan",
+    "denominator": "Jumlah petugas per pelanggan yang melaksanakan pelayanan homecare dalam 1 bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "FORMULIR KEPUASAN PASIEN TERHADAP PETUGAS",
+        "FORM PELAKSANAN HOME CARE SESUAI PERMINTAAN"
+      ],
+      [
+        "JANUARI 2026",
+        "JANUARI 2026"
+      ],
+      [
+        "TANGGAL",
+        "NAMA PASIEN",
+        "ALAMAT",
+        "PELAYANAN H.CARE",
+        "PETUGAS",
+        "KETERANGAN",
+        "ISI KOMPLEN",
+        "PENANGGANAN\n KOMPLEN",
+        "TANGGAL\nPERMINTAAN/JAM",
+        "JAM RESPON \nTEAM",
+        "NAMA PASIEN",
+        "ALAMAT",
+        "KEBUTUHAN/\nUntuk tgl,jam",
+        "KETERANGAN\nsetelah diberikan penjelasan HC"
+      ]
+    ]
+  },
+  "IBS": {
+    "file": "IBS.xlsx",
+    "archetype": "monthly_summary",
+    "judul": "KELENGKAPAN PENGISIAN LAPORAN ANESTESI OLEH DOKTER ANESTESI FULL TIME.",
+    "numerator": "Jumlah dokumen laporan anastesi yang lengkap dalam 1 bulan",
+    "denominator": "Jumlah pasien yang dioperasi dalam 1 bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Januari",
+        "Februari",
+        "Maret",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Agustus",
+        "September",
+        "Oktober",
+        "November",
+        "Desember"
+      ],
+      [
+        "TGL",
+        "FT",
+        "NFT",
+        "JOF",
+        "JONF",
+        "FT",
+        "NFT",
+        "JOF",
+        "JONF",
+        "FT",
+        "NFT",
+        "JOF",
+        "JONF",
+        "FT",
+        "NFT",
+        "JOF",
+        "JONF",
+        "FT",
+        "NFT",
+        "JOF",
+        "JONF",
+        "FT",
+        "NFT",
+        "JOF",
+        "JONF",
+        "FT",
+        "NFT",
+        "JOF",
+        "JONF",
+        "FT",
+        "NFT",
+        "JOF",
+        "JONF",
+        "FT",
+        "NFT",
+        "JOF",
+        "JONF",
+        "FT",
+        "NFT",
+        "JOF",
+        "JONF",
+        "FT",
+        "NFT",
+        "JOF",
+        "JONF",
+        "FT",
+        "NFT",
+        "JOF",
+        "JONF"
+      ],
+      [
+        "1",
+        "115",
+        "32",
+        "225",
+        "47",
+        "164",
+        "30",
+        "216",
+        "49",
+        "173",
+        "19",
+        "199",
+        "26"
+      ]
+    ]
+  },
+  "IGD": {
+    "file": "IGD.xlsx",
+    "archetype": "dynamic_rows",
+    "judul": "Kepatuhan Pelaksanaan Triase IGD di shift pagi ( Jam 12.00- 14.00 WIB)",
+    "numerator": "Jumlah pasien IGD yang dilakukan triase dari jam 12.00 - 14.00 WIB (pada hari senin dan sabtu) dalam 1 bulan",
+    "denominator": "Jumlah total pasien IGD dari jam 12.00-14.00 WIB (pada hari senin dan sabtu )  dalam 1 bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Kepatuhan Pelaksanaan triase IGD di shift pagi ( Jam 12.00- 14.00 WIB) hari senin dan sabtu",
+        "Kelengkapan Billing Pasien Rawat Inap dari IGD"
+      ],
+      [
+        "No",
+        "Hari",
+        "tgl",
+        "jumlah pasien 12-14",
+        "RM pasien yg dilakukan triase",
+        "jumlah RM terlambat triase",
+        "pasien no void",
+        "%",
+        "No",
+        "tgl",
+        "nama pasien",
+        "RM",
+        "Nota",
+        "%",
+        "adm",
+        "tanpa adm"
+      ],
+      [
+        "pasien no void",
+        "#DIV/0!",
+        "lengkap",
+        "tidak lengkap"
+      ]
+    ]
+  },
+  "INTENSIVE CARE": {
+    "file": "INTENSIVE CARE.xlsx",
+    "archetype": "dynamic_rows",
+    "judul": "KETEPATAN PEMBERIAN DOSIS OBAT DRIP DI RUANG ICU-HCU",
+    "numerator": "Jumlah pemberian awal obat drip yang tepat dalam 1 bulan",
+    "denominator": "Jumlah seluruh pemberian awal obat drip dalam 1 bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Form Ketepatan Pemberian Dosis Obat Drip di ruang ICU-HCU",
+        "Form Terdokumentasinya Tindak lanjut dari balance cairan di Ruang Intensive Dewasa"
+      ],
+      [
+        "(Isi : Ya = 1, Tidak = 0 )",
+        "(Isi : Ya = 1, Tidak = 0 )"
+      ],
+      [
+        "Bulan",
+        "No",
+        "No RM",
+        "Sesuai",
+        "Tidak Sesuai",
+        "Nilai",
+        "nama perawat",
+        "Petugas yg input data",
+        "Bulan",
+        "No",
+        "No RM",
+        "Ditindaklanjuti",
+        "Tidak ditindaklanjuti",
+        "Nilai",
+        "nama perawat",
+        "Petugas yg input data"
+      ]
+    ]
+  },
+  "IRJ": {
+    "file": "IRJ.xlsx",
+    "archetype": "dynamic_rows",
+    "judul": "",
+    "numerator": "",
+    "denominator": "",
+    "target": "100%",
+    "headers_sample": [
+      [
+        "KETEPATAN WAKTU TUNGGU PELAYANAN FARMASI",
+        "KETEPATAN PENGISIAN ATURAN PAKAI OBAT DI EMR OLEH MEDIS",
+        "KEPATUHAN PENGGUNAAN FORMULARIUM NASIONAL"
+      ],
+      [
+        "46266",
+        "No",
+        "Nama Dokter",
+        "jumlah sampel",
+        "Nama Pasien",
+        "Tgl Lahir Pasien",
+        "No. RM",
+        "Nama Obat",
+        "Dosis Obat",
+        "Aturan Pakai",
+        "Formularium Nasional",
+        "Generik",
+        "Total (generik+ Fornas+ Non Generik+ non Formularium )"
+      ],
+      [
+        "Standar Waktu",
+        "Jumlah sampel",
+        "Sesuai Waktu",
+        "Total waktu",
+        "1",
+        "IGD dan Poli Umum",
+        "25",
+        "25",
+        "25",
+        "25",
+        "IGD",
+        "8421",
+        "7878",
+        "18719"
+      ]
+    ]
+  },
+  "IT": {
+    "file": "IT.xlsx",
+    "archetype": "monthly_summary",
+    "judul": "TERPENUHINYA KEAMANAN DATA PASIEN RUMAH SAKIT",
+    "numerator": "Jumlah akun yang tidak tersimpan di perangkat manapun dalam 1 bulan",
+    "denominator": "Jumlah akun pada tanggal 30 yang diperiksa dalam 1 bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "No",
+        "User ID",
+        "Nama",
+        "Lokasi",
+        "IP address",
+        "Unit",
+        "Tanggal",
+        "Jam",
+        "Keterangan",
+        "Petugas",
+        "Validasi"
+      ],
+      [
+        "1",
+        "tiara",
+        "Tiara Zania , Amd Kep",
+        "IRJ",
+        "10.99.100.25",
+        "IRJ",
+        "28 Januari 2026",
+        "0.39374999999999999",
+        "TAB 1",
+        "Rinto",
+        "Gio"
+      ],
+      [
+        "2",
+        "tiara",
+        "Tiara Zania , Amd Kep",
+        "IRJ",
+        "10.99.100.30",
+        "IRJ",
+        "28 Januari 2026",
+        "9.35",
+        "TAB 12",
+        "Rinto",
+        "Gio"
+      ]
+    ]
+  },
+  "K3LH": {
+    "file": "K3LH.xlsx",
+    "archetype": "fixed_rows",
+    "judul": "TERCAPAINYA STANDAR BAKU MUTU AIR PADA HASIL UJI MUTU AIR LIMBAH",
+    "numerator": "Jumlah parameter air limbah yang memenuhi persyaratan dalam 1 bulan",
+    "denominator": "Jumlah semua parameter air limbah yang di uji dalam 1 bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Ket :",
+        "*Isi angka 1 bila sesuai standar, angka 0 bila diluar nilai normal, x bila tidak ada pemeriksaan."
+      ],
+      [
+        "Data diisi sesuai bulan saat hasil diterima, bukan saat dilakukan pemeriksaan.",
+        "Validasi"
+      ],
+      [
+        "No",
+        "Parameter",
+        "Bulan",
+        "Parameter",
+        "BULAN"
+      ]
+    ]
+  },
+  "KEAMANAN & TRANSPORTASI": {
+    "file": "KEAMANAN & TRANSPORTASI.xlsx",
+    "archetype": "dynamic_rows",
+    "judul": "KETERSEDIAAN KARTU VISITOR YANG LAYAK",
+    "numerator": "Jumlah kartu visitor yang tersedia dan layak saat pemeriksaan dalam 1 bulan",
+    "denominator": "Jumlah kartu visitor yang diperiksa dalam 1 bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "FORMULIR",
+        "FORMULIR MONITORING TRANSPORTASI"
+      ],
+      [
+        "KELAYAKAN KARTU VISITOR",
+        "KETEPATAN WAKTU PENJEMPUTAN DAN PENGANTARAN PASIEN"
+      ],
+      [
+        "TAHUN 2026",
+        "JANUARI 2026"
+      ]
+    ]
+  },
+  "KEPEGAWAIAN": {
+    "file": "KEPEGAWAIAN.xlsx",
+    "archetype": "monthly_summary",
+    "judul": "KETEPATAN WAKTU PENERBITAN PKS PERPANJANGAN KONTRAK",
+    "numerator": "Jumlah PKS Perpanjangan kontrak yang selesai sebelum PKS nya berakhir dalam 1 bulan.",
+    "denominator": "Jumlah PKS yang berakhir dalam 1 bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Sudah Acc Dir",
+        "Blm Acc Dir",
+        "Total PKS yg berakhir",
+        "Total PKS yg berakhir"
+      ],
+      [
+        "Tepat Waktu",
+        "Terlambat"
+      ],
+      [
+        "Januari",
+        "49",
+        "49",
+        "49"
+      ]
+    ]
+  },
+  "LA RUFFA": {
+    "file": "LA RUFFA.xlsx",
+    "archetype": "dynamic_rows",
+    "judul": "Kepatuhan Bidan dalam Kelengkapan Dokumentasi Komunikasi Efektif SBAR",
+    "numerator": "Jumlah dokumentasi komunikasi efektif SBAR yang lengkap dalam 1 bulan",
+    "denominator": "Jumlah dokumentasi komunikasi efektif SBAR yang diperiksa dalam 1 bulan",
+    "target": "IMU 2",
+    "headers_sample": [
+      [
+        "Kepatuhan Kelengkapan Pengisian Resume Asuhan Keperawatan",
+        "Kepatuhan Bidan Dalam Kelengkapan Pengisian SBAR"
+      ],
+      [
+        "No",
+        "Tanggal",
+        "Nama Pasien",
+        "RM",
+        "Nama Bidan",
+        "Belum di kerjakan",
+        "Dikerjakan",
+        "Total Jumlah Keseluruhan",
+        "KET",
+        "Total Persen Keseluruhan",
+        "No",
+        "Tanggal",
+        "Nama Pasien",
+        "NO RM",
+        "Nama Bidan",
+        "Kelengkapan",
+        "Total yang sesuai",
+        "Total Jumlah Keseluruhan",
+        "KET",
+        "Total Persen Keseluruhan"
+      ],
+      [
+        "Lengkap",
+        "Tidak lengkap",
+        "S",
+        "B",
+        "A",
+        "R"
+      ]
+    ]
+  },
+  "LABORATORIUM": {
+    "file": "LABORATORIUM.xlsx",
+    "archetype": "daily_grid",
+    "judul": "KETEPATAN PELAPORAN HASIL LABORATORIUM",
+    "numerator": "Jumlah hasil labor ( identitas dan hasil ) di EMR yang tepat (tidak ada kompain) dalam satu bulan",
+    "denominator": "Jumlah hasil  pemeriksaan laboratorium dalam satu bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Tgl",
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "Mei",
+        "Jun",
+        "Jul",
+        "Agust",
+        "Sept",
+        "Okt",
+        "Nov",
+        "Des"
+      ],
+      [
+        "J",
+        "T",
+        "K",
+        "J",
+        "T",
+        "K",
+        "J",
+        "T",
+        "K",
+        "J",
+        "T",
+        "K",
+        "J",
+        "T",
+        "K",
+        "J",
+        "T",
+        "K",
+        "J",
+        "T",
+        "K",
+        "J",
+        "T",
+        "K",
+        "J",
+        "T",
+        "K",
+        "J",
+        "T",
+        "K",
+        "J",
+        "T",
+        "K",
+        "J",
+        "T",
+        "K"
+      ],
+      [
+        "26",
+        "129",
+        "129",
+        "0",
+        "134",
+        "134",
+        "0",
+        "155",
+        "155",
+        "0",
+        "133",
+        "133",
+        "0",
+        "60",
+        "60",
+        "0",
+        "139",
+        "139",
+        "0",
+        "140",
+        "140",
+        "78",
+        "78",
+        "0",
+        "155",
+        "155",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "LOGISTIK": {
+    "file": "LOGISTIK.xlsx",
+    "archetype": "fixed_rows",
+    "judul": "KESESUAIAN  FISIK BARANG DENGAN KARTU STOK DAN SIM RS",
+    "numerator": "Jumlah Item yang sesuai antara kartu stok-fisik-SIM RS saat diperiksa dalam satu bulan",
+    "denominator": "Jumlah semua item yang diperiksa dalam satu bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "NO",
+        "Tgl",
+        "Nama Barang",
+        "Kartu Stok",
+        "Stok SIM RS",
+        "Fisik barang",
+        "sesuai",
+        "tidak sesuai",
+        "kesimpulan"
+      ]
+    ]
+  },
+  "PASTORAL CARE": {
+    "file": "PASTORAL CARE.xlsx",
+    "archetype": "dynamic_rows",
+    "judul": "TERLAKSANANYA FEEDBACK PENDOKUMENTASIAN PELAYANAN ROHANI",
+    "numerator": "Jumlah   pendokumentasian pada PPA Note terkait pelayanan rohani setelah dilakukan feedback dalam 1 bulan",
+    "denominator": "Jumlah sampling   pasien yang mendapat pelayanan rohani dalam 1 bulan",
+    "target": "Panduan Rekam Medis RS Yos Sudarso",
+    "headers_sample": [
+      [
+        "TANGGAL",
+        "NAMA PASIEN",
+        "RUANGAN",
+        "ISLAM",
+        "KATOLIK",
+        "KRISTEN",
+        "BUDHA",
+        "HINDU",
+        "PETUGAS"
+      ],
+      [
+        "KUNJUNGAN",
+        "DOA",
+        "KUNJUNGAN",
+        "KOMUNI",
+        "DOA",
+        "S.PENG",
+        "KONSELING",
+        "KUNJUNGAN",
+        "DOA",
+        "KUNJUNGAN",
+        "DOA",
+        "KUNJUNGAN",
+        "DOA"
+      ],
+      [
+        "46113",
+        "TIDAK KUNJUNGAN"
+      ]
+    ]
+  },
+  "PEMASARAN": {
+    "file": "PEMASARAN.xlsx",
+    "archetype": "monthly_summary",
+    "judul": "",
+    "numerator": "",
+    "denominator": "",
+    "target": "100%",
+    "headers_sample": [
+      [
+        "Bulan",
+        "Kegiatan I",
+        "Kegiatan II",
+        "Kegiatan III",
+        "Kegiatan IV",
+        "Total Terlaksana",
+        "Jumlah Jadwal tanpa kendala pihak 3",
+        "Data jadwal yg terkendala pihak ke 3"
+      ],
+      [
+        "Terlaksana",
+        "Terlaksana",
+        "Terlaksana",
+        "Terlaksana",
+        "Jlh",
+        "Alasan"
+      ],
+      [
+        "Januari",
+        "0",
+        "0",
+        "0",
+        "2",
+        "2",
+        "0",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "PEMELIHARAAN SARANA MEDIS": {
+    "file": "PEMELIHARAAN SARANA MEDIS.xlsx",
+    "archetype": "daily_grid",
+    "judul": "TERPENUHINYA RESPON TIME LAPORAN KERUSAKAN ALAT MEDIS",
+    "numerator": "Jumlah laporan kerusakan alat medis yang direspon maksimal 15 menit sejak laporan dibuat dalam 1 bulan",
+    "denominator": "Jumlah seluruh laporan kerusakan alat medis dalam 1 bulan.",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Tgl",
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "Mei",
+        "Jun",
+        "Jul",
+        "Agust",
+        "Sept",
+        "Okt",
+        "Nov",
+        "Des"
+      ],
+      [
+        "=<15'",
+        "JLH",
+        "=<15'",
+        "JLH",
+        "=<15'",
+        "JLH",
+        "=<2D",
+        "JLH",
+        "=<2D",
+        "JLH",
+        "=<2D",
+        "JLH",
+        "=<15'",
+        "JLH",
+        "=<15'",
+        "JLH",
+        "=<15'",
+        "JLH",
+        "=<15'",
+        "JLH",
+        "=<15'",
+        "JLH",
+        "=<15'",
+        "JLH"
+      ],
+      [
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "1",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "7",
+        "7",
+        "3",
+        "3",
+        "2"
+      ]
+    ]
+  },
+  "PEMELIHARAAN SARANA UMUM": {
+    "file": "PEMELIHARAAN SARANA UMUM.xlsx",
+    "archetype": "fixed_rows",
+    "judul": "PELAKSANAAN PEMELIHARAAN MESIN BLOWER",
+    "numerator": "Jumlah pemeliharaan mesin blower yang sesuai dengan jadwal dalam 1 bulan",
+    "denominator": "Jumlah pemeliharaan mesin blower yang terjadwal dalam 1 bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Form. Pemeliharaan mesin Blower IPAL.",
+        "Form. Pemeliharaan mesin LIFT"
+      ],
+      [
+        "No",
+        "Bulan",
+        "Terlaksana",
+        "Jumlah Jadwal",
+        "No",
+        "Bulan",
+        "Terlaksana",
+        "Jumlah Jadwal"
+      ],
+      [
+        "1",
+        "Januari",
+        "2",
+        "3",
+        "1",
+        "Januari",
+        "3",
+        "4"
+      ]
+    ]
+  },
+  "RADIOLOGI": {
+    "file": "RADIOLOGI.xlsx",
+    "archetype": "dynamic_rows",
+    "judul": "WAKTU TUNGGU HASIL PEMERIKSAAN RONTGEN FOTO THORAX PASIEN TB ≤ 3 JAM",
+    "numerator": "Pasien TB yang mendapatkan hasil <= 30  menit dalam 1 bulan",
+    "denominator": "Semua pasien TB yang Rontgen Thorax dalam 1 bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Bulan",
+        "Jlh",
+        "=<3 jam",
+        "Eks",
+        "Validasi",
+        "No. Rekam Medis",
+        "Nama Pasien"
+      ],
+      [
+        "1",
+        "Januari",
+        "13",
+        "13",
+        "eko",
+        "00-79-08-45",
+        "ACEP HADIWINATA"
+      ],
+      [
+        "2",
+        "Februari",
+        "00-46-61-34",
+        "DANIWARTI MUCHTAR"
+      ]
+    ]
+  },
+  "REHABILITASI MEDIK": {
+    "file": "REHABILITASI MEDIK.xlsx",
+    "archetype": "daily_grid",
+    "judul": "Terlaksananya Reschedule Kedatangan Pasien Sesuai Jadwal",
+    "numerator": "Jumlah pasien yang datang sesuai Reschedule",
+    "denominator": "Jumlah pasien yang datang",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Tanggal",
+        "No",
+        "Nama",
+        "RM",
+        "Terapi Ke",
+        "Drop Out"
+      ],
+      [
+        "1",
+        "2",
+        "3",
+        "4",
+        "Yes",
+        "No"
+      ],
+      [
+        "Tanggal",
+        "No",
+        "Nama",
+        "RM",
+        "TTV",
+        "EWS \nSCORE"
+      ]
+    ]
+  },
+  "REKAM MEDIS": {
+    "file": "REKAM MEDIS.xlsx",
+    "archetype": "monthly_summary",
+    "judul": "Penerapan nomor rekam medis tunggal saat registrasi pasien rawat jalan",
+    "numerator": "Jumlah Nomor Rekam Medis tunggal pada pasien Rawat jalan dalam 1 bulan.",
+    "denominator": "Jumlah pasien baru Rawat jalan dalam 1 bulan",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Tgl",
+        "Januari",
+        "Februari",
+        "Maret",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Agustus",
+        "September",
+        "Oktober",
+        "November",
+        "Desember"
+      ],
+      [
+        "Jlh",
+        "Tunggal",
+        "Jlh",
+        "Tunggal",
+        "Jlh",
+        "Tunggal",
+        "Jlh",
+        "Tunggal",
+        "Jlh",
+        "Tunggal",
+        "Jlh",
+        "Tunggal",
+        "Jlh",
+        "Tunggal",
+        "Jlh",
+        "Tunggal",
+        "Jlh",
+        "Tunggal",
+        "Jlh",
+        "Tunggal",
+        "Jlh",
+        "Tunggal",
+        "Jlh",
+        "Tunggal"
+      ]
+    ]
+  },
+  "SUDIRMAN": {
+    "file": "SUDIRMAN.xlsx",
+    "archetype": "dynamic_rows",
+    "judul": "",
+    "numerator": "",
+    "denominator": "",
+    "target": "100%",
+    "headers_sample": [
+      [
+        "FORMULIR KETEPATAN DOKUMENTASI KOMUNIKASI SBAR",
+        "FORMULIR KETIDAKSTABILAN JARINGAN INTERNET"
+      ],
+      [
+        "NO",
+        "Tanggal",
+        "NO RM",
+        "Tepat",
+        "Tidak Tepat",
+        "Nama Perawat",
+        "NO",
+        "Hari",
+        "Tanggal",
+        "Komplain"
+      ],
+      [
+        "1",
+        "46024",
+        "00-47-22-61",
+        "√",
+        "Ns Silvia Putri Z",
+        "1",
+        "Senin",
+        "46034",
+        "Saat TT di kamar VIP 6- 14 Jaringan hilang timbul"
+      ]
+    ]
+  },
+  "THAMRIN": {
+    "file": "THAMRIN.xlsx",
+    "archetype": "dynamic_rows",
+    "judul": "",
+    "numerator": "",
+    "denominator": "",
+    "target": "100%",
+    "headers_sample": [
+      [
+        "FORMULIR KETEPATAN DOKUMENTASI KOMUNIKASI SBAR",
+        "FORMULIR KETIDAKSTABILAN JARINGAN INTERNET"
+      ],
+      [
+        "NO",
+        "Tanggal",
+        "NO RM",
+        "Tepat",
+        "Tidak Tepat",
+        "Nama Perawat",
+        "NO",
+        "Hari",
+        "Tanggal",
+        "Komplain"
+      ],
+      [
+        "1",
+        "46024",
+        "00-47-22-61",
+        "√",
+        "Ns Silvia Putri Z",
+        "1",
+        "Senin",
+        "46034",
+        "Saat TT di kamar VIP 6- 14 Jaringan hilang timbul"
+      ]
+    ]
+  },
+  "TU": {
+    "file": "TU.xlsx",
+    "archetype": "monthly_summary",
+    "judul": "KETEPATAN PENGIRIMAN LAPORAN KEPADA LEMBAGA PEMERINTAHAN.",
+    "numerator": "Jumlah laporan yang tepat waktu dalam 1 bulan",
+    "denominator": "Semua laporan atau data yang diminta oleh Lembaga Pemerintahan dalam 1 bulan.",
+    "target": "IMP-U1",
+    "headers_sample": [
+      [
+        "Laporan yg ssi kriteria",
+        "Lap tdk ssi kriteria",
+        "Total lap"
+      ],
+      [
+        "Jlh",
+        "Tepat waktu"
+      ],
+      [
+        "Januari",
+        "0"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+B1: FORMULIR KETEPATAN DOKUMENTASI KOMUNIKASI SBAR | K1: FORMULIR KETIDAKSTABILAN JARINGAN INTERNET
+A4: NO | B4: Tanggal | C4: NO RM | D4: Tepat | E4: Tidak Tepat | F4: Nama Perawat | K4: NO | L4: Hari | M4: Tanggal | N4: Komplain
+A5: 1 | B5: 46024 | C5: 00-47-22-61 | E5: √ | F5: Ns Silvia Putri Z | K5: 1 | L5: Senin | M5: 46034 | N5: Saat TT di kamar VIP 6- 14 Jaringan hilang timbul
+A6: 2 | B6: 46024 | C6: 00-39-22-35 | E6: √ | F6: Ns Silvia Putri Z | K6: 2 | L6: Selasa | M6: 46035 | N6: Saat TT dan bawa visite dokter , wifi tidak bisa tersambung di kamar pasien
+A7: 3 | B7: 46027 | C7: 00-78-99-75 | E7: √ | F7: Ns Nindha K | K7: 3 | L7: Sabtu | M7: 46039 | N7: Saat TT jaringan wifi tidak conect ke Tab , harus keluar kamar rawatan dulu
+A8: 4 | B8: 46048 | C8: 00-45-15-37 | D8: √ | F8: Ns Yosep S | K8: 4 | L8: Senin | M8: 46041 | N8: -
+A9: 5 | B9: 46039 | C9: 00-70-40-37 | D9: √ | F9: Ns Maisafa W | K9: 5 | L9: Selasa | M9: 46042 | N9: Jaringan wifi berputar putar
+A10: 6 | B10: 46031 | C10: 00-30-42-17 | E10: √ | F10: Ns Mona Andini | K10: 6 | L10: Rabu | M10: 46043 | N10: -
+A11: 7 | B11: 46025 | C11: 00-32-08-10 | D11: √ | F11: Ns Mutiyara | K11: 7 | L11: Kamis | M11: 46044 | N11: Saat TT jaringan wifi tidak conect ke Tab , harus keluar kamar rawatan dulu
+A12: 8 | B12: 46035 | C12: 00-17-59-08 | D12: √ | F12: Ns Novita Irmawati | K12: 8 | L12: Jumat | M12: 46045 | N12: -

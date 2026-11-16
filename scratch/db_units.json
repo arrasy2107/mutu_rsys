@@ -1,0 +1,192 @@
+[
+    {
+        "id": 1,
+        "kode": "IGD",
+        "nama": "Instalasi Gawat Darurat"
+    },
+    {
+        "id": 2,
+        "kode": "ICU",
+        "nama": "Intensive Care Unit"
+    },
+    {
+        "id": 4,
+        "kode": "NICU",
+        "nama": "Neonatal Intensive Care Unit"
+    },
+    {
+        "id": 12,
+        "kode": "FARMASI-RJ",
+        "nama": "Instalasi Farmasi Rawat Jalan"
+    },
+    {
+        "id": 13,
+        "kode": "LABOR",
+        "nama": "Laboratorium"
+    },
+    {
+        "id": 14,
+        "kode": "RADIOLOGI",
+        "nama": "Instalasi Radiologi"
+    },
+    {
+        "id": 15,
+        "kode": "GIZI",
+        "nama": "Instalasi Gizi"
+    },
+    {
+        "id": 17,
+        "kode": "REKAM-MED",
+        "nama": "Rekam Medis"
+    },
+    {
+        "id": 18,
+        "kode": "IRJ",
+        "nama": "Instalasi Rawat Jalan"
+    },
+    {
+        "id": 19,
+        "kode": "IBS",
+        "nama": "Instalasi Bedah Sentral"
+    },
+    {
+        "id": 20,
+        "kode": "REHAB-MED",
+        "nama": "Rehabilitasi Medik"
+    },
+    {
+        "id": 21,
+        "kode": "AKUNTANSI",
+        "nama": "Akuntansi"
+    },
+    {
+        "id": 22,
+        "kode": "MARKETING",
+        "nama": "Pemasaran"
+    },
+    {
+        "id": 23,
+        "kode": "BENDAHARA",
+        "nama": "Bendahara"
+    },
+    {
+        "id": 24,
+        "kode": "CASEMIX",
+        "nama": "Casemix"
+    },
+    {
+        "id": 25,
+        "kode": "AKRI",
+        "nama": "AKRI"
+    },
+    {
+        "id": 26,
+        "kode": "LOGISTIK",
+        "nama": "Logistik"
+    },
+    {
+        "id": 27,
+        "kode": "GUDANG-UMUM",
+        "nama": "Gudang Umum"
+    },
+    {
+        "id": 28,
+        "kode": "CUCI-JAHIT",
+        "nama": "Cuci Jahit"
+    },
+    {
+        "id": 29,
+        "kode": "IPS-U",
+        "nama": "Pemeliharaan Sarana Umum"
+    },
+    {
+        "id": 30,
+        "kode": "IPS-M",
+        "nama": "Pemeliharaan Sarana Medis"
+    },
+    {
+        "id": 31,
+        "kode": "CUSTOMER-CARE",
+        "nama": "Customer Care"
+    },
+    {
+        "id": 32,
+        "kode": "PASTORAL",
+        "nama": "Pastoral Care"
+    },
+    {
+        "id": 33,
+        "kode": "HOMECARE",
+        "nama": "Home Care"
+    },
+    {
+        "id": 34,
+        "kode": "KEAMANAN",
+        "nama": "Keamanan & Transportasi"
+    },
+    {
+        "id": 35,
+        "kode": "PSDM",
+        "nama": "Kepegawaian"
+    },
+    {
+        "id": 36,
+        "kode": "DIKLIT",
+        "nama": "Diklit"
+    },
+    {
+        "id": 37,
+        "kode": "IT",
+        "nama": "IT"
+    },
+    {
+        "id": 38,
+        "kode": "TU",
+        "nama": "TU"
+    },
+    {
+        "id": 39,
+        "kode": "IRNA-HERLINA",
+        "nama": "Herlina"
+    },
+    {
+        "id": 41,
+        "kode": "FARMASI-RN",
+        "nama": "Instalasi Farmasi Rawat Inap"
+    },
+    {
+        "id": 42,
+        "kode": "K3LH",
+        "nama": "K3LH"
+    },
+    {
+        "id": 43,
+        "kode": "IRNA-SUD",
+        "nama": "Sudirman"
+    },
+    {
+        "id": 44,
+        "kode": "IRNA-TH",
+        "nama": "Thamrin"
+    },
+    {
+        "id": 45,
+        "kode": "IRNA-DS",
+        "nama": "Dewi Sartika"
+    },
+    {
+        "id": 46,
+        "kode": "IRNA-AI",
+        "nama": "Ade Irma"
+    },
+    {
+        "id": 47,
+        "kode": "IRNA-LA",
+        "nama": "La Ruffa"
+    },
+    {
+        "id": 48,
+        "kode": "IRNA-IC",
+        "nama": "ICU HCU"
+    }
+]

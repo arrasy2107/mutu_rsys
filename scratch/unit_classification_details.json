@@ -1,0 +1,1236 @@
+{
+  "summary": {
+    "daily_grid": [
+      "AKUTANSI",
+      "GUDANG UMUM",
+      "IBS",
+      "LABORATORIUM",
+      "PEMELIHARAAN SARANA MEDIS",
+      "TU"
+    ],
+    "patient_register": [
+      "ADE IRMA",
+      "AKRI",
+      "BENDAHARA",
+      "CUCI JAHIT",
+      "CUSTOMER CARE",
+      "DEWI SARTIKA",
+      "FARMASI RAJAL",
+      "GIZI",
+      "HERLINA",
+      "HOME CARE",
+      "IGD",
+      "INTENSIVE CARE",
+      "IRJ",
+      "IT",
+      "KEAMANAN & TRANSPORTASI",
+      "LA RUFFA",
+      "PASTORAL CARE",
+      "RADIOLOGI",
+      "REHABILITASI MEDIK",
+      "REKAM MEDIS",
+      "SUDIRMAN",
+      "THAMRIN"
+    ],
+    "entity_matrix": [
+      "K3LH",
+      "LOGISTIK",
+      "PEMELIHARAAN SARANA UMUM"
+    ],
+    "monthly_summary": [
+      "CASEMIX",
+      "DIKLIT",
+      "KEPEGAWAIAN",
+      "PEMASARAN"
+    ],
+    "other": []
+  },
+  "details": [
+    {
+      "unit": "ADE IRMA",
+      "sheets": [
+        "FORM PENGUMPUL DATA"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Tanggal | Nomor RM | Jumlah pasien | Jelas terbaca | Tidak jelas Terbaca | Observer",
+            "1 | 46041 | tidak ada sesuai kriteria pasien | 1",
+            "2 | 21-01-2026 | 79-10-09 | MUHAMMAD DANISH HAKIM | V | V",
+            "3 | 21-01-2026 | 77-11-15 | ARCELIO ATHALLA FEBRIAN | V | V"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "AKRI",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "TGL | Januari | Februari | Maret | April | Mei",
+            "JLH | V | JLH | V | JLH | V"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Bulan | TERLAKSANANYA VERIFIKASI BILLING HARIAN | TERLAKSANANYA PERCEPATAN WAKTU TUNGGU PASIEN PULANG | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "95 % | 95% | 0 | 0 | 0",
+            "Januari | 84.321223709369022 | 95 | 882 | 1046 | 83.21995464852607"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "AKUTANSI",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "daily_grid",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "daily_grid",
+          "sample_headers": [
+            "TGL | Januari | Februari | Maret | April | Mei",
+            "Sesuai | Tidak sesuai | Sesuai | Tidak sesuai | Sesuai | Tidak sesuai",
+            "1 | 1 | 1 | 1 | 1 | 1",
+            "2 | 1 | 1 | 1 | 1 | 1"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Bulan | KETEPATAN WAKTU PELAKSANAAN VERIFIKASI SETORAN KASIR | Ketepatan waktu Realisasi pendingan jasa medis BPJS Kesehatan | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100% | 100% | 0 | 0 | 0",
+            "Januari | 74.193548387096769 | 100 | 23 | 31 | 0"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "BENDAHARA",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Ketepatan | Jumlah | Ket Benar | Ket Salah",
+            "Januari | 1511 | 1461 | 50",
+            "Februari | 984 | 979 | 5",
+            "Maret | 1139 | 1136 | 3"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Bulan | KETEPATAN DATA PENERIMA PEMBAYARAN TRANSAKSI MELALUI TRANSFER | Ketepatan pencatatan transaksi dana masuk ke rekening RS dari nota pembayaran pasien pribadi non tunai. | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100% | 100% | 0 | 0 | 0",
+            "Januari | 100 | 100 | 682 | 682 | 96.690933156849766"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "CASEMIX",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "monthly_summary",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Bulan | Tepat Koding | Seluruh klaim rawat jalan 1 bulan",
+            "Januari | 11096 | 11108",
+            "Februari | 11877 | 11905",
+            "Maret | 10636 | 10675"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Bulan | KETEPATAN KODING KLAIM BPJS RAJAL PADA PEMERIKSAAN INTERNAL | Kelengkapan Berkas Klaim Rawat Inap BPJS Kesehatan | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "99% | 100% | 0 | 0 | 0",
+            "Januari | 99.891969751530425 | 95 | 11096 | 11108 | 99.266503667481658"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "CUCI JAHIT",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "entity_matrix",
+          "sample_headers": [
+            "Tgl | Januari | Februari | Maret | April | Mei",
+            "INT | IBS | JLH | INT | IBS | JLH",
+            "1 | 1 | 0",
+            "2 | 1 | 1"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Bulan | KETEPATAN LINEN MASUK DAN KELUAR | KETEPATAN WAKTU PENGANTARAN LAUNDRI PASIEN | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "80 % | 100 % | 0 | 0 | 0",
+            "Januari | 50 | 80 | 10 | 20 | 33.333333333333329"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "CUSTOMER CARE",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA 1",
+        "FORM PENGUMPUL DATA 2",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA 1",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "C. Care  ( Agus ,Unika, Riko ) | JLH | SATPAM\nJLH | JLH | JLH Ke 2",
+            "Karcis | Mobile JKN | Pasien Prioritas | Maxim | Antar Tamu, Buat surat Kronologis, Layanan Jadwal dokter | Stiker RJ",
+            "2 | 250 | 13 | 4 | 10 | 7",
+            "3 | 437 | 15 | 3 | 8 | 5"
+          ]
+        },
+        {
+          "sheet": "FORM PENGUMPUL DATA 2",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Tgl | Nama Pasien | Jenis Permintaan Bantuan | Jam Petugas Merespon | Waktu Respon ( menit ) | Petugas",
+            "2 | Armedi | Layanan Pasien Prioritas 07,06 | 07.16 | 10 | Unika",
+            "Latri | Layanan Pasien Prioritas 10.14 | 11.10 | 60 | Riko | B",
+            "Tasman | Layanan Pasien Prioritas 09.15 | 09.30 | 15 | Agus | B"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Bulan | TERPENUHINYA LAYANAN CUSTOMER CARE DI RAWAT JALAN | Ketepatan Waktu Respon Petugas Customer Care terhadap Permintaan Bantuan Pasien Prioritas dirawat jalan",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "Januari | 89.5960832313341 | 70 | 8784 | 9804 | 48.8372093023256",
+            "Februari | 91.6971329613238 | 70 | 9531 | 10394 | 83.7837837837838"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "DEWI SARTIKA",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Kepatuhan penginputan billing terapi insulin di Ruang Dewi Sartika | Kepatuhan melakukan verifikasi oleh PPJA/K.Tim pada pengkajian pasien baru di Ruang Dewi Sartika sesuai regulasi 1 x 24 jam | Ketepatan PPJA/K.Tim melakukan Hand Over Antar Shiff secara SBAR",
+            "No | Nama Pasien | RM | Tindakan Billing | Nama Petugas | TGL",
+            "Dilakukan | Tidak dilakukan | Jam | Dilakukan | Tidak Dilakukan | Sesuai",
+            "1 | DUSMAN | 00-79-00-34 | 1 | Ns. Nazyla | 1"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Bulan | Kepatuhan penginputan billing terapi insulin di Ruang Dewi Sartika | Kepatuhan melakukan verifikasi oleh PPJA/K.Tim pada pengkajian pasien baru di Ruang Dewi Sartika sesuai regulasi 1 x 24 jam | Ketepatan PPJA/K.Tim melakukan Hand Over Antar Shiff secara SBAR",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100% | 100% | 90%",
+            "Januari | 32.142857142857146 | 100 | 9 | 28 | 34.883720930232556"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "DIKLIT",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM",
+        "PDSA",
+        "JUKNIS",
+        "Uji coba",
+        "Sheet2",
+        "Sheet3",
+        "Sheet4"
+      ],
+      "primary_archetype": "monthly_summary",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "No | Bulan | Jumlah IHT Dalam Bulan | Jumlah IHT yang ter Feedback",
+            "1 | Januari | 1 | 1",
+            "2 | Februari | 0 | 0",
+            "3 | Maret | 2 | 2"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Bulan | Terlaksananya Proses Pemberian Feedback dari Diklat untuk kelengkapan Pelaksanaan Pelatihan | Terlaksananya Proses tindaklanjut penginformasian ke unit kerja terkait Permohonan pelatihan yang masuk ke Diklat | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100 % | 100 % | 0 | 0 | 0",
+            "Januari | 100 | 100 | 1 | 1 | 100"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "FARMASI RAJAL",
+      "sheets": [
+        "FORM PENGUMPUL DATA"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "KETEPATAN WAKTU TUNGGU PELAYANAN FARMASI | KETEPATAN PENGISIAN ATURAN PAKAI OBAT DI EMR OLEH MEDIS | KEPATUHAN PENGGUNAAN FORMULARIUM NASIONAL",
+            "46266 | No | Nama Dokter | jumlah sampel | Nama Pasien | Tgl Lahir Pasien",
+            "Standar Waktu | Jumlah sampel | Sesuai Waktu | Total waktu | 1 | IGD dan Poli Umum",
+            "obat 1 minggu dan | <= 30' | 778 | 670 | 2 | dr. Alex Chandra"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "GIZI",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "daily_grid",
+          "sample_headers": [
+            "TGL | Jan | Februari | Maret | April | Mei",
+            "Daging | Ayam | Ikan | Daging | Ayam | Ikan",
+            "JLH | TL | JLH | TL | JLH | TL"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Bulan | KEPATUHAN PELABELAN PROTEIN HEWANI | JUMLAH BAHAN MAKANANAN HEWANI YANG KELUAR SESUAI FIFO | EVALUASI VISUAL COMSTOK MAKANAN PASIEN YANG TIDAK TERMAKAN | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            ">80% | >90% | < 20 % | 0 | 0",
+            "Januari | 100 | 80 | 776 | 776 | 100"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "GUDANG UMUM",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "daily_grid",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "daily_grid",
+          "sample_headers": []
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Bulan | KETEPATAN PEMILIHAN GUDANG SAAT PENGENTRIAN BARANG | 0 | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100% | 0 | 0 | 0 | 0",
+            "Januari | 97.826086956521735 | 100 | 135 | 138 | #DIV/0!"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "HERLINA",
+      "sheets": [
+        "FORM PENGUMPUL DATA"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Tanggal 01-25 Jan 26 | Nilai | VALIDASI | oleh Juliawati",
+            "No | Tanggal | Identitas | Petugas | ptgas 1 | ptgas 2",
+            "Nama pasien | RM | Nama Obat | Dosis ( volume) | Cara pemberian | Indikasi Pemberian",
+            "10 | 46034 | HARLINA | 00-75-53-28 | Novorapid | 12 unit"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "HOME CARE",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "FORM KEPUASAN",
+        "FORM PELAKSANAAN HC",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "TANGGAL | NAMA PASIEN | ALAMAT | PELAYANAN H.CARE | PETUGAS | KETERANGAN",
+            "JUMLAH | ADA \nKOMPLEN | TIDAK ADA\n KOMPLEN",
+            "1 | PELANGGAN | Mina | Parak Gadang | P Dasar 12 jam | Maharani",
+            "1 | Misyon | Sawahan Timur | P Dasar 12 jam | Elvia Roza | V"
+          ]
+        },
+        {
+          "sheet": "FORM KEPUASAN",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "TANGGAL | NAMA PASIEN | NAMA PETUGAS | PETUGAS BERSIKAP \nRAMAH | PETUGAS RESPON CEPAT TERHADAP\nKELUHAN | PETUGAS MEMBERIKAN  PENJELASAN DAN EDUKASI DENGAN TEPAT",
+            "YA | TIDAK | YA | TIDAK | YA | TIDAK",
+            "1 | Mina | Maharani | V | V | V",
+            "Misyon | Elvia Roza | V | V | V | V"
+          ]
+        },
+        {
+          "sheet": "FORM PELAKSANAAN HC",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "TOTAL JUMLAH \nPERMINTAAN | TANGGAL\nPERMINTAAN/ JAM | JAM RESPON \nTEAM | NAMA PASIEN | ALAMAT | EDUKASI/\nPENJELASAN",
+            "0 | 1 | 0",
+            "0 | 2 | 0",
+            "0 | 3 | 0"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Bulan | KEPUASAN PELANGGAN TERHADAP PETUGAS HOMECARE | TINGKAT PELAKSANAAN HOME CARE SESUAI PERMINTAAN | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100 % | 90% | 0 | 0 | 0",
+            "Januari | 97.701149425287355 | 100 | 85 | 87 | 46.666666666666664"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "IBS",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "daily_grid",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "daily_grid",
+          "sample_headers": [
+            "Januari | Februari | Maret | April | Mei | Juni",
+            "TGL | FT | NFT | JOF | JONF | FT",
+            "1 | 115 | 32 | 225 | 47 | 164"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Bulan | KELENGKAPAN PENGISIAN LAPORAN ANESTESI OLEH DOKTER ANESTESI FULL TIME. | KELENGKAPAN DATA BOOKINGAN | KETEPATAN WAKTU PEMBERIAN AB PROFILAKSIS SEBELUM OPERASI | KELENGKAPAN PENGISIAN LAPORAN ANESTESI NON FULL TIME | KELENGKAPAN DOKUMEN HANDOVER DARI IBS",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100 % | 100 % | 95% | 100% | >= 80% | 100%",
+            "Januari | 51.111111111111107 | 80 | 115 | 225 | 56.617647058823529"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "IGD",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM",
+        "Sheet2",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "No | Hari | tgl | jumlah pasien 12-14 | RM pasien yg dilakukan triase | jumlah RM terlambat triase",
+            "pasien no void | #DIV/0! | lengkap | tidak lengkap",
+            "Bulan | Hari | Tgl | Jlh pasien jam 12 -14 | Jlh pasien yg ditriase | Jlh psn yg terlambat ditriase",
+            "JANUARI | Senin | 5 | 6 | 0 | 6"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Bulan | Kepatuhan Pelaksanaan Triase IGD di shift pagi ( Jam 12.00- 14.00 WIB) | Kelengkapan Billing Pasien Rawat Inap dari IGD | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "80% | 100% | 0 | 0 | 0",
+            "Januari | 33.802816901408448 | 80 | 24 | 71 | 89.685314685314694"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "INTENSIVE CARE",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Bulan | No | No RM | Sesuai | Tidak Sesuai | Nilai"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Bulan | KETEPATAN PEMBERIAN DOSIS OBAT DRIP DI RUANG ICU-HCU | Terdokumentasinya Tindak lanjut dari balance cairan di Ruang Intensive Dewasa | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100 % | 100 % | 0 | 0 | 0",
+            "Januari | 100 | 100 | 20 | 20 | 95"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "IRJ",
+      "sheets": [
+        "FORM PENGUMPUL DATA"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "KETEPATAN WAKTU TUNGGU PELAYANAN FARMASI | KETEPATAN PENGISIAN ATURAN PAKAI OBAT DI EMR OLEH MEDIS | KEPATUHAN PENGGUNAAN FORMULARIUM NASIONAL",
+            "46266 | No | Nama Dokter | jumlah sampel | Nama Pasien | Tgl Lahir Pasien",
+            "Standar Waktu | Jumlah sampel | Sesuai Waktu | Total waktu | 1 | IGD dan Poli Umum",
+            "obat 1 minggu dan | <= 30' | 778 | 670 | 2 | dr. Alex Chandra"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "IT",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "daily_grid",
+          "sample_headers": [
+            "No | User ID | Nama | Lokasi | IP address | Unit",
+            "1 | tiara | Tiara Zania , Amd Kep | IRJ | 10.99.100.25 | IRJ",
+            "2 | tiara | Tiara Zania , Amd Kep | IRJ | 10.99.100.30 | IRJ",
+            "3 | tiara | Tiara Zania , Amd Kep | IRJ | 10.99.101.90 | IRJ"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Bulan | TERPENUHINYA KEAMANAN DATA PASIEN RUMAH SAKIT | SIMRS Avicenna pada Ruangan Rawat Inap | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100 % | 80% | 0 | 0 | 0",
+            "Januari | 80 | 100 | 12 | 15 | 98.156682027649765"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "K3LH",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "entity_matrix",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "entity_matrix",
+          "sample_headers": [
+            "No | Parameter | Bulan | Parameter | BULAN",
+            "Januari | Februari | Maret | April | Mei | Juni",
+            "Ipal 1 | Ipal 2 | Ipal 1 | Ipal 2 | Ipal 1 | Ipal 2",
+            "1 | Total Suspended Solid | 0 | 1 | x | x"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "entity_matrix",
+          "sample_headers": [
+            "Bulan | TERCAPAINYA STANDAR BAKU MUTU AIR PADA HASIL UJI MUTU AIR LIMBAH | Kepatuhan Pekerja lepas terhadap rekomendasi APD PCRA bangunan | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100 % | 100 % | 0 | 0 | 0",
+            "Januari | 0 | 100 | 0 | 18 | 40"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "KEAMANAN & TRANSPORTASI",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM",
+        "PDSA",
+        "JUKNIS",
+        "BUKTI DATA MANUAL"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Bulan | TOTAL | Senin I | Senin II | Senin III | Senin IV",
+            "Jlh | Layak | Jlh | Layak | Jlh | Layak",
+            "Januari | 47 | 41 | 47 | 41 | 50",
+            "Februari | 50 | 50 | 50 | 49 | 50"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Bulan | KETERSEDIAAN KARTU VISITOR YANG LAYAK | KETEPATAN WAKTU PENJEMPUTAN DAN PENGANTARAN PASIEN | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "≥ 95% | 90% | 0 | 0 | 0",
+            "Januari | 87.2340425531915 | 95 | 41 | 47 | 96"
+          ]
+        },
+        {
+          "sheet": "BUKTI DATA MANUAL",
+          "archetype": "daily_grid",
+          "sample_headers": []
+        }
+      ]
+    },
+    {
+      "unit": "KEPEGAWAIAN",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "monthly_summary",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Sudah Acc Dir | Blm Acc Dir | Total PKS yg berakhir | Total PKS yg berakhir",
+            "Januari | 49 | 49 | 49",
+            "Februari | 14 | 14 | 14",
+            "Maret | 15 | 15 | 15"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Bulan | KETEPATAN WAKTU PENERBITAN PKS PERPANJANGAN KONTRAK | Pengelolaan Kearsipan File Karyawan | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100% | 100 | 0 | 0 | 0",
+            "Januari | 100 | 100 | 49 | 49 | 100"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "LA RUFFA",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM KB",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "No | Tanggal | Nama Pasien | RM | Nama Bidan | Belum di kerjakan",
+            "Lengkap | Tidak lengkap | S | B | A | R",
+            "#DIV/0! | Sesuai | Tidak Sesuai | Sesuai | Tidak Sesuai | Sesuai",
+            "0 | 0 | 0 | 0 | 0 | 0"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Bulan | Kepatuhan Bidan dalam Kelengkapan Dokumentasi Komunikasi Efektif SBAR | Kepatuhan Bidan dalam Kelengkapan Dokumentasi Resume Asuhan Keperawatan | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100% | 100% | 0 | 0 | 0",
+            "Januari | 94.339622641509436 | 100 | 200 | 212 | 81.25"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "LABORATORIUM",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "daily_grid",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "daily_grid",
+          "sample_headers": [
+            "Tgl | Jan | Feb | Mar | Apr | Mei",
+            "J | T | K | J | T | K",
+            "26 | 129 | 129 | 0 | 134 | 134",
+            "27 | 122 | 122 | 0 | 129 | 129"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Bulan | KETEPATAN PELAPORAN HASIL LABORATORIUM | LAPOR HASIL KRITIS PEMERIKSAAN LABORATORIUM  ≤30 MENIT | PENCATATAN PENDISTRIBUSIAN DARAH | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100 % | 100 % | 100% | 0 | 0",
+            "Januari | 99.972655181843038 | 100 | 3656 | 3657 | 100"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "LOGISTIK",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "entity_matrix",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "entity_matrix",
+          "sample_headers": [
+            "NO | Tgl | Nama Barang | Kartu Stok | Stok SIM RS | Fisik barang"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Bulan | KESESUAIAN  FISIK BARANG DENGAN KARTU STOK DAN SIM RS | KESESUAIAN  FISIK BARANG DENGAN KARTU STOK DAN SIM RS | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100% | 100% | 0 | 0 | 0",
+            "Januari | #DIV/0! | 100 | 98 | 100 | 49"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "PASTORAL CARE",
+      "sheets": [
+        "PEMILIHAN",
+        " PROFIL MUTU",
+        "KUNJUNGAN PASIEN",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "SPM",
+        "RTL",
+        "PDSA",
+        "JUKNIS",
+        "Sheet2",
+        "Sheet1"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "TGL | NAMA PASIEN | PENDOKUMENTASIAN PADA  PPA  NOTE | PENDOKUMENTASIAN PADA  PPA  NOTE | RUANGAN | PETUGAS",
+            "46024 | NICHOLAS RAFFERTY SHO | 1 | ADE IRMA | BETTY | 46025",
+            "SERLI EFENDIE  , | 1 | DEWI SARTIKA | BETTY | ISHAK AR | 1",
+            "WIJAYA LUKMAN  , | 1 | HERLINA | BETTY | 46027 | NUR INSYAF"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Bulan | TERLAKSANANYA FEEDBACK PENDOKUMENTASIAN PELAYANAN ROHANI | KETEPATAN WAKTU PENDAMPING ROHANI  DALAM MEMBERIKAN PELAYANAN KEPADA PASIEN",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "Januari | 80.097087378640779 | 85 | 165 | 206 | 100",
+            "Februari | 80.769230769230774 | 85 | 189 | 234 | 63.636363636363633"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "PEMASARAN",
+      "sheets": [
+        "FORM PENGUMPUL DATA"
+      ],
+      "primary_archetype": "monthly_summary",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Bulan | Kegiatan I | Kegiatan II | Kegiatan III | Kegiatan IV | Total Terlaksana",
+            "Terlaksana | Terlaksana | Terlaksana | Terlaksana | Jlh | Alasan",
+            "Januari | 0 | 0 | 0 | 2 | 2",
+            "Februari | 3 | 3 | 3 | 3 | 12"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "PEMELIHARAAN SARANA MEDIS",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "daily_grid",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "daily_grid",
+          "sample_headers": [
+            "Tgl | Jan | Feb | Mar | Apr | Mei",
+            "=<15' | JLH | =<15' | JLH | =<15' | JLH",
+            "1 | 0 | 1 | 1 | 0 | 0",
+            "2 | 0 | 2 | 0 | 1 | 1"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Bulan | TERPENUHINYA RESPON TIME LAPORAN KERUSAKAN ALAT MEDIS | Terpenuhinya pemeliharaan alat Medis yang dikategorikan resiko tinggi | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "90% | 100% | 0 | 0 | 0",
+            "Januari | 0 | 90 | 0 | 69 | 50"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "PEMELIHARAAN SARANA UMUM",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "entity_matrix",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "entity_matrix",
+          "sample_headers": [
+            "No | Bulan | Terlaksana | Jumlah Jadwal | No | Bulan",
+            "1 | Januari | 2 | 3 | 1 | Januari",
+            "2 | Februari | 3 | 3 | 2 | Februari",
+            "3 | Maret | 1 | 3 | 3 | Maret"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Bulan | PELAKSANAAN PEMELIHARAAN MESIN BLOWER | Pemeliharaan mesin lift | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100% | 100% | 0 | 0 | 0",
+            "Januari | 66.666666666666657 | 100 | 2 | 3 | 75"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "RADIOLOGI",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Bulan | Jlh | =<3 jam | Eks | Validasi | No. Rekam Medis",
+            "1 | Januari | 13 | 13 | eko | 00-79-08-45",
+            "2 | Februari | 00-46-61-34 | DANIWARTI MUCHTAR",
+            "3 | Maret | 00-74-62-80 | ELIDAWATI"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "WAKTU TUNGGU HASIL PEMERIKSAAN RONTGEN FOTO THORAX PASIEN TB ≤ 3 JAM | KEPUASAN PELANGGAN >=80% | KETEPATAN PEMERIKSAAN RONTGEN TANPA PENGULANGAN | KETEPATAN PENGINPUTAN FOTO RONTGEN DI ATHACHEMENT | PELAKSANAAN EKSPERTISE DILAKUKAN OLEH DOKTER SPESIALIS RADIOLOGI | Evaluasi Waktu bacaan hasil digital radiologi non kontras Radiologi Non Cyto <24 jam",
+            "Bulan | Hasil | Standar | Numerator | Denominator | Hasil",
+            "100% | 100% | 100% | 100% | 100% | Januari",
+            "Januari | 100 | 100 | 12 | 12 | 96.551724137931032"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "REHABILITASI MEDIK",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Tanggal | No | Nama | RM | Terapi Ke | Drop Out",
+            "1 | 2 | 3 | 4 | Yes | No",
+            "Tanggal | No | Nama | RM | TTV | EWS \nSCORE",
+            "RR | SpO2 | MASK OKSIGEN | TD | HR | GCS"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Bulan | Terlaksananya Reschedule Kedatangan Pasien Sesuai Jadwal | Terlaksananya Early Warning Score di Rehabilitasi Medik | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100% | 100% | 0 | 0 | 0",
+            "Januari | 96.338028169014095 | 100 | 342 | 355 | 70"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "REKAM MEDIS",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "daily_grid",
+          "sample_headers": [
+            "Tgl | Januari | Februari | Maret | April | Mei",
+            "Jlh | Tunggal | Jlh | Tunggal | Jlh | Tunggal"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "Bulan | Penerapan nomor rekam medis tunggal saat registrasi pasien rawat jalan | Kelengkapan data Pendidikan diregistrasi Rawat jalan | Kepatuhan Identifikasi Pasien | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "100% | 100% | 100% | 0 | 0",
+            "Januari | 97.884084636614531 | 100 | 1064 | 1087 | 63.276836158192097"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "SUDIRMAN",
+      "sheets": [
+        "FORM PENGUMPUL DATA"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "NO | Tanggal | NO RM | Tepat | Tidak Tepat | Nama Perawat",
+            "1 | 46024 | 00-47-22-61 | √ | Ns Silvia Putri Z | 1",
+            "2 | 46024 | 00-39-22-35 | √ | Ns Silvia Putri Z | 2",
+            "3 | 46027 | 00-78-99-75 | √ | Ns Nindha K | 3"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "THAMRIN",
+      "sheets": [
+        "FORM PENGUMPUL DATA"
+      ],
+      "primary_archetype": "patient_register",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "patient_register",
+          "sample_headers": [
+            "NO | Tanggal | NO RM | Tepat | Tidak Tepat | Nama Perawat",
+            "1 | 46024 | 00-47-22-61 | √ | Ns Silvia Putri Z | 1",
+            "2 | 46024 | 00-39-22-35 | √ | Ns Silvia Putri Z | 2",
+            "3 | 46027 | 00-78-99-75 | √ | Ns Nindha K | 3"
+          ]
+        }
+      ]
+    },
+    {
+      "unit": "TU",
+      "sheets": [
+        "PEMILIHAN",
+        "PROFIL",
+        "FORM PENGUMPUL DATA",
+        "VALIDASI",
+        "DATA & ANALISA",
+        "RTL",
+        "SPM",
+        "PDSA",
+        "JUKNIS"
+      ],
+      "primary_archetype": "daily_grid",
+      "sheet_analysis": [
+        {
+          "sheet": "FORM PENGUMPUL DATA",
+          "archetype": "daily_grid",
+          "sample_headers": [
+            "Laporan yg ssi kriteria | Lap tdk ssi kriteria | Total lap"
+          ]
+        },
+        {
+          "sheet": "DATA & ANALISA",
+          "archetype": "monthly_summary",
+          "sample_headers": [
+            "Bulan | KETEPATAN PENGIRIMAN LAPORAN KEPADA LEMBAGA PEMERINTAHAN. | Selesainya usulan pembuatan PKS dengan Pihak Ketiga sesuai Standar | 0 | 0 | 0",
+            "Hasil | Standar | Numerator | Denominator | Hasil | Standar",
+            "90% | 90% | 0 | 0 | 0",
+            "Januari | 100 | 90 | 14 | 14 | 100"
+          ]
+        }
+      ]
+    }
+  ]
+}

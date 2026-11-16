@@ -1,0 +1,668 @@
+{
+  "ADE IRMA": [],
+  "AKRI": [
+    {
+      "kode": "IMP-U1",
+      "judul": "TERLAKSANANYA VERIFIKASI BILLING HARIAN",
+      "numerator": "Jumlah billing  harian yang diverifikasi dalam 1 bulan.",
+      "denominator": "Jumlah billing harian dalam 1 bulan",
+      "target": "95 %",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir Verifikasi Pasien Rawat Inap"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "TERLAKSANANYA PERCEPATAN WAKTU TUNGGU PASIEN PULANG",
+      "numerator": "Jumlah pasien pulang tanpa konfirmasi ulang dari rawat inap",
+      "denominator": "Jumlah pasien pulang setiap hari",
+      "target": "95%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir Pasien Pulang"
+    }
+  ],
+  "AKUTANSI": [
+    {
+      "kode": "IMP-U1",
+      "judul": "KETEPATAN WAKTU PELAKSANAAN VERIFIKASI SETORAN KASIR",
+      "numerator": "Jumlah setoran kasir yang sesuai standar waktu dalam 1 bulan",
+      "denominator": "jumlah hari pelaksanaan setoran kasir dalam 1 bulan",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir Pelaksanaan Setoran Kasir"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "Ketepatan waktu Realisasi pendingan jasa medis BPJS Kesehatan",
+      "numerator": "jumlah data pendingan jasa medis status layak selesai dikerjakan maksimal 4 hari kerja sejak data masuk",
+      "denominator": "jumlah data pendingan jasa medis status layak yang masuk saat bulan terkait",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir pelaksanaan pendingan jasa medis"
+    }
+  ],
+  "BENDAHARA": [
+    {
+      "kode": "IMP-U1",
+      "judul": "KETEPATAN DATA PENERIMA PEMBAYARAN TRANSAKSI MELALUI TRANSFER",
+      "numerator": "Jumlah data penerima pembayaran transaksi yang tepat dalam 1 bulan",
+      "denominator": "Jumlah data penerima pembayaran transaksi dalam 1 bulan",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form Bukti Pembayaran"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "Ketepatan pencatatan transaksi dana masuk ke rekening RS dari nota pembayaran pasien pribadi non tunai.",
+      "numerator": "Jumlah transaksi dana masuk ke rekening RS dari nota pembayaran pasien pribadi non tunai dalam dalam satu bulan yang tidak lengkap datanya",
+      "denominator": "Jumlah transaksi dana masuk ke rekening RS dari nota pembayaran pasien pribadi non tunai dalam dalam satu bulan",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form data transaksi pasien non tunai"
+    }
+  ],
+  "CASEMIX": [
+    {
+      "kode": "IMP-U1",
+      "judul": "KETEPATAN KODING KLAIM BPJS RAJAL PADA PEMERIKSAAN INTERNAL",
+      "numerator": "Jumlah data klaim rawat jalan yang layak/tepat pada pengajuan klaim reguler dalam 1 bulan",
+      "denominator": "Jumlah seluruh data klaim rawat jalan pada pengajuan klaim reguler dalam 1 bulan.",
+      "target": "99%",
+      "formula": "(Numerator / Denominator) x 100%",
+      "instrumen": "Formulir Data Klaim"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "Kelengkapan Berkas Klaim Rawat Inap BPJS Kesehatan",
+      "numerator": "Jumlah data klaim rawat inap yang lengkap pada pengajuan klaim reguler dalam 1 bulan",
+      "denominator": "Jumlah seluruh data klaim rawat inap dalam 1 bulan pada pengajuan klaim Reguler",
+      "target": "100%",
+      "formula": "(Numerator / Denominator) x 100%",
+      "instrumen": "Formulir Berkas klaim yang lengkap"
+    }
+  ],
+  "CUCI JAHIT": [
+    {
+      "kode": "IMP-U1",
+      "judul": "KETEPATAN LINEN MASUK DAN KELUAR",
+      "numerator": "Jumlah dokumen linen masuk yang sesuai dengan catatan linen keluar dalam satu bulan",
+      "denominator": "jumlah semua linen masuk dalam satu bulan",
+      "target": "80 %",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir Linen Masuk dan Keluar"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "KETEPATAN WAKTU PENGANTARAN LAUNDRI PASIEN",
+      "numerator": "Jumlah semua laundri pasien yang diantar jam 06.00 - 12.00 dalam 1 bulan.",
+      "denominator": "jumlah semua  laundri pasien yang diantar ke Unit Cuci Jahit dalam 1 bulan.",
+      "target": "100 %",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir Linen Pasien"
+    }
+  ],
+  "CUSTOMER CARE": [
+    {
+      "kode": "IMP-U1",
+      "judul": "TERPENUHINYA LAYANAN CUSTOMER CARE DI RAWAT JALAN",
+      "numerator": "Jumlah pasien yang dibantu oleh petugas customer care dalam 1 bulan.",
+      "denominator": "Jumlah pasien yang dibantu oleh petugas CC dan Satpam dalam 1 bulan.",
+      "target": "≥ 70%",
+      "formula": "Persentase Layanan Customer Care= Jumlah pasien yang dibantu Customer Care / Jumlah total pasien yang dibantu Customer Care dan Satpam​×100%",
+      "instrumen": "Formulir  Layanan Customer Care"
+    },
+    {
+      "kode": "IMP-U2",
+      "judul": "Ketepatan Waktu Respon Petugas Customer Care terhadap Permintaan Bantuan Pasien Prioritas dirawat jalan",
+      "numerator": "Jumlah respon bantuan pasien rawat jalan yang ditanggapi oleh petugas Customer Care ≤ 10 menit sejak laporan diterima dalam 1 bulan.",
+      "denominator": "Jumlah seluruh permintaan bantuan pasien rawat jalan yang diterima oleh petugas Customer Care dalam 1 bulan.",
+      "target": "≥ 80%",
+      "formula": "Persentase Ketepatan Respon CC= Jumlah permintaan yang direspon ≤ 5 menit /Jumlah Seluruh permintaan bantuan di area pelayanan  ​× 100%",
+      "instrumen": "Formulir Permintaan Bantuan dan Catatan Waktu Tanggap Customer Care"
+    }
+  ],
+  "DEWI SARTIKA": [
+    {
+      "kode": "IMP-U1",
+      "judul": "Kepatuhan penginputan billing terapi insulin di Ruang Dewi Sartika",
+      "numerator": "Jumlah terapi insulin yang terdokumentasi  di billing pasien sampai tanggal 20 setiap bulan",
+      "denominator": "Jumlah terapi insulin yang diberikan pada pasien sampai tgl 20 setiap bulan",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir Kepatuhan Terapi Insulin"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "Kepatuhan melakukan verifikasi oleh PPJA/K.Tim pada pengkajian pasien baru di Ruang Dewi Sartika sesuai regulasi 1 x 24 jam",
+      "numerator": "Jumlah kepatuhan verifikasi pengkajian keperawatan dalam 1x24 jam di Ruang Dewi Sartika dalam satu bulan",
+      "denominator": "Jumlah pasien baru di ruangan Dewi Sartika dalam satu bulan",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir kepatuhan verifikasi pengkajian keperawatan pasien baru  1x24 jam"
+    },
+    {
+      "kode": "IMU 3",
+      "judul": "Ketepatan PPJA/K.Tim melakukan Hand Over Antar Shiff secara SBAR",
+      "numerator": "Jumlah ketepatan melakukan hand over secara SBAR / pasien",
+      "denominator": "Jumlah petugas PPJA/ K.Tim  tanggal 1-20 setiap bulan",
+      "target": "90%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir Dokumentasi SBAR"
+    }
+  ],
+  "DIKLIT": [
+    {
+      "kode": "IMP-U1",
+      "judul": "Terlaksananya Proses Pemberian Feedback dari Diklat untuk kelengkapan Pelaksanaan Pelatihan",
+      "numerator": "Jumlah Pelatihan yang diberikan Feedback selama satu bulan",
+      "denominator": "Jumlah Pelatihan yang direncanakan dalam satu bulan",
+      "target": "100 %",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir Proses Kerja Diklat"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "Terlaksananya Proses tindaklanjut penginformasian ke unit kerja terkait Permohonan pelatihan yang masuk ke Diklat",
+      "numerator": "Jumlah Pelatihan yang terinformasi tepat waktu",
+      "denominator": "Jumlah Pelatihan yang masuk ke Diklat",
+      "target": "100 %",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir Proses Kerja Diklat"
+    }
+  ],
+  "FARMASI RAJAL": [],
+  "GIZI": [
+    {
+      "kode": "IMP-U1",
+      "judul": "KEPATUHAN PELABELAN PROTEIN HEWANI",
+      "numerator": "Jumlah protein hewani yang diberi label dalam 1 bulan",
+      "denominator": "Jumlah protein hewani yang disimpan di freezer Instalasi Gizi dalam 1 bulan.",
+      "target": ">80%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir Pelabelan Protein Hewani"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "JUMLAH BAHAN MAKANANAN HEWANI YANG KELUAR SESUAI FIFO",
+      "numerator": "Jumlah bahan makanan hewani keluar sesuai FIFO",
+      "denominator": "Jumlah bahan makanan hewani",
+      "target": ">90%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir pelabelan protein hewani"
+    },
+    {
+      "kode": "IMU 3",
+      "judul": "EVALUASI VISUAL COMSTOK MAKANAN PASIEN YANG TIDAK TERMAKAN",
+      "numerator": "Jumlah visual comstok makanan pasien yang tidak termakan disurvey 4x sebulan",
+      "denominator": "Jumlah visual comstok makanan pasien yang disajikan disurvey  4x sebulan",
+      "target": "< 20 %",
+      "formula": "( Numerator x Denumerator ) x 100%",
+      "instrumen": "Form Visual comstock"
+    }
+  ],
+  "GUDANG UMUM": [
+    {
+      "kode": "IMP-U1",
+      "judul": "KETEPATAN PEMILIHAN GUDANG SAAT PENGENTRIAN BARANG",
+      "numerator": "Jumlah Faktur yang di Entri tanpa kesalahan",
+      "denominator": "Jumlah Semua Faktur yang di entri dalam satu bulan",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form pengentrian barang"
+    }
+  ],
+  "HERLINA": [],
+  "HOME CARE": [
+    {
+      "kode": "IMP-U1",
+      "judul": "KEPUASAN PELANGGAN TERHADAP PETUGAS HOMECARE",
+      "numerator": "Jumlah petugas per pelanggan yang tidak mendapat komplain dalam 1 bulan",
+      "denominator": "Jumlah petugas per pelanggan yang melaksanakan pelayanan homecare dalam 1 bulan",
+      "target": "100 %",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form Kepuasan Pelanggan"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "TINGKAT PELAKSANAAN HOME CARE SESUAI PERMINTAAN",
+      "numerator": "Jumlah pasien yang dilayani Home Care dalam 1 bulan",
+      "denominator": "Jumlah semua permintaan layanan Home Care dalam 1 bulan",
+      "target": "90%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form pengumpulan data"
+    }
+  ],
+  "IBS": [
+    {
+      "kode": "IMP-U1",
+      "judul": "KELENGKAPAN PENGISIAN LAPORAN ANESTESI OLEH DOKTER ANESTESI FULL TIME.",
+      "numerator": "Jumlah dokumen laporan anastesi yang lengkap dalam 1 bulan",
+      "denominator": "Jumlah pasien yang dioperasi dalam 1 bulan",
+      "target": "100 %",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir Pengumpulan Data Laporan Anastesi"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "KELENGKAPAN DATA BOOKINGAN",
+      "numerator": "Jumlah data bookingan lengkap yang ada di EMR",
+      "denominator": "Jumlah semua operasi dalam 1 bulan",
+      "target": "100 %",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Format data bookingan"
+    },
+    {
+      "kode": "IMP RSYS 1",
+      "judul": "KETEPATAN WAKTU PEMBERIAN AB PROFILAKSIS SEBELUM OPERASI",
+      "numerator": "Jumlah pasien yang mendapat antibiotik profilaksis pembedahan  30 – 60 menit sebelum insisi kulit, ditambah jumlah pasien yang mendapatkan antibiotik setelah insisi kulit dilakukan",
+      "denominator": "Jumlah seluruh pasien yang mendapatkan instruksi antibiotik profilaksis pembedahan",
+      "target": "95%",
+      "formula": "Numerator/ Denominator x 100%",
+      "instrumen": "Form surgical safety checklist, checklist persiapan operasi"
+    },
+    {
+      "kode": "IMP RS 3",
+      "judul": "KELENGKAPAN PENGISIAN LAPORAN ANESTESI NON FULL TIME",
+      "numerator": "Jumlah dokumen laporan anastesi yang lengkap dalam 24 jam",
+      "denominator": "Jumlah semua dokumentasi laporan anastesi pasien yang menjalani operasi dalam 24 jam selama 1 bulan",
+      "target": "100%",
+      "formula": "(Numerator/denumerator) x 100 %",
+      "instrumen": "Formulir pemantauan laporan anastesi"
+    },
+    {
+      "kode": "IMP RS 6",
+      "judul": "KELENGKAPAN DOKUMEN HANDOVER DARI IBS",
+      "numerator": "Jumlah dokumen hand over ( form handover ) oleh petugas IBS saat perawat ruangan menjemput pasien dari IBS yang terisi lengkap.",
+      "denominator": "Jumlah pasien yang dipindahkan ke rawat inap setelah operasi.",
+      "target": ">= 80%",
+      "formula": "( Numerator / Denumerator ) x 100 %",
+      "instrumen": "Formulir  Kelengkapan Dokumen Handover"
+    },
+    {
+      "kode": "IMP RS 8",
+      "judul": "TERLAKSANANYA TIME OUT OPERASI",
+      "numerator": "Jumlah pelaksanaan Time Out  saat akan pelaksanaan operasi",
+      "denominator": "Jumlah semua  pasien yang menjalani operasi yang diobservasi dalam 1 bulan",
+      "target": "100%",
+      "formula": "(Numerator/denumerator) x 100 %",
+      "instrumen": "Formulir pemantauan pelaksanaan Time Out"
+    },
+    {
+      "kode": "IMN 6",
+      "judul": "PENUNDAAN OPERASI ELEKTIF",
+      "numerator": "Jumlah pasien yang jadwal operasinya tertunda lebih dari 1 jam",
+      "denominator": "Jumlah pasien operasi elektif",
+      "target": "<= 5%",
+      "formula": "(Jumlah pasien yang jadwal operasinya tertunda lebih dari 1 jam  /  Jumlah pasien operasi elektif)  x  100%",
+      "instrumen": "Formulir Penundaan Operasi Elektif"
+    }
+  ],
+  "IGD": [
+    {
+      "kode": "IMP-U1",
+      "judul": "Kepatuhan Pelaksanaan Triase IGD di shift pagi ( Jam 12.00- 14.00 WIB)",
+      "numerator": "Jumlah pasien IGD yang dilakukan triase dari jam 12.00 - 14.00 WIB (pada hari senin dan sabtu) dalam 1 bulan",
+      "denominator": "Jumlah total pasien IGD dari jam 12.00-14.00 WIB (pada hari senin dan sabtu )  dalam 1 bulan",
+      "target": "80%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir Observasi Triase"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "Kelengkapan Billing Pasien Rawat Inap dari IGD",
+      "numerator": "semua nota pasien rawat inap dari IGD yang diinput lengkap",
+      "denominator": "semua pasien rawat inap dari IGD",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "data sekunder (EMR)"
+    }
+  ],
+  "INTENSIVE CARE": [
+    {
+      "kode": "IMP-U1",
+      "judul": "KETEPATAN PEMBERIAN DOSIS OBAT DRIP DI RUANG ICU-HCU",
+      "numerator": "Jumlah pemberian awal obat drip yang tepat dalam 1 bulan",
+      "denominator": "Jumlah seluruh pemberian awal obat drip dalam 1 bulan",
+      "target": "100 %",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form Pemberian Obat Drip"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "Terdokumentasinya Tindak lanjut dari balance cairan di Ruang Intensive Dewasa",
+      "numerator": "Jumlah EMR yang memiliki dokumentasi tindak lanjut balance cairan dalam 1 bulan.",
+      "denominator": "Jumlah semua EMR yang memerlukan tindak lanjut balance cairan dalam 1 bulan",
+      "target": "100 %",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "RME"
+    }
+  ],
+  "IRJ": [],
+  "IT": [
+    {
+      "kode": "IMP-U1",
+      "judul": "TERPENUHINYA KEAMANAN DATA PASIEN RUMAH SAKIT",
+      "numerator": "Jumlah akun yang tidak tersimpan di perangkat manapun dalam 1 bulan",
+      "denominator": "Jumlah akun pada tanggal 30 yang diperiksa dalam 1 bulan",
+      "target": "100 %",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form User ID yang Tersimpan Otomatis di Browser"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "SIMRS Avicenna pada Ruangan Rawat Inap",
+      "numerator": "Jumlah komplen Unit rawat inap",
+      "denominator": "jumlah unit rawat inap",
+      "target": "80%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Laporan Catatan Unit yang Komplen lambat"
+    }
+  ],
+  "K3LH": [
+    {
+      "kode": "IMP-U1",
+      "judul": "TERCAPAINYA STANDAR BAKU MUTU AIR PADA HASIL UJI MUTU AIR LIMBAH",
+      "numerator": "Jumlah parameter air limbah yang memenuhi persyaratan dalam 1 bulan",
+      "denominator": "Jumlah semua parameter air limbah yang di uji dalam 1 bulan",
+      "target": "100 %",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir Perbandingan Hasil Uji Mutu Air Limbah"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "Kepatuhan Pekerja lepas terhadap rekomendasi APD PCRA bangunan",
+      "numerator": "Jumlah item APD yang dipakai dalam 1 bulan",
+      "denominator": "Jumlah semua APD dalam satu bulan",
+      "target": "100 %",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Checklist kepatuhan tukang dan mandor"
+    }
+  ],
+  "KEAMANAN & TRANSPORTASI": [
+    {
+      "kode": "IMP-U1",
+      "judul": "KETERSEDIAAN KARTU VISITOR YANG LAYAK",
+      "numerator": "Jumlah kartu visitor yang tersedia dan layak saat pemeriksaan dalam 1 bulan",
+      "denominator": "Jumlah kartu visitor yang diperiksa dalam 1 bulan",
+      "target": "≥ 95%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir Kelayakan Kartu Visitor"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "KETEPATAN WAKTU PENJEMPUTAN DAN PENGANTARAN PASIEN",
+      "numerator": "Jumlah penjemputan/pengantaran tepat waktu",
+      "denominator": "Jumlah total permintaan transportasi pasien",
+      "target": "90%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir monitoring transportasi"
+    },
+    {
+      "kode": "IMU 3",
+      "judul": "Ketersediaan dan kelayakkan kartu visitor",
+      "numerator": "",
+      "denominator": "",
+      "target": "",
+      "formula": "",
+      "instrumen": ""
+    }
+  ],
+  "KEPEGAWAIAN": [
+    {
+      "kode": "IMP-U1",
+      "judul": "KETEPATAN WAKTU PENERBITAN PKS PERPANJANGAN KONTRAK",
+      "numerator": "Jumlah PKS Perpanjangan kontrak yang selesai sebelum PKS nya berakhir dalam 1 bulan.",
+      "denominator": "Jumlah PKS yang berakhir dalam 1 bulan",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir Data Karyawan"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "Pengelolaan Kearsipan File Karyawan",
+      "numerator": "Jumlah File yang dibuat, diterima untuk di arsipkan",
+      "denominator": "Jumlah file dalam 1 bulan",
+      "target": "100",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Data Pembuatan dan Pengiriman File Karyawan"
+    }
+  ],
+  "LA RUFFA": [
+    {
+      "kode": "IMU 2",
+      "judul": "Kepatuhan Bidan dalam Kelengkapan Dokumentasi Komunikasi Efektif SBAR",
+      "numerator": "Jumlah dokumentasi komunikasi efektif SBAR yang lengkap dalam 1 bulan",
+      "denominator": "Jumlah dokumentasi komunikasi efektif SBAR yang diperiksa dalam 1 bulan",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir kelengkapan Dokumentasi Komunikasi Efektif SBAR di Ruangan La Ruffa"
+    },
+    {
+      "kode": "IMP-U1",
+      "judul": "Kepatuhan Bidan dalam Kelengkapan Dokumentasi Resume Asuhan Keperawatan",
+      "numerator": "Jumlah resume asuhan keperawatan yang terisi lengkap dalam 1 bulan",
+      "denominator": "Jumlah pasien pulang dalam 1 bulan.",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Formulir Kelengkapan Resume Asuhan Keperawatan"
+    }
+  ],
+  "LABORATORIUM": [
+    {
+      "kode": "IMP-U1",
+      "judul": "KETEPATAN PELAPORAN HASIL LABORATORIUM",
+      "numerator": "Jumlah hasil labor ( identitas dan hasil ) di EMR yang tepat (tidak ada kompain) dalam satu bulan",
+      "denominator": "Jumlah hasil  pemeriksaan laboratorium dalam satu bulan",
+      "target": "100 %",
+      "formula": "(Numerator/Denomirator )x100%",
+      "instrumen": "Formulir Pencatatan Ketepatan Pelaporan Hasil Laboratorium"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "PELAPORAN HASIL KRITIS LABORATORIUM  ≤30 menit",
+      "numerator": "Jumlah hasil kritis laboratorium yang didilaporkan ≤ 30 menit dalam satu bulan",
+      "denominator": "Jumlah hasil kritis laboratorium yang diobservasi dalam satu bulan",
+      "target": "100 %",
+      "formula": "(Numerator/Denomirator )x100%",
+      "instrumen": "Formulir pencatan hasil kritis Laboratorium"
+    },
+    {
+      "kode": "IMU 3",
+      "judul": "PENCATATAN PENDISTRIBUSIAN DARAH",
+      "numerator": "Jumlah kantong darah dalam satu bulan",
+      "denominator": "Jumlah kantong darah dalam satu bulan",
+      "target": "100%",
+      "formula": "(Numerator/Denomirator )x100%",
+      "instrumen": "Form pengumpulan data"
+    }
+  ],
+  "LOGISTIK": [
+    {
+      "kode": "IMP-U1",
+      "judul": "KESESUAIAN  FISIK BARANG DENGAN KARTU STOK DAN SIM RS",
+      "numerator": "Jumlah Item yang sesuai antara kartu stok-fisik-SIM RS saat diperiksa dalam satu bulan",
+      "denominator": "Jumlah semua item yang diperiksa dalam satu bulan",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form Kesesuaian Stock"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "TERSEDIANYA BARANG YANG AKAN DIBERIKAN KE SELURUH RUANGAN SELAMA TAHUN 2026",
+      "numerator": "Jumlah  stok Item fisik barang  saat diperiksa dalam satu bulan",
+      "denominator": "Jumlah semua item yang diperiksa dalam satu bulan",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form Kesesuaian Stock"
+    }
+  ],
+  "PASTORAL CARE": [
+    {
+      "kode": "IMU 2",
+      "judul": "KETEPATAN WAKTU PENDAMPING ROHANI  DALAM MEMBERIKAN PELAYANAN KEPADA PASIEN",
+      "numerator": "Jumlah pelayanan rohani yang diberikan < 1 jam setelah permintaan diterima",
+      "denominator": "Jumlah seluruh permintaan pelayanan rohani dalam periode pengukuran",
+      "target": "> 85 %",
+      "formula": "(Jumlah pelayanan tepat waktu/ Jumlah permintaan layanan ) x 100%",
+      "instrumen": "Formulir waktu permintaan dan waktu pelayanan"
+    }
+  ],
+  "PEMASARAN": [],
+  "PEMELIHARAAN SARANA MEDIS": [
+    {
+      "kode": "IMP-U1",
+      "judul": "TERPENUHINYA RESPON TIME LAPORAN KERUSAKAN ALAT MEDIS",
+      "numerator": "Jumlah laporan kerusakan alat medis yang direspon maksimal 15 menit sejak laporan dibuat dalam 1 bulan",
+      "denominator": "Jumlah seluruh laporan kerusakan alat medis dalam 1 bulan.",
+      "target": "90%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form Rekapitulasi Laporan Kerusakan"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "Terpenuhinya pemeliharaan alat Medis yang dikategorikan resiko tinggi",
+      "numerator": "Jumlah peralatan medis beresiko tinggi yang dipelihara tepat waktu dalam satu bulan",
+      "denominator": "Jumlah seluruh peralatan medis beresiko tinggi yang harus dipelihara dalam satu bulan",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form jadwal pemeliharaan peralatan medis"
+    }
+  ],
+  "PEMELIHARAAN SARANA UMUM": [
+    {
+      "kode": "IMP-U1",
+      "judul": "PELAKSANAAN PEMELIHARAAN MESIN BLOWER",
+      "numerator": "Jumlah pemeliharaan mesin blower yang sesuai dengan jadwal dalam 1 bulan",
+      "denominator": "Jumlah pemeliharaan mesin blower yang terjadwal dalam 1 bulan",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form Pemeliharaan Mesin Blower IPAL."
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "Pemeliharaan mesin lift",
+      "numerator": "Jumlah pemeliharaan mesin blower yang sesuai dengan jadwal dalam 1 bulan",
+      "denominator": "Jumlah pemeliharaan mesin blower yang terjadwal dalam 1 bulan",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form Pemeliharaan Mesin Blower IPAL."
+    }
+  ],
+  "RADIOLOGI": [
+    {
+      "kode": "IMP-U1",
+      "judul": "WAKTU TUNGGU HASIL PEMERIKSAAN RONTGEN FOTO THORAX PASIEN TB ≤ 3 JAM",
+      "numerator": "Pasien TB yang mendapatkan hasil <= 30  menit dalam 1 bulan",
+      "denominator": "Semua pasien TB yang Rontgen Thorax dalam 1 bulan",
+      "target": "100%",
+      "formula": "(Numerator/Denominator)x100%",
+      "instrumen": "Form Pemeriksaan TB"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "KEPUASAN PELANGGAN >=80%",
+      "numerator": "pencatatan kepuasan pasien dalam 1 bulan",
+      "denominator": "Total sample dalam 1 bulan",
+      "target": "100%",
+      "formula": "(numerator/Denominator)x100%",
+      "instrumen": "Mencatat data dari form pengisian survei kepuasan pasien,"
+    },
+    {
+      "kode": "IMU 3",
+      "judul": "KETEPATAN PEMERIKSAAN RONTGEN TANPA PENGULANGAN",
+      "numerator": "jumlah ketepatan penginputan foto rontgen dalam 1 bulan",
+      "denominator": "semua pasien rontgen di Instalasi Radiologi dalam 1 bulan",
+      "target": "100%",
+      "formula": "Numerator/Denominator x 100%",
+      "instrumen": "Formulir ketepatan pengerjaan rontgen di Instalasi Radiologi"
+    },
+    {
+      "kode": "IMU 4",
+      "judul": "KETEPATAN PENGINPUTAN FOTO RONTGEN DI ATHACHEMENT",
+      "numerator": "jumlah ketepatan penginputan foto rontgen dalam 1 bulan",
+      "denominator": "semua pasien rontgen di Instalasi Radiologi dalam 1 bulan",
+      "target": "100%",
+      "formula": "Numerator/Denominator x 100%",
+      "instrumen": "Formulir kesalahan penginputan foto rontgen di Instalasi Radiologi"
+    },
+    {
+      "kode": "IMU 5",
+      "judul": "PELAKSANAAN EKSPERTISE DILAKUKAN OLEH DOKTER SPESIALIS RADIOLOGI",
+      "numerator": "Hasil bacaan Radiologi dibacakan oleh dokter Radiologi dalam 1 bulan",
+      "denominator": "Semua pasien Radiologi dalam 1 bulan",
+      "target": "100%",
+      "formula": "(numerator/Denominator)x100%",
+      "instrumen": "Mengcopy data dari EMR hasil bacaan dokter radiologi"
+    }
+  ],
+  "REHABILITASI MEDIK": [
+    {
+      "kode": "IMP-U1",
+      "judul": "Terlaksananya Reschedule Kedatangan Pasien Sesuai Jadwal",
+      "numerator": "Jumlah pasien yang datang sesuai Reschedule",
+      "denominator": "Jumlah pasien yang datang",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "FORM RESCHEDULE MUTU REHAB"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "Terlaksananya Early Warning Score di Rehabilitasi Medik",
+      "numerator": "Jumlah pasien yang sudah dinilai lengkap EWS nya yang didokumentasikan dalam SOAP",
+      "denominator": "Jumlah pasien yang datang dan menjadi sample",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "EMR"
+    }
+  ],
+  "REKAM MEDIS": [
+    {
+      "kode": "IMP-U1",
+      "judul": "Penerapan nomor rekam medis tunggal saat registrasi pasien rawat jalan",
+      "numerator": "Jumlah Nomor Rekam Medis tunggal pada pasien Rawat jalan dalam 1 bulan.",
+      "denominator": "Jumlah pasien baru Rawat jalan dalam 1 bulan",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form Penerapan Nomor Rekam Medis Tunggal"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "Kelengkapan data Pendidikan diregistrasi Rawat jalan",
+      "numerator": "Jumlah pasien dari sampel yang memiliki data pendidikan lengkap dalam satu bulan",
+      "denominator": "Jumlah sampel pasien rawat jalan yang diobservasi dalam satu bulan",
+      "target": "100%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form Kelengkapan data Pendidikan diregistrasi Rawat jalan"
+    },
+    {
+      "kode": "IMU 3",
+      "judul": "Kepatuhan Identifikasi Pasien",
+      "numerator": "Jumlah pemberi pelayanan yg melakukan identifikasi pasien secara benar dalam periode observasi.",
+      "denominator": "Jumlah pemberi pelayanan yg diobservasi dalam periode observasi.",
+      "target": "100%",
+      "formula": "( Jlh pemberi pelayanan yg melakukan identifikasi pasien scr benar dlm periode /  Jlh pemberi pelayanan yg diobservasi dlm periode observasi ) x 100%",
+      "instrumen": "Formulir Observasi Kepatuhan Identifikasi Pasien."
+    }
+  ],
+  "SUDIRMAN": [],
+  "THAMRIN": [],
+  "TU": [
+    {
+      "kode": "IMP-U1",
+      "judul": "KETEPATAN PENGIRIMAN LAPORAN KEPADA LEMBAGA PEMERINTAHAN.",
+      "numerator": "Jumlah laporan yang tepat waktu dalam 1 bulan",
+      "denominator": "Semua laporan atau data yang diminta oleh Lembaga Pemerintahan dalam 1 bulan.",
+      "target": "90%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form Pengiriman Laporan"
+    },
+    {
+      "kode": "IMU 2",
+      "judul": "Selesainya usulan pembuatan PKS dengan Pihak Ketiga sesuai Standar",
+      "numerator": "Jumlah PKS dengan Pihak Ketiga yang telah selesai dalam 3 hari sejak diterima dalam 1 bulan",
+      "denominator": "Semua PKS dengan Pihak Ketiga yang hendak di perpanjang dalam 1 bulan",
+      "target": "90%",
+      "formula": "( Numerator/Denomerator) x 100%",
+      "instrumen": "Form rekapan pembuatan PKS dengan Pihak Ketiga"
+    }
+  ]
+}

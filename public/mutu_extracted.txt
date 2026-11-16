@@ -1,0 +1,62 @@
+﻿INDIKATOR MUTU (IMUT)
+PELAPORAN IKP (Insiden Keselamatan Pasien)
+MANAJEMEN RESIKO (MANRISK)
+HVA : Hazard Vulnerability Analysis (Analisis Kerentanan terhadap Bahaya/Bencana).
+JUKNIS (PETUNJUK TEKNIS)
+Indikator Mutu
+Manajemen Resiko
+HVA (Hazard Vulnerability Analysis)
+INDIKATOR MUTU
+Tenaga Kerja Unit
+Pemilihan
+Profil 
+Form Pengumpul Data
+Validasi
+Data dan Analisis
+PDCA/PDSA
+Data
+Table Pemilihan
+Skala Prioritas
+Daftar IMUT yang ditetapkan
+Jenis dan Table Profil. 
+Pilihan Jenis : IMP-RS, IMN, IMP-U, IMU, SPM. Data penentu rekap.
+Validasi Table
+Table, RTL : judul, bulan, standar, numerator, denumerator, capaian (berdasarkan grafik warna)
+RTL : judul, analisa (), penyebab, RTL, PJ RTL, pelaksana dan evaluasi, bukti.
+PDCA, PDSA
+Tenaga Kerja Rumah Sakit/Medis
+Data Capaian : IMP-RS, IMN, IMP-U, SPM.
+RTL (Rencana Tindak Lanjut) : IMP-RS, IMN, IMP-U, SPM.
+PDCA (PDCA (Plan-Do-Check-Act)/PDSA (Plan-Do-Study-Act)
+Agregasi
+Supervisi : IMUT, RTL
+IKP (Insiden Keselamatan Pasien)
+Data : No, No. Laporan, Tanggal Laporan, Tanggal Kejadian, Tipe Insiden (Pilihan), Prosedur Medis, Insiden, Jenis (RTL), Grading, Unit Pelapor, Unit Terkait, Penyelesaian (Investigasi RCA (Root Cause Analysis)), Tanggal Penugasan/Tanggal Dilaporkan, Tanggal Selesai RCA/AAM (Analisis Akar Masalah), Bukti RTL.
+Pemetaan & Grafik. Sajikan dalam table
+Tipe Insiden
+Jenis Insiden
+Grading
+Unit Pelapor
+Tipe Insiden - Grading
+Tipe Insiden – Jenis
+Penyelesaian/Investigasi RCA
+MANRISK (Manajemen Resiko)
+Tenaga Kerja Unit
+Tenaga Kerja Rumah Sakit/Medis
+Daftar Resiko 
+Identifikasi Resiko
+Analisis Resiko
+Profil Resiko 
+Pengendalian
+Rencana Penanganan
+Pemetaan
+Laporan
+HVA (Hazard Vulnerability Analysis)
+Tenaga Kerja Unit
+Tenaga Kerja Rumah Sakit/Medis
+Natural Hazard
+Technological
+Human
+Hazardous
+Summary
+Scoring dan penetapan prioritas

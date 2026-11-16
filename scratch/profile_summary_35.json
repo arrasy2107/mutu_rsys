@@ -1,0 +1,523 @@
+[
+  {
+    "file": "ADE IRMA.xlsx",
+    "unit": "ADE IRMA",
+    "profil_found": false,
+    "judul": "",
+    "num": "",
+    "den": "",
+    "target": "",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Formulir observasi gelang identitas | Formulir Ketercukupan tenaga",
+      "Tanggal | Nomor RM | Jumlah pasien | Jelas terbaca | Tidak jelas Terbaca | Observer | No | Tanggal audit | No.RM | Nama pasien | Elemen 1\n(jam) | Elemen 2\n(input) | Elemen 3\n(output) | Elemen 4\n(Hutingan) | Hasil akhir\n(Tepat 1, tidak 0) | Keterangan | Tanggal | Jumlah pasien | Jumlah Perawat",
+      "1 | 46041 | tidak ada sesuai kriteria pasien | 1"
+    ]
+  },
+  {
+    "file": "AKRI.xlsx",
+    "unit": "AKRI",
+    "profil_found": true,
+    "judul": "TERLAKSANANYA PERCEPATAN WAKTU TUNGGU PASIEN PULANG",
+    "num": "Jumlah pasien pulang tanpa konfirmasi ulang dari rawat inap ",
+    "den": "Jumlah pasien pulang setiap hari",
+    "target": "95%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Formulir Verifikasi Pasien Rawat Inap",
+      "Ket : JLH = Jumlah pasien ranap,   V = verifikasi terlaksana",
+      "TGL | Januari | Februari | Maret | April | Mei | Juni | Juli | Agustus | Sept | Okt | Nov | Des"
+    ]
+  },
+  {
+    "file": "AKUTANSI.xlsx",
+    "unit": "AKUTANSI",
+    "profil_found": true,
+    "judul": "Ketepatan waktu Realisasi pendingan jasa medis BPJS Kesehatan",
+    "num": "jumlah data pendingan jasa medis status layak selesai dikerjakan maksimal 4 hari kerja sejak data masuk",
+    "den": "jumlah data pendingan jasa medis status layak yang masuk saat bulan terkait",
+    "target": "100%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Formulir pelaksanaan verifikasi setoran kasir",
+      "TGL | Januari | Februari | Maret | April | Mei | Juni | Juli | Agustus | September | Oktober | November | Desember",
+      "Sesuai | Tidak sesuai | Sesuai | Tidak sesuai | Sesuai | Tidak sesuai | Sesuai | Tidak sesuai | Sesuai | Tidak sesuai | Sesuai | Tidak sesuai | Sesuai | Tidak sesuai | Sesuai | Tidak sesuai | Sesuai | Tidak sesuai | Sesuai | Tidak sesuai | Sesuai | Tidak sesuai | Sesuai | Tidak sesuai"
+    ]
+  },
+  {
+    "file": "BENDAHARA.xlsx",
+    "unit": "BENDAHARA",
+    "profil_found": true,
+    "judul": "Ketepatan pencatatan transaksi dana masuk ke rekening RS dari nota pembayaran pasien pribadi non tunai.",
+    "num": "Jumlah transaksi dana masuk ke rekening RS dari nota pembayaran pasien pribadi non tunai dalam dalam satu bulan yang tidak lengkap datanya",
+    "den": "Jumlah transaksi dana masuk ke rekening RS dari nota pembayaran pasien pribadi non tunai dalam dalam satu bulan",
+    "target": "100%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "mirip dengan sheet data & analisa, tapi pakai ket dan bahasa sendiri.",
+      "Form bukti pembayaran",
+      "Ketepatan | Jumlah | Ket Benar | Ket Salah"
+    ]
+  },
+  {
+    "file": "CASEMIX.xlsx",
+    "unit": "CASEMIX",
+    "profil_found": true,
+    "judul": "Kelengkapan Berkas Klaim Rawat Inap BPJS Kesehatan",
+    "num": "Jumlah data klaim rawat inap yang lengkap pada pengajuan klaim reguler dalam 1 bulan ",
+    "den": "Jumlah seluruh data klaim rawat inap dalam 1 bulan pada pengajuan klaim Reguler",
+    "target": "100%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Ketepatan Koding Pada Klaim BPJS Rawat Jalan di Casemix < 5%",
+      "Bulan | Tepat Koding | Seluruh klaim rawat jalan 1 bulan ",
+      "Januari  | 11096 | 11108"
+    ]
+  },
+  {
+    "file": "CUCI JAHIT.xlsx",
+    "unit": "CUCI JAHIT",
+    "profil_found": true,
+    "judul": "KETEPATAN WAKTU PENGANTARAN LAUNDRI PASIEN",
+    "num": "Jumlah semua laundri pasien yang diantar jam 06.00 - 12.00 dalam 1 bulan.",
+    "den": "jumlah semua  laundri pasien yang diantar ke Unit Cuci Jahit dalam 1 bulan.",
+    "target": "100 %",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Formulir Linen Masuk dan Keluar",
+      "Ket : INT= tulis 1 bila jumlah kain masuk dari ruang Intensive sesuai dengan yang diantar, 0 bila tidak sesuai, IBS = tulis 1 bila jumlah kain masuk dari ruang IBS sesuai dengan yang diantar, 0 bila tidak sesuai, JLH = Jumlah ruangan yang memasukkan kain dalam 1 hari.",
+      "Tgl | Januari | Februari | Maret | April | Mei | Juni | Juli | Agustus | September | Oktober | November | Desember"
+    ]
+  },
+  {
+    "file": "CUSTOMER CARE.xlsx",
+    "unit": "CUSTOMER CARE",
+    "profil_found": true,
+    "judul": "Ketepatan Waktu Respon Petugas Customer Care terhadap Permintaan Bantuan Pasien Prioritas dirawat jalan",
+    "num": "Jumlah respon bantuan pasien rawat jalan yang ditanggapi oleh petugas Customer Care ≤ 10 menit sejak laporan diterima dalam 1 bulan.",
+    "den": "Jumlah seluruh permintaan bantuan pasien rawat jalan yang diterima oleh petugas Customer Care dalam 1 bulan.",
+    "target": "≥ 80%",
+    "form_sheet": "FORM PENGUMPUL DATA 1",
+    "header_preview": [
+      "Formulir  Layanan Customer Care ",
+      "Ket : CC = jlh pasien yg dilayani petugas CC, S = jlh pasien yg dilayani Satpam, JLH = jumlah pasien yang dilayani",
+      "Tgl | JANUARI"
+    ]
+  },
+  {
+    "file": "DEWI SARTIKA.xlsx",
+    "unit": "DEWI SARTIKA",
+    "profil_found": true,
+    "judul": "Ketepatan PPJA/K.Tim melakukan Hand Over Antar Shiff secara SBAR",
+    "num": "Jumlah ketepatan melakukan hand over secara SBAR / pasien ",
+    "den": "Jumlah petugas PPJA/ K.Tim  tanggal 1-20 setiap bulan ",
+    "target": "90%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "JANUARI",
+      "Kepatuhan penginputan billing terapi insulin di Ruang Dewi Sartika | Kepatuhan melakukan verifikasi oleh PPJA/K.Tim pada pengkajian pasien baru di Ruang Dewi Sartika sesuai regulasi 1 x 24 jam | Ketepatan PPJA/K.Tim melakukan Hand Over Antar Shiff secara SBAR",
+      "No | Nama Pasien | RM  | Tindakan Billing  | Nama Petugas | TGL | Nama | Masuk  | RM | Verifikasi 1 x 24 Jam | Nama Petugas | NO  | Tanggal | Nama PPJA/K.Tim | Nama Pasien | No RM | S | B | A | R"
+    ]
+  },
+  {
+    "file": "DIKLIT.xlsx",
+    "unit": "DIKLIT",
+    "profil_found": true,
+    "judul": "Terlaksananya Proses tindaklanjut penginformasian ke unit kerja terkait Permohonan pelatihan yang masuk ke Diklat ",
+    "num": "Jumlah Pelatihan yang terinformasi tepat waktu",
+    "den": "Jumlah Pelatihan yang masuk ke Diklat",
+    "target": "100 %",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "1. Formulir Proses Kerja Diklat",
+      "No | Bulan | Jumlah IHT Dalam Bulan | Jumlah IHT yang ter Feedback",
+      "1 | Januari | 1 | 1"
+    ]
+  },
+  {
+    "file": "FARMASI RAJAL.xlsx",
+    "unit": "FARMASI RAJAL",
+    "profil_found": false,
+    "judul": "",
+    "num": "",
+    "den": "",
+    "target": "",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "KETEPATAN WAKTU TUNGGU PELAYANAN FARMASI  | KETEPATAN PENGISIAN ATURAN PAKAI OBAT DI EMR OLEH MEDIS | KEPATUHAN PENGGUNAAN FORMULARIUM NASIONAL",
+      "46266 | No | Nama Dokter | jumlah sampel  | Nama Pasien | Tgl Lahir Pasien | No. RM | Nama Obat | Dosis Obat | Aturan Pakai | Formularium Nasional | Generik  | Total (generik+ Fornas+ Non Generik+ non Formularium )",
+      "Standar Waktu  | Jumlah sampel  | Sesuai Waktu  | Total waktu  | 1 | IGD dan Poli Umum | 25 | 25 | 25 | 25 | IGD  | 8421 | 7878 | 18719"
+    ]
+  },
+  {
+    "file": "GIZI.xlsx",
+    "unit": "GIZI",
+    "profil_found": true,
+    "judul": "EVALUASI VISUAL COMSTOK MAKANAN PASIEN YANG TIDAK TERMAKAN",
+    "num": "Jumlah visual comstok makanan pasien yang tidak termakan disurvey 4x sebulan",
+    "den": "Jumlah visual comstok makanan pasien yang disajikan disurvey  4x sebulan",
+    "target": "< 20 %",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "FORMULIR PELABELAN PROTEIN HEWANI",
+      "PROTEIN HEWANI",
+      "Ket : JLH : jumlah protein hewani ( Total J = denominator ), TL : jumlah protein hewani yang tidak ada label, (Total L = numerator )"
+    ]
+  },
+  {
+    "file": "GUDANG UMUM.xlsx",
+    "unit": "GUDANG UMUM",
+    "profil_found": true,
+    "judul": "KETEPATAN PEMILIHAN GUDANG SAAT PENGENTRIAN BARANG",
+    "num": "Jumlah Faktur yang di Entri tanpa kesalahan",
+    "den": "Jumlah Semua Faktur yang di entri dalam satu bulan",
+    "target": "100%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": []
+  },
+  {
+    "file": "HERLINA.xlsx",
+    "unit": "HERLINA",
+    "profil_found": false,
+    "judul": "",
+    "num": "",
+    "den": "",
+    "target": "",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Formulir Pemberian Insulin di Ruangan Herlina",
+      "Tanggal 01-25 Jan 26 | Nilai | VALIDASI | oleh Juliawati",
+      "No | Tanggal | Identitas  | Petugas | ptgas 1 | ptgas 2 | ptgas 1 | ptgas 2"
+    ]
+  },
+  {
+    "file": "HOME CARE.xlsx",
+    "unit": "HOME CARE",
+    "profil_found": true,
+    "judul": "TINGKAT PELAKSANAAN HOME CARE SESUAI PERMINTAAN",
+    "num": "Jumlah pasien yang dilayani Home Care dalam 1 bulan",
+    "den": "Jumlah semua permintaan layanan Home Care dalam 1 bulan",
+    "target": "90%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "FORMULIR KEPUASAN PASIEN TERHADAP PETUGAS | FORM PELAKSANAN HOME CARE SESUAI PERMINTAAN",
+      "JANUARI 2026 | JANUARI 2026",
+      "TANGGAL | NAMA PASIEN  | ALAMAT | PELAYANAN H.CARE | PETUGAS | KETERANGAN | ISI KOMPLEN | PENANGGANAN\n KOMPLEN | TANGGAL\nPERMINTAAN/JAM\n | JAM RESPON \nTEAM | NAMA PASIEN  | ALAMAT | KEBUTUHAN/\nUntuk tgl,jam | KETERANGAN\nsetelah diberikan penjelasan HC"
+    ]
+  },
+  {
+    "file": "IBS.xlsx",
+    "unit": "IBS",
+    "profil_found": true,
+    "judul": "PENUNDAAN OPERASI ELEKTIF ",
+    "num": "Jumlah pasien yang jadwal operasinya tertunda lebih dari 1 jam",
+    "den": "Jumlah pasien operasi elektif",
+    "target": "<= 5%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "1. KELENGKAPAN LAPORAN ANESTESI",
+      "Ket : FT : Jlh laporan anestesi dokter full time yg lengkap, NFT : Jlh laporan anestesi dokter Non fulltime yang lengkap, JOF : Jumlah operasi dokter full time, JONF : Jumlah operasi dokter non full time.",
+      "Januari | Februari | Maret | April | Mei | Juni | Juli | Agustus | September | Oktober | November | Desember"
+    ]
+  },
+  {
+    "file": "IGD.xlsx",
+    "unit": "IGD",
+    "profil_found": true,
+    "judul": "Kelengkapan Billing Pasien Rawat Inap dari IGD",
+    "num": "semua nota pasien rawat inap dari IGD yang diinput lengkap",
+    "den": "semua pasien rawat inap dari IGD",
+    "target": "100%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Kepatuhan Pelaksanaan triase IGD di shift pagi ( Jam 12.00- 14.00 WIB) hari senin dan sabtu | Kelengkapan Billing Pasien Rawat Inap dari IGD",
+      "No | Hari | tgl | jumlah pasien 12-14 | RM pasien yg dilakukan triase | jumlah RM terlambat triase | pasien no void | % | No | tgl | nama pasien  | RM | Nota | % | adm | tanpa adm ",
+      "pasien no void | #DIV/0! | lengkap | tidak lengkap"
+    ]
+  },
+  {
+    "file": "INTENSIVE CARE.xlsx",
+    "unit": "INTENSIVE CARE",
+    "profil_found": true,
+    "judul": "Terdokumentasinya Tindak lanjut dari balance cairan di Ruang Intensive Dewasa",
+    "num": "Jumlah EMR yang memiliki dokumentasi tindak lanjut balance cairan dalam 1 bulan.",
+    "den": "Jumlah semua EMR yang memerlukan tindak lanjut balance cairan dalam 1 bulan",
+    "target": "100 %",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Form Ketepatan Pemberian Dosis Obat Drip di ruang ICU-HCU |  Form Terdokumentasinya Tindak lanjut dari balance cairan di Ruang Intensive Dewasa",
+      "(Isi : Ya = 1, Tidak = 0 ) | (Isi : Ya = 1, Tidak = 0 )",
+      "Bulan | No | No RM | Sesuai | Tidak Sesuai | Nilai | nama perawat | Petugas yg input data | Bulan | No | No RM | Ditindaklanjuti | Tidak ditindaklanjuti | Nilai | nama perawat | Petugas yg input data"
+    ]
+  },
+  {
+    "file": "IRJ.xlsx",
+    "unit": "IRJ",
+    "profil_found": false,
+    "judul": "",
+    "num": "",
+    "den": "",
+    "target": "",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "KETEPATAN WAKTU TUNGGU PELAYANAN FARMASI  | KETEPATAN PENGISIAN ATURAN PAKAI OBAT DI EMR OLEH MEDIS | KEPATUHAN PENGGUNAAN FORMULARIUM NASIONAL",
+      "46266 | No | Nama Dokter | jumlah sampel  | Nama Pasien | Tgl Lahir Pasien | No. RM | Nama Obat | Dosis Obat | Aturan Pakai | Formularium Nasional | Generik  | Total (generik+ Fornas+ Non Generik+ non Formularium )",
+      "Standar Waktu  | Jumlah sampel  | Sesuai Waktu  | Total waktu  | 1 | IGD dan Poli Umum | 25 | 25 | 25 | 25 | IGD  | 8421 | 7878 | 18719"
+    ]
+  },
+  {
+    "file": "IT.xlsx",
+    "unit": "IT",
+    "profil_found": true,
+    "judul": "SIMRS Avicenna pada Ruangan Rawat Inap",
+    "num": "Jumlah komplen Unit rawat inap",
+    "den": "jumlah unit rawat inap",
+    "target": "80%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "User ID yang Tersimpan Otomatis di Browser",
+      "No | User ID | Nama | Lokasi | IP address | Unit | Tanggal | Jam | Keterangan | Petugas | Validasi",
+      "1 | tiara | Tiara Zania , Amd Kep | IRJ | 10.99.100.25 | IRJ | 28 Januari 2026 | 0.39374999999999999 | TAB 1 | Rinto | Gio"
+    ]
+  },
+  {
+    "file": "K3LH.xlsx",
+    "unit": "K3LH",
+    "profil_found": true,
+    "judul": "Kepatuhan Pekerja lepas terhadap rekomendasi APD PCRA bangunan",
+    "num": "Jumlah item APD yang dipakai dalam 1 bulan",
+    "den": "Jumlah semua APD dalam satu bulan",
+    "target": "100 %",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "FORM PENGUMPULAN DATA HASIL UJI MUTU AIR LIMBAH BULANAN",
+      "Ket :\n\n |  *Isi angka 1 bila sesuai standar, angka 0 bila diluar nilai normal, x bila tidak ada pemeriksaan.",
+      "* Ipal 1 : Ipal gedung utama"
+    ]
+  },
+  {
+    "file": "KEAMANAN & TRANSPORTASI.xlsx",
+    "unit": "KEAMANAN & TRANSPORTASI",
+    "profil_found": true,
+    "judul": "Ketersediaan dan kelayakkan kartu visitor",
+    "num": "Jumlah penjemputan/pengantaran tepat waktu",
+    "den": "Jumlah total permintaan transportasi pasien",
+    "target": "90%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "FORMULIR | FORMULIR MONITORING TRANSPORTASI",
+      "KELAYAKAN KARTU VISITOR | KETEPATAN WAKTU PENJEMPUTAN DAN PENGANTARAN PASIEN",
+      "TAHUN 2026 | JANUARI 2026"
+    ]
+  },
+  {
+    "file": "KEPEGAWAIAN.xlsx",
+    "unit": "KEPEGAWAIAN",
+    "profil_found": true,
+    "judul": "Pengelolaan Kearsipan File Karyawan",
+    "num": "Jumlah File yang dibuat, diterima untuk di arsipkan",
+    "den": "Jumlah file dalam 1 bulan",
+    "target": "100",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Formulir Data karyawan",
+      "Sudah Acc Dir | Blm Acc Dir | Total PKS yg berakhir | Total PKS yg berakhir",
+      "Tepat Waktu | Terlambat"
+    ]
+  },
+  {
+    "file": "LA RUFFA.xlsx",
+    "unit": "LA RUFFA",
+    "profil_found": true,
+    "judul": "Kepatuhan Bidan dalam Kelengkapan Dokumentasi Resume Asuhan Keperawatan",
+    "num": "Jumlah resume asuhan keperawatan yang terisi lengkap dalam 1 bulan",
+    "den": "Jumlah pasien pulang dalam 1 bulan.",
+    "target": "100%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Kepatuhan Kelengkapan Pengisian Resume Asuhan Keperawatan | Kepatuhan Bidan Dalam Kelengkapan Pengisian SBAR",
+      "No | Tanggal | Nama Pasien | RM | Nama Bidan | Belum di kerjakan | Dikerjakan | Total Jumlah Keseluruhan | KET | Total Persen Keseluruhan | No | Tanggal | Nama Pasien | NO RM | Nama Bidan | Kelengkapan | Total yang sesuai | Total Jumlah Keseluruhan | KET | Total Persen Keseluruhan",
+      "Lengkap | Tidak lengkap | S | B | A | R"
+    ]
+  },
+  {
+    "file": "LABORATORIUM.xlsx",
+    "unit": "LABORATORIUM",
+    "profil_found": true,
+    "judul": "PENCATATAN PENDISTRIBUSIAN DARAH",
+    "num": "Jumlah kantong darah dalam satu bulan ",
+    "den": "Jumlah kantong darah dalam satu bulan ",
+    "target": "100%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Formulir Pencatatan Ketepatan Pelaporan Hasil Laboratorium ",
+      "Ket : J = Jumlah pemeriksaan ( Total J = denominator ), T : Jumlah pemeriksaan yang tepat ( Total T = numerator ), K : Jumlah komplain yg terbukti salah input.",
+      "Tgl | Jan | Feb | Mar | Apr | Mei | Jun | Jul | Agust | Sept | Okt | Nov | Des"
+    ]
+  },
+  {
+    "file": "LOGISTIK.xlsx",
+    "unit": "LOGISTIK",
+    "profil_found": true,
+    "judul": "TERSEDIANYA BARANG YANG AKAN DIBERIKAN KE SELURUH RUANGAN SELAMA TAHUN 2026",
+    "num": "Jumlah  stok Item fisik barang  saat diperiksa dalam satu bulan ",
+    "den": "Jumlah semua item yang diperiksa dalam satu bulan",
+    "target": "100%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Formulir Form Kesesuaian stock dalam sistim di Sim RS dengan fisik stock di gudang",
+      "BULAN : JANUARI 2026",
+      "NO | Tgl | Nama Barang | Kartu Stok  | Stok SIM RS | Fisik barang | sesuai  | tidak sesuai | kesimpulan "
+    ]
+  },
+  {
+    "file": "PASTORAL CARE.xlsx",
+    "unit": "PASTORAL CARE",
+    "profil_found": true,
+    "judul": "KETEPATAN WAKTU PENDAMPING ROHANI  DALAM MEMBERIKAN PELAYANAN KEPADA PASIEN",
+    "num": "Jumlah pelayanan rohani yang diberikan < 1 jam setelah permintaan diterima",
+    "den": "Jumlah seluruh permintaan pelayanan rohani dalam periode pengukuran",
+    "target": "> 85 %",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "FORMAT TERLAKSANANYA FEEDBACK PENDOKUMENTASIAN PELAYANAN ROHANI | FORMAT KETEPATAN WAKTU PENDAMPING ROHANI DALAM MEMBERIKAN PELAYANAN KEPADA PASIEN",
+      "TGL | NAMA PASIEN | PENDOKUMENTASIAN PADA  PPA  NOTE | PENDOKUMENTASIAN PADA  PPA  NOTE | RUANGAN | PETUGAS | KETERANGAN | TGL | NAMA PASIEN | PENDOKUMENTASIAN PADA  PPA  NOTE | RUANGAN | PETUGAS | KETERANGAN",
+      "46023 | 46023"
+    ]
+  },
+  {
+    "file": "PEMASARAN.xlsx",
+    "unit": "PEMASARAN",
+    "profil_found": false,
+    "judul": "",
+    "num": "",
+    "den": "",
+    "target": "",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "FORMULIR KEGIATAN PROMOSI",
+      "Bulan | Kegiatan I | Kegiatan II | Kegiatan III | Kegiatan IV | Total Terlaksana | Jumlah Jadwal tanpa kendala pihak 3 | Data jadwal yg terkendala pihak ke 3",
+      "Terlaksana | Terlaksana | Terlaksana | Terlaksana | Jlh | Alasan"
+    ]
+  },
+  {
+    "file": "PEMELIHARAAN SARANA MEDIS.xlsx",
+    "unit": "PEMELIHARAAN SARANA MEDIS",
+    "profil_found": true,
+    "judul": "Terpenuhinya pemeliharaan alat Medis yang dikategorikan resiko tinggi",
+    "num": "Jumlah peralatan medis beresiko tinggi yang dipelihara tepat waktu dalam satu bulan",
+    "den": "Jumlah seluruh peralatan medis beresiko tinggi yang harus dipelihara dalam satu bulan",
+    "target": "100%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Form Rekapitulasi Laporan Kerusakan",
+      "Ket : <15' = laporan kerusakan yg direspon maksimal dalam 15 menit, JLH = Jumlah laporan kerusakan almed yg sesuai kriteria .",
+      "Tgl | Jan | Feb | Mar | Apr | Mei | Jun | Jul | Agust | Sept | Okt | Nov | Des"
+    ]
+  },
+  {
+    "file": "PEMELIHARAAN SARANA UMUM.xlsx",
+    "unit": "PEMELIHARAAN SARANA UMUM",
+    "profil_found": true,
+    "judul": "Pemeliharaan mesin lift",
+    "num": "Jumlah pemeliharaan mesin blower yang sesuai dengan jadwal dalam 1 bulan",
+    "den": "Jumlah pemeliharaan mesin blower yang terjadwal dalam 1 bulan",
+    "target": "100%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Form. Pemeliharaan mesin Blower IPAL. | Form. Pemeliharaan mesin LIFT",
+      "No | Bulan | Terlaksana | Jumlah Jadwal | No | Bulan | Terlaksana | Jumlah Jadwal",
+      "1 | Januari | 2 | 3 | 1 | Januari | 3 | 4"
+    ]
+  },
+  {
+    "file": "RADIOLOGI.xlsx",
+    "unit": "RADIOLOGI",
+    "profil_found": true,
+    "judul": "PELAKSANAAN EKSPERTISE DILAKUKAN OLEH DOKTER SPESIALIS RADIOLOGI",
+    "num": "Hasil bacaan Radiologi dibacakan oleh dokter Radiologi dalam 1 bulan",
+    "den": "Semua pasien Radiologi dalam 1 bulan",
+    "target": "100%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Form Pemeriksaan TB",
+      "Ket : Jlh= jumlah pemeriksaan thorax psn TB dengan klinis TB, =<3 jam= pemeriksaan yang memenuhi standar waktu, Eks= jumlah pemeriksaan tanpa klinis TB",
+      "46023"
+    ]
+  },
+  {
+    "file": "REHABILITASI MEDIK.xlsx",
+    "unit": "REHABILITASI MEDIK",
+    "profil_found": true,
+    "judul": "Terlaksananya Early Warning Score di Rehabilitasi Medik ",
+    "num": "Jumlah pasien yang sudah dinilai lengkap EWS nya yang didokumentasikan dalam SOAP",
+    "den": "Jumlah pasien yang datang dan menjadi sample",
+    "target": "100%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "List Reschedule Pasien ",
+      "Tanggal | No | Nama | RM | Terapi Ke | Drop Out",
+      "1 | 2 | 3 | 4 | Yes | No"
+    ]
+  },
+  {
+    "file": "REKAM MEDIS.xlsx",
+    "unit": "REKAM MEDIS",
+    "profil_found": true,
+    "judul": "Kepatuhan Identifikasi Pasien ",
+    "num": "Jumlah pemberi pelayanan yg melakukan identifikasi pasien secara benar dalam periode observasi.",
+    "den": "Jumlah pemberi pelayanan yg diobservasi dalam periode observasi.",
+    "target": "100%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Form Penerapan Nomor Rekam Medis Tunggal ",
+      "Tgl | Januari | Februari | Maret | April | Mei | Juni | Juli | Agustus | September | Oktober | November | Desember",
+      "Jlh | Tunggal | Jlh | Tunggal | Jlh | Tunggal | Jlh | Tunggal | Jlh | Tunggal | Jlh | Tunggal | Jlh | Tunggal | Jlh | Tunggal | Jlh | Tunggal | Jlh | Tunggal | Jlh | Tunggal | Jlh | Tunggal"
+    ]
+  },
+  {
+    "file": "SUDIRMAN.xlsx",
+    "unit": "SUDIRMAN",
+    "profil_found": false,
+    "judul": "",
+    "num": "",
+    "den": "",
+    "target": "",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "FORMULIR KETEPATAN DOKUMENTASI KOMUNIKASI SBAR | FORMULIR KETIDAKSTABILAN JARINGAN INTERNET ",
+      "NO  | Tanggal | NO RM  | Tepat | Tidak Tepat | Nama Perawat  | NO  | Hari | Tanggal | Komplain ",
+      "1 | 46024 | 00-47-22-61  | √ | Ns Silvia Putri Z | 1 | Senin  | 46034 | Saat TT di kamar VIP 6- 14 Jaringan hilang timbul"
+    ]
+  },
+  {
+    "file": "THAMRIN.xlsx",
+    "unit": "THAMRIN",
+    "profil_found": false,
+    "judul": "",
+    "num": "",
+    "den": "",
+    "target": "",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "FORMULIR KETEPATAN DOKUMENTASI KOMUNIKASI SBAR | FORMULIR KETIDAKSTABILAN JARINGAN INTERNET ",
+      "NO  | Tanggal | NO RM  | Tepat | Tidak Tepat | Nama Perawat  | NO  | Hari | Tanggal | Komplain ",
+      "1 | 46024 | 00-47-22-61  | √ | Ns Silvia Putri Z | 1 | Senin  | 46034 | Saat TT di kamar VIP 6- 14 Jaringan hilang timbul"
+    ]
+  },
+  {
+    "file": "TU.xlsx",
+    "unit": "TU",
+    "profil_found": true,
+    "judul": "Selesainya usulan pembuatan PKS dengan Pihak Ketiga sesuai Standar",
+    "num": "Jumlah PKS dengan Pihak Ketiga yang telah selesai dalam 3 hari sejak diterima dalam 1 bulan",
+    "den": "Semua PKS dengan Pihak Ketiga yang hendak di perpanjang dalam 1 bulan",
+    "target": "90%",
+    "form_sheet": "FORM PENGUMPUL DATA",
+    "header_preview": [
+      "Form Pengiriman Laporan",
+      "Laporan yg ssi kriteria | Lap tdk ssi kriteria | Total lap",
+      "Jlh | Tepat waktu"
+    ]
+  }
+]

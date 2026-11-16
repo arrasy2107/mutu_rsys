@@ -1,0 +1,264 @@
+
+UNIT: Ade Irma (ADE IRMA.xlsx) - 3 indicators:
+  - [>= 100.0%] KEJELASAN GELANG IDENTITAS PASIEN SAAT DILAKUKAN PROSEDUR KEPERAWATAN DI RUANG ADE IRMA
+    Months: 10 months recorded.
+  - [>= 80.0%] Ketepatan Dokumentasi Fluid Balance (Balans Cairan)
+    Months: 10 months recorded.
+  - [>= 90.0%] Ketercukupan tenaga di ruangan AI
+    Months: 0 months recorded.
+
+UNIT: AKRI (AKRI.xlsx) - 2 indicators:
+  - [>= 95.0%] TERLAKSANANYA VERIFIKASI BILLING HARIAN
+    Months: 12 months recorded.
+  - [>= 95.0%] TERLAKSANANYA PERCEPATAN WAKTU TUNGGU PASIEN PULANG
+    Months: 9 months recorded.
+
+UNIT: Akuntansi (AKUTANSI.xlsx) - 2 indicators:
+  - [>= 100.0%] KETEPATAN WAKTU PELAKSANAAN VERIFIKASI SETORAN KASIR
+    Months: 12 months recorded.
+  - [>= 100.0%] Ketepatan waktu Realisasi pendingan jasa medis BPJS Kesehatan
+    Months: 9 months recorded.
+
+UNIT: Bendahara (BENDAHARA.xlsx) - 2 indicators:
+  - [>= 100.0%] KETEPATAN DATA PENERIMA PEMBAYARAN TRANSAKSI MELALUI TRANSFER
+    Months: 12 months recorded.
+  - [>= 100.0%] Ketepatan pencatatan transaksi dana masuk ke rekening RS dari nota pembayaran pasien pribadi non tunai.
+    Months: 12 months recorded.
+
+UNIT: Casemix (CASEMIX.xlsx) - 2 indicators:
+  - [>= 99.0%] KETEPATAN KODING KLAIM BPJS RAJAL PADA PEMERIKSAAN INTERNAL
+    Months: 9 months recorded.
+  - [>= 100.0%] Kelengkapan Berkas Klaim Rawat Inap BPJS Kesehatan
+    Months: 8 months recorded.
+
+UNIT: Cuci Jahit (CUCI JAHIT.xlsx) - 2 indicators:
+  - [>= 80.0%] KETEPATAN LINEN MASUK DAN KELUAR
+    Months: 12 months recorded.
+  - [>= 100.0%] KETEPATAN WAKTU PENGANTARAN LAUNDRI PASIEN
+    Months: 12 months recorded.
+
+UNIT: Customer Care (CUSTOMER CARE.xlsx) - 2 indicators:
+  - [>= 70.0%] TERPENUHINYA LAYANAN CUSTOMER CARE DI RAWAT JALAN
+    Months: 10 months recorded.
+  - [>= 80.0%] Ketepatan Waktu Respon Petugas Customer Care terhadap Permintaan Bantuan Pasien Prioritas dirawat jalan
+    Months: 10 months recorded.
+
+UNIT: Dewi Sartika (DEWI SARTIKA.xlsx) - 3 indicators:
+  - [>= 100.0%] Kepatuhan penginputan billing terapi insulin di Ruang Dewi Sartika
+    Months: 9 months recorded.
+  - [>= 100.0%] Kepatuhan melakukan verifikasi oleh PPJA/K.Tim pada pengkajian pasien baru di Ruang Dewi Sartika sesuai regulasi 1 x 24 jam
+    Months: 9 months recorded.
+  - [>= 90.0%] Ketepatan PPJA/K.Tim melakukan Hand Over Antar Shiff secara SBAR
+    Months: 9 months recorded.
+
+UNIT: Diklit (DIKLIT.xlsx) - 2 indicators:
+  - [>= 100.0%] Terlaksananya Proses Pemberian Feedback dari Diklat untuk kelengkapan Pelaksanaan Pelatihan
+    Months: 9 months recorded.
+  - [>= 100.0%] Terlaksananya Proses tindaklanjut penginformasian ke unit kerja terkait Permohonan pelatihan yang masuk ke Diklat
+    Months: 12 months recorded.
+
+UNIT: Instalasi Farmasi Rawat Jalan (FARMASI.xlsx) - 5 indicators:
+  - [>= 80.0%] KELENGKAPAN EDUKASI TERINTEGRASI OLEH APOTEKER DI RAWAT INAP
+    Months: 9 months recorded.
+  - [>= 85.0%] KETEPATAN WAKTU TUNGGU PELAYANAN FARMASI
+    Months: 10 months recorded.
+  - [>= 100.0%] KETEPATAN PENGISIAN ATURAN PAKAI OBAT DI EMR OLEH MEDIS
+    Months: 9 months recorded.
+  - [>= 100.0%] KEPATUHAN PENYIMPANAN OBAT HIGH ALERT DI IBS
+    Months: 10 months recorded.
+  - [>= 80.0%] (IMN) KEPATUHAN PENGGUNAAN FORMULARIUM NASIONAL
+    Months: 10 months recorded.
+
+UNIT: Instalasi Gizi (GIZI.xlsx) - 3 indicators:
+  - [>= 80.0%] KEPATUHAN PELABELAN PROTEIN HEWANI
+    Months: 12 months recorded.
+  - [>= 90.0%] JUMLAH BAHAN MAKANANAN HEWANI YANG KELUAR SESUAI FIFO
+    Months: 9 months recorded.
+  - [>= 20.0%] EVALUASI VISUAL COMSTOK MAKANAN PASIEN YANG TIDAK TERMAKAN
+    Months: 9 months recorded.
+
+UNIT: Gudang Umum (GUDANG UMUM.xlsx) - 1 indicators:
+  - [>= 100.0%] KETEPATAN PEMILIHAN GUDANG SAAT PENGENTRIAN BARANG
+    Months: 9 months recorded.
+
+UNIT: Herlina (HERLINA.xlsx) - 3 indicators:
+  - [>= 100.0%] Kepatuhan Dokumentasi double check insulin di Ruang Herlina
+    Months: 10 months recorded.
+  - [>= 100.0%] Ketepatan Dokumentasi SBAR sesuai SPO di Ruang Herlina
+    Months: 10 months recorded.
+  - [>= 100.0%] Kelengkapan verifikasi Edukasi oleh PPJA dan KT Ruang Herlina dalam 1x 24 jam
+    Months: 10 months recorded.
+
+UNIT: Home Care (HOME CARE.xlsx) - 2 indicators:
+  - [>= 100.0%] KEPUASAN PELANGGAN TERHADAP PETUGAS HOMECARE
+    Months: 10 months recorded.
+  - [>= 90.0%] TINGKAT PELAKSANAAN HOME CARE SESUAI PERMINTAAN
+    Months: 10 months recorded.
+
+UNIT: Instalasi Bedah Sentral (IBS.xlsx) - 7 indicators:
+  - [>= 100.0%] KELENGKAPAN PENGISIAN LAPORAN ANESTESI OLEH DOKTER ANESTESI FULL TIME.
+    Months: 9 months recorded.
+  - [>= 100.0%] KELENGKAPAN DATA BOOKINGAN
+    Months: 9 months recorded.
+  - [>= 95.0%] KETEPATAN WAKTU PEMBERIAN AB PROFILAKSIS SEBELUM OPERASI
+    Months: 9 months recorded.
+  - [>= 100.0%] KELENGKAPAN PENGISIAN LAPORAN ANESTESI NON FULL TIME
+    Months: 9 months recorded.
+  - [>= 80.0%] KELENGKAPAN DOKUMEN HANDOVER DARI IBS
+    Months: 9 months recorded.
+  - [>= 100.0%] TERLAKSANANYA TIME OUT OPERASI
+    Months: 9 months recorded.
+  - [<= 5.0%] PENUNDAAN OPERASI ELEKTIF
+    Months: 9 months recorded.
+
+UNIT: Instalasi Gawat Darurat (IGD.xlsx) - 2 indicators:
+  - [>= 80.0%] Kepatuhan Pelaksanaan Triase IGD di shift pagi ( Jam 12.00- 14.00 WIB)
+    Months: 9 months recorded.
+  - [>= 100.0%] Kelengkapan Billing Pasien Rawat Inap dari IGD
+    Months: 9 months recorded.
+
+UNIT: Intensive Care Unit (INTENSIVE CARE.xlsx) - 2 indicators:
+  - [>= 100.0%] KETEPATAN PEMBERIAN DOSIS OBAT DRIP DI RUANG ICU-HCU
+    Months: 8 months recorded.
+  - [>= 100.0%] Terdokumentasinya Tindak lanjut dari balance cairan di Ruang Intensive Dewasa
+    Months: 8 months recorded.
+
+UNIT: Instalasi Rawat Jalan (IRJ.xlsx) - 5 indicators:
+  - [>= 100.0%] Terlaksananya pendampingan praktek DPJP di Rawat Jalan
+    Months: 9 months recorded.
+  - [>= 100.0%] Terlaksananya pengkajian pasien baru di rawat jalan
+    Months: 9 months recorded.
+  - [>= 100.0%] Berkas penagihan rawat jalan lengkap
+    Months: 9 months recorded.
+  - [>= 76.61%] Kepuasan Pasien
+    Months: 9 months recorded.
+  - [>= 80.0%] Waktu Tunggu Rawat Jalan
+    Months: 10 months recorded.
+
+UNIT: IT (IT.xlsx) - 2 indicators:
+  - [>= 100.0%] TERPENUHINYA KEAMANAN DATA PASIEN RUMAH SAKIT
+    Months: 9 months recorded.
+  - [>= 80.0%] SIMRS Avicenna pada Ruangan Rawat Inap
+    Months: 9 months recorded.
+
+UNIT: K3LH (K3LH.xlsx) - 2 indicators:
+  - [>= 100.0%] TERCAPAINYA STANDAR BAKU MUTU AIR PADA HASIL UJI MUTU AIR LIMBAH
+    Months: 12 months recorded.
+  - [>= 100.0%] Kepatuhan Pekerja lepas terhadap rekomendasi APD PCRA bangunan
+    Months: 9 months recorded.
+
+UNIT: Keamanan & Transportasi (KEAMANAN & TRANSPORTASI.xlsx) - 3 indicators:
+  - [>= 95.0%] KETERSEDIAAN KARTU VISITOR YANG LAYAK
+    Months: 12 months recorded.
+  - [>= 90.0%] KETEPATAN WAKTU PENJEMPUTAN DAN PENGANTARAN PASIEN
+    Months: 9 months recorded.
+  - [>= 0.0%] 0
+    Months: 0 months recorded.
+
+UNIT: Kepegawaian (KEPEGAWAIAN.xlsx) - 2 indicators:
+  - [>= 100.0%] KETEPATAN WAKTU PENERBITAN PKS PERPANJANGAN KONTRAK
+    Months: 12 months recorded.
+  - [>= 100.0%] Pengelolaan Kearsipan File Karyawan
+    Months: 12 months recorded.
+
+UNIT: La Ruffa (LA RUFFA.xlsx) - 2 indicators:
+  - [>= 100.0%] Kepatuhan Bidan dalam Kelengkapan Dokumentasi Komunikasi Efektif SBAR
+    Months: 9 months recorded.
+  - [>= 100.0%] Kepatuhan Bidan dalam Kelengkapan Dokumentasi Resume Asuhan Keperawatan
+    Months: 9 months recorded.
+
+UNIT: Laboratorium (LABORATORIUM.xlsx) - 3 indicators:
+  - [>= 100.0%] KETEPATAN PELAPORAN HASIL LABORATORIUM
+    Months: 9 months recorded.
+  - [>= 100.0%] LAPOR HASIL KRITIS PEMERIKSAAN LABORATORIUM  ≤30 MENIT
+    Months: 9 months recorded.
+  - [>= 100.0%] PENCATATAN PENDISTRIBUSIAN DARAH
+    Months: 9 months recorded.
+
+UNIT: Logistik (LOGISTIK.xlsx) - 2 indicators:
+  - [>= 100.0%] KESESUAIAN  FISIK BARANG DENGAN KARTU STOK DAN SIM RS
+    Months: 0 months recorded.
+  - [>= 100.0%] KESESUAIAN  FISIK BARANG DENGAN KARTU STOK DAN SIM RS
+    Months: 9 months recorded.
+
+UNIT: Pastoral Care (PASTORAL CARE.xlsx) - 2 indicators:
+  - [>= 85.0%] TERLAKSANANYA FEEDBACK PENDOKUMENTASIAN PELAYANAN ROHANI
+    Months: 9 months recorded.
+  - [>= 85.0%] KETEPATAN WAKTU PENDAMPING ROHANI  DALAM MEMBERIKAN PELAYANAN KEPADA PASIEN
+    Months: 9 months recorded.
+
+UNIT: Pemasaran (PEMASARAN.xlsx) - 3 indicators:
+  - [>= 100.0%] TERLAKSANANYA PROMOSI SESUAI JADWAL
+    Months: 12 months recorded.
+  - [>= 100.0%] Pelaksanaan review PKS terlaksana sesuai jadwal
+    Months: 9 months recorded.
+  - [>= 80.0%] KETEPATAN WAKTU TANGGAP KOMPLAIN
+    Months: 9 months recorded.
+
+UNIT: Pemeliharaan Sarana Medis (PEMELIHARAAN SARANA MEDIS.xlsx) - 2 indicators:
+  - [>= 90.0%] TERPENUHINYA RESPON TIME LAPORAN KERUSAKAN ALAT MEDIS
+    Months: 9 months recorded.
+  - [>= 100.0%] Terpenuhinya pemeliharaan alat Medis yang dikategorikan resiko tinggi
+    Months: 9 months recorded.
+
+UNIT: Pemeliharaan Sarana Umum (PEMELIHARAAN SARANA UMUM.xlsx) - 2 indicators:
+  - [>= 100.0%] PELAKSANAAN PEMELIHARAAN MESIN BLOWER
+    Months: 12 months recorded.
+  - [>= 100.0%] Pemeliharaan mesin lift
+    Months: 9 months recorded.
+
+UNIT: Instalasi Radiologi (RADIOLOGI.xlsx) - 10 indicators:
+  - [>= 100.0%] Hasil
+    Months: 12 months recorded.
+  - [>= 96.55172413793103%] Hasil
+    Months: 12 months recorded.
+  - [>= 100.0%] Hasil
+    Months: 12 months recorded.
+  - [>= 100.0%] Hasil
+    Months: 12 months recorded.
+  - [>= 100.0%] Hasil
+    Months: 12 months recorded.
+  - [>= 13425.4%] Standar
+    Months: 0 months recorded.
+  - [>= 100.0%] Capaian
+    Months: 0 months recorded.
+  - [>= 100.0%] Capaian
+    Months: 0 months recorded.
+  - [>= 4259.27%] Standar
+    Months: 0 months recorded.
+  - [>= 100.0%] Hasil
+    Months: 0 months recorded.
+
+UNIT: Rehabilitasi Medik (REHABILITASI MEDIK.xlsx) - 2 indicators:
+  - [>= 100.0%] Terlaksananya Reschedule Kedatangan Pasien Sesuai Jadwal
+    Months: 9 months recorded.
+  - [>= 100.0%] Terlaksananya Early Warning Score di Rehabilitasi Medik
+    Months: 9 months recorded.
+
+UNIT: Rekam Medis (REKAM MEDIS.xlsx) - 3 indicators:
+  - [>= 100.0%] Penerapan nomor rekam medis tunggal saat registrasi pasien rawat jalan
+    Months: 12 months recorded.
+  - [>= 100.0%] Kelengkapan data Pendidikan diregistrasi Rawat jalan
+    Months: 9 months recorded.
+  - [>= 100.0%] Kepatuhan Identifikasi Pasien
+    Months: 9 months recorded.
+
+UNIT: Sudirman (SUDIRMAN.xlsx) - 2 indicators:
+  - [>= 100.0%] KETEPATAN DOKUMENTASI SBAR DI RUANG SUDIRMAN
+    Months: 9 months recorded.
+  - [>= 80.0%] Kestabilan Jaringan Internet di Ruangan Sudirman
+    Months: 9 months recorded.
+
+UNIT: Thamrin (THAMRIN.xlsx) - 3 indicators:
+  - [>= 100.0%] KEPATUHAN PENDOKUMENTASIAN DOUBLE CHECK INSULIN DI RUANG THAMRIN
+    Months: 10 months recorded.
+  - [>= 100.0%] Kepatuhan penggunaan APD di isolasi Thamrin
+    Months: 9 months recorded.
+  - [>= 100.0%] KETEPATAN DOKUMENTASI SBAR DI RUANG THAMRIN
+    Months: 9 months recorded.
+
+UNIT: TU (TU.xlsx) - 2 indicators:
+  - [>= 90.0%] KETEPATAN PENGIRIMAN LAPORAN KEPADA LEMBAGA PEMERINTAHAN.
+    Months: 9 months recorded.
+  - [>= 90.0%] Selesainya usulan pembuatan PKS dengan Pihak Ketiga sesuai Standar
+    Months: 9 months recorded.

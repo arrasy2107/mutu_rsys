@@ -1,0 +1,504 @@
+Baik. Kita lanjut membangun Dynamic Table Engine sebagai modul reusable untuk aplikasi Laravel 13 + Inertia.js.
+
+Saya akan merancangnya supaya nantinya setiap menu aplikasi cukup mendefinisikan konfigurasi tabel, tanpa perlu membuat ulang logika tabel, editor, validasi, penyimpanan, dan export.
+
+Target akhirnya adalah sebuah modul yang bisa menangani:
+
+- Tabel input data biasa (Data Grid).
+- Tabel spreadsheet seperti Excel.
+- Custom editor untuk setiap kolom.
+- Dropdown statis maupun dinamis.
+- Copy-paste dari Excel.
+- Formatting, merge cells, dan pengaturan layout.
+- Save, update, dan export Excel.
+- Template tabel yang dapat digunakan ulang.
+
+# 1. Arsitektur Dynamic Table Engine
+
+Saya usulkan kita menggunakan tiga lapisan utama.
+
+Layer 1
+
+Table Configuration Engine
+
+Mengatur definisi tabel, tipe editor, validasi, dropdown, dan konfigurasi tampilan.
+
+Layer 2
+
+Table Rendering Engine
+
+DataGrid Engine
+
+Tabulator
+
+Spreadsheet Engine
+
+Univer
+
+Layer 3
+
+Table Data Engine
+
+Mengatur penyimpanan, validasi server, versioning, audit, dan export.
+
+Laravel 13 + MySQL + File Storage
+
+Prinsip pentingnya: kedua rendering engine tidak boleh memiliki logika penyimpanan sendiri-sendiri. Keduanya harus menggunakan kontrak data dan API yang sama.
+
+# 2. Struktur folder
+
+Saya akan menggunakan asumsi Inertia.js + Vue 3 + TypeScript. TypeScript akan membantu menjaga konsistensi konfigurasi tabel yang memiliki banyak variasi.
+
+Struktur yang saya sarankan:
+
+```
+resources/js/
+│
+├── Modules/
+│   └── DynamicTable/
+│       │
+│       ├── Components/
+│       │   ├── DynamicTable.vue
+│       │   ├── TableToolbar.vue
+│       │   ├── TableStatus.vue
+│       │   │
+│       │   ├── DataGrid/
+│       │   │   ├── DataGrid.vue
+│       │   │   └── editors/
+│       │   │
+│       │   └── Spreadsheet/
+│       │       ├── Spreadsheet.vue
+│       │       └── plugins/
+│       │
+│       ├── Composables/
+│       │   ├── useTableConfig.ts
+│       │   ├── useTableData.ts
+│       │   ├── useTableSave.ts
+│       │   └── useTableValidation.ts
+│       │
+│       ├── Services/
+│       │   ├── TableApi.ts
+│       │   ├── TableMapper.ts
+│       │   └── ExportService.ts
+│       │
+│       ├── Types/
+│       │   ├── table.ts
+│       │   ├── column.ts
+│       │   └── spreadsheet.ts
+│       │
+│       └── index.ts
+```
+
+Backend:
+
+```
+app/
+│
+├── Models/
+│   ├── TableDefinition.php
+│   ├── TableColumn.php
+│   ├── TableSubmission.php
+│   └── SpreadsheetDocument.php
+│
+├── Services/
+│   └── DynamicTable/
+│       ├── TableConfigService.php
+│       ├── TableDataService.php
+│       ├── TableValidationService.php
+│       └── TableExportService.php
+│
+├── Http/
+│   ├── Controllers/
+│   │   └── DynamicTableController.php
+│   └── Requests/
+│       └── SaveTableRequest.php
+│
+└── Exports/
+    └── DynamicTableExport.php
+```
+
+Dengan struktur ini, Dynamic Table Engine menjadi modul mandiri yang bisa dipanggil dari halaman mana saja.
+
+# 3. Database design
+
+Saya menyarankan enam tabel utama untuk tahap awal.
+
+| Tabel                   | Kegunaan                                     |
+| ----------------------- | -------------------------------------------- |
+| `table_definitions`     | Identitas dan tipe tabel                     |
+| `table_columns`         | Konfigurasi setiap kolom                     |
+| `table_templates`       | Template tampilan yang dapat digunakan ulang |
+| `table_submissions`     | Header dokumen input                         |
+| `table_submission_rows` | Data setiap baris                            |
+| `spreadsheet_documents` | Snapshot workbook Univer                     |
+
+Relasi sederhananya:
+
+```
+table_definitions
+    │
+    ├── table_columns
+    │
+    ├── table_templates
+    │
+    └── table_submissions
+            │
+            └── table_submission_rows
+
+spreadsheet_documents
+    └── table_submissions
+```
+
+### Migration: table_definitions
+
+```
+Schema::create('table_definitions', function (Blueprint $table) {
+    $table->id();
+    $table->string('code')->unique();
+    $table->string('name');
+    $table->enum('type', [
+        'datagrid',
+        'spreadsheet'
+    ]);
+    $table->json('settings')->nullable();
+    $table->unsignedInteger('version')->default(1);
+    $table->boolean('is_active')->default(true);
+    $table->timestamps();
+});
+```
+
+### Migration: table_columns
+
+```
+Schema::create('table_columns', function (Blueprint $table) {
+    $table->id();
+
+    $table->foreignId('table_definition_id')
+        ->constrained()
+        ->cascadeOnDelete();
+
+    $table->string('field');
+    $table->string('label');
+
+    $table->string('editor')->default('text');
+
+    $table->json('options')->nullable();
+    $table->json('validation')->nullable();
+    $table->json('settings')->nullable();
+
+    $table->unsignedInteger('position')->default(0);
+
+    $table->boolean('is_visible')->default(true);
+    $table->boolean('is_editable')->default(true);
+
+    $table->timestamps();
+
+    $table->unique([
+        'table_definition_id',
+        'field'
+    ]);
+});
+```
+
+### Migration: table_submissions
+
+```
+Schema::create('table_submissions', function (Blueprint $table) {
+    $table->id();
+
+    $table->foreignId('table_definition_id')
+        ->constrained();
+
+    $table->string('document_number')->nullable();
+    $table->unsignedInteger('definition_version');
+
+    $table->string('status')->default('draft');
+
+    $table->foreignId('created_by')
+        ->constrained('users');
+
+    $table->timestamps();
+});
+```
+
+### Migration: table_submission_rows
+
+```
+Schema::create('table_submission_rows', function (Blueprint $table) {
+    $table->id();
+
+    $table->foreignId('table_submission_id')
+        ->constrained()
+        ->cascadeOnDelete();
+
+    $table->unsignedInteger('row_order');
+
+    $table->json('data');
+
+    $table->timestamps();
+
+    $table->unique([
+        'table_submission_id',
+        'row_order'
+    ]);
+});
+```
+
+### Migration: spreadsheet_documents
+
+```
+Schema::create('spreadsheet_documents', function (Blueprint $table) {
+    $table->id();
+
+    $table->foreignId('table_submission_id')
+        ->unique()
+        ->constrained()
+        ->cascadeOnDelete();
+
+    $table->json('workbook_snapshot')->nullable();
+
+    $table->unsignedInteger('version')->default(1);
+
+    $table->timestamps();
+});
+```
+
+Untuk `spreadsheet_documents`, gunakan JSON column jika ukuran workbook masih sesuai dengan kapasitas database. Untuk workbook besar, lebih baik simpan snapshot di file storage dan database hanya menyimpan path serta metadata.
+
+Catatan desain: `table_submission_rows.data` sengaja menggunakan JSON karena struktur kolom bisa berbeda antara satu menu dengan menu lainnya. Untuk data yang membutuhkan reporting, relasi, dan query kompleks, tetap gunakan tabel bisnis khusus.
+
+# 4. Format konfigurasi Dynamic Table
+
+Inilah bagian inti dari modul.
+
+Saya menyarankan satu standar konfigurasi untuk semua jenis tabel.
+
+Contoh konfigurasi Data Grid:
+
+```
+export interface TableConfig {
+    code: string;
+    name: string;
+
+    type: 'datagrid' | 'spreadsheet';
+
+    columns?: TableColumnConfig[];
+
+    settings?: Record<string, unknown>;
+}
+
+export interface TableColumnConfig {
+    field: string;
+    label: string;
+
+    editor:
+        | 'text'
+        | 'number'
+        | 'date'
+        | 'select'
+        | 'autocomplete'
+        | 'checkbox';
+
+    width?: number;
+    editable?: boolean;
+
+    options?: {
+        source?: 'static' | 'api';
+        items?: Array<{
+            label: string;
+            value: string | number;
+        }>;
+        endpoint?: string;
+    };
+
+    validation?: {
+        required?: boolean;
+        min?: number;
+        max?: number;
+    };
+}
+```
+
+Contoh pemakaian:
+
+```
+export const purchaseConfig: TableConfig = {
+    code: 'PURCHASE_DETAIL',
+    name: 'Detail Pembelian',
+
+    type: 'datagrid',
+
+    columns: [
+        {
+            field: 'product',
+            label: 'Nama Barang',
+            editor: 'autocomplete',
+            width: 250,
+            editable: true,
+            options: {
+                source: 'api',
+                endpoint: '/api/products/search'
+            }
+        },
+        {
+            field: 'unit',
+            label: 'Satuan',
+            editor: 'select',
+            options: {
+                source: 'static',
+                items: [
+                    { label: 'PCS', value: 'pcs' },
+                    { label: 'BOX', value: 'box' },
+                    { label: 'KG', value: 'kg' }
+                ]
+            }
+        },
+        {
+            field: 'quantity',
+            label: 'Qty',
+            editor: 'number',
+            validation: {
+                required: true,
+                min: 1
+            }
+        },
+        {
+            field: 'price',
+            label: 'Harga',
+            editor: 'number'
+        }
+    ]
+};
+```
+
+Keuntungan format ini adalah komponen DataGrid tidak perlu mengetahui apakah tabel tersebut digunakan untuk pembelian, penjualan, inventaris, atau anggaran.
+
+Komponen hanya membaca konfigurasi.
+
+# 5. Dynamic Table Renderer
+
+Kita membuat satu komponen utama bernama `DynamicTable.vue`.
+
+```
+<script setup lang="ts">
+import DataGrid from './DataGrid/DataGrid.vue';
+import Spreadsheet from './Spreadsheet/Spreadsheet.vue';
+
+import type { TableConfig } from '../Types/table';
+
+defineProps<{
+    config: TableConfig;
+    data: Record<string, unknown>[];
+}>();
+</script>
+
+<template>
+    <DataGrid
+        v-if="config.type === 'datagrid'"
+        :config="config"
+        :data="data"
+    />
+
+    <Spreadsheet
+        v-else-if="config.type === 'spreadsheet'"
+        :config="config"
+        :data="data"
+    />
+</template>
+```
+
+Halaman Inertia nantinya cukup seperti ini:
+
+```
+<script setup lang="ts">
+import DynamicTable from
+    '@/Modules/DynamicTable/Components/DynamicTable.vue';
+
+defineProps({
+    config: Object,
+    data: Array
+});
+</script>
+
+<template>
+    <div class="p-6">
+        <DynamicTable
+            :config="config"
+            :data="data"
+        />
+    </div>
+</template>
+```
+
+Jadi halaman menu tidak perlu mengurus detail implementasi Tabulator atau Univer.
+
+# 6. Standar API backend
+
+Saya sarankan endpoint berikut:
+
+| Method | Endpoint                                     | Fungsi                |
+| ------ | -------------------------------------------- | --------------------- |
+| GET    | `/api/dynamic-tables/{code}`                 | Mengambil konfigurasi |
+| GET    | `/api/dynamic-tables/{code}/data`            | Mengambil data        |
+| POST   | `/api/dynamic-tables/{code}/save`            | Menyimpan data        |
+| PUT    | `/api/dynamic-tables/{code}/save`            | Memperbarui data      |
+| POST   | `/api/dynamic-tables/{code}/validate`        | Validasi              |
+| GET    | `/api/dynamic-tables/{code}/export`          | Export Excel          |
+| GET    | `/api/dynamic-tables/{code}/options/{field}` | Mengambil dropdown    |
+
+Contoh payload penyimpanan:
+
+```
+{
+    "definition_version": 1,
+    "rows": [
+        {
+            "product": "Produk A",
+            "unit": "pcs",
+            "quantity": 10,
+            "price": 5000
+        },
+        {
+            "product": "Produk B",
+            "unit": "box",
+            "quantity": 5,
+            "price": 10000
+        }
+    ]
+}
+```
+
+Untuk keamanan, Laravel harus tetap memvalidasi nama field, tipe data, permission, dan aturan bisnis berdasarkan definisi tabel di server. Jangan mempercayai konfigurasi atau validasi yang dikirim browser.
+
+Saya juga menyarankan setiap penyimpanan memiliki mekanisme revision atau optimistic locking agar perubahan dari dua pengguna tidak saling menimpa.
+
+# 7. Tahapan development
+
+Saya menyarankan pembangunan modul ini secara bertahap agar tidak terlalu banyak komponen dibuat sekaligus.
+
+1. Phase 1 — Core Engine
+   - Database migration.
+   - Table configuration.
+   - Dynamic renderer.
+   - Tabulator integration.
+   - CRUD dan penyimpanan.
+
+     Prioritas pertama
+2. Phase 2 — Custom Editor
+   - Text, number, date.
+   - Select dan autocomplete.
+   - API-based dropdown.
+   - Validation per cell.
+   - Copy-paste Excel.
+3. Phase 3 — Spreadsheet Engine
+   - Integrasi Univer.
+   - Cell formatting.
+   - Merge cells.
+   - Multiple worksheets.
+   - Workbook snapshot.
+4. Phase 4 — Advanced Features
+   - Import/export Excel.
+   - Autosave.
+   - Revision management.
+   - Audit trail.
+   - Role-based access.
