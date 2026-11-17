@@ -13,6 +13,8 @@ const form = useForm({
     role: 'pic_unit',
     unit_id: '',
     aktif: true,
+    password: '',
+    password_confirmation: '',
 });
 
 const submit = () => form.post(route('users.store'));
@@ -117,6 +119,33 @@ const submit = () => form.post(route('users.store'));
                             />
                             <p v-if="form.errors.email" class="text-xs text-rose-500 mt-1">{{ form.errors.email }}</p>
                         </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1.5">
+                                    Password Sementara <span class="text-rose-500">*</span>
+                                </label>
+                                <input
+                                    v-model="form.password"
+                                    type="password"
+                                    autocomplete="new-password"
+                                    class="w-full text-sm border-gray-200 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+                                />
+                                <p class="text-[11px] text-gray-500 mt-1">Gunakan password unik per akun, minimal 12 karakter dengan huruf besar, huruf kecil, dan angka.</p>
+                                <p v-if="form.errors.password" class="text-xs text-rose-500 mt-1">{{ form.errors.password }}</p>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1.5">
+                                    Konfirmasi Password <span class="text-rose-500">*</span>
+                                </label>
+                                <input
+                                    v-model="form.password_confirmation"
+                                    type="password"
+                                    autocomplete="new-password"
+                                    class="w-full text-sm border-gray-200 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+                                />
+                            </div>
+                        </div>
                     </div>
 
                     <!-- SEKSI 2: PROFIL PEJABAT AKTIF -->
@@ -162,11 +191,10 @@ const submit = () => form.post(route('users.store'));
                         </div>
                     </div>
 
-                    <!-- Note Password Default -->
                     <div class="p-3.5 bg-amber-50 border border-amber-200 rounded-xl flex items-start gap-3">
                         <svg class="w-5 h-5 text-amber-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         <div class="text-xs text-amber-800 leading-relaxed">
-                            <span class="font-bold">Password Default Otomatis:</span> Akun baru akan dibuat dengan password bawaan <strong class="font-mono bg-white px-1.5 py-0.5 rounded border border-amber-300">12345678</strong>. Pengguna akan secara otomatis diwajibkan untuk mengganti password saat login pertama kali.
+                            <span class="font-bold">Password sementara:</span> sampaikan kepada pengguna melalui saluran yang aman. Pengguna wajib menggantinya saat login pertama.
                         </div>
                     </div>
 

@@ -34,29 +34,20 @@ class ForceChangePasswordController extends Controller
             'password' => [
                 'required',
                 'confirmed',
-                Password::min(8),
+                Password::min(12)->mixedCase()->numbers(),
             ],
         ], [
-            'password.required'  => 'Password baru wajib diisi.',
+            'password.required' => 'Password baru wajib diisi.',
             'password.confirmed' => 'Konfirmasi password tidak cocok.',
-            'password.min'       => 'Password minimal 8 karakter.',
+            'password.min' => 'Password minimal 12 karakter.',
         ]);
 
-        // Pastikan password baru tidak sama dengan password default
-        if (Hash::check('12345678', $request->user()->password)) {
-            if ($request->password === '12345678') {
-                return back()->withErrors([
-                    'password' => 'Password baru tidak boleh sama dengan password default (12345678).',
-                ]);
-            }
-        }
-
         $request->user()->update([
-            'password'             => Hash::make($request->password),
+            'password' => Hash::make($request->password),
             'must_change_password' => false,
         ]);
 
         return redirect()->route('dashboard')
-            ->with('success', 'Password berhasil diubah. Selamat datang, ' . $request->user()->name . '!');
+            ->with('success', 'Password berhasil diubah. Selamat datang, '.$request->user()->name.'!');
     }
 }

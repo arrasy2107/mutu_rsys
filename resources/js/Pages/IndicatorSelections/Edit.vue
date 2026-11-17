@@ -846,7 +846,7 @@ const submit = () => {
                             </div>
                             <div class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50 p-2 text-center">
                                 <img
-                                    :src="'/storage/' + existingFile"
+                                    :src="route('evidence.show', { type: 'indicator-selection', record: selection.id })"
                                     alt="Foto Pendukung Tersimpan"
                                     class="max-h-60 w-auto mx-auto object-contain rounded-lg shadow-2xs"
                                 />
@@ -869,7 +869,7 @@ const submit = () => {
                         <!-- Tombol Aksi: Buka, Ganti (Edit), Hapus (Delete) -->
                         <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-slate-100">
                             <a
-                                :href="'/storage/' + existingFile"
+                                :href="route('evidence.show', { type: 'indicator-selection', record: selection.id })"
                                 target="_blank"
                                 class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-medium transition shadow-2xs"
                             >

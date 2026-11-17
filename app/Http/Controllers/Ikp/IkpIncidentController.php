@@ -5,9 +5,10 @@ namespace App\Http\Controllers\Ikp;
 use App\Http\Controllers\Controller;
 use App\Models\PatientSafetyIncident;
 use App\Models\Unit;
-use Carbon\Carbon;
+use App\Models\User;
+use App\Services\PrivateEvidenceStorage;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -39,7 +40,7 @@ class IkpIncidentController extends Controller
         if ($unitId) {
             $query->where(function ($q) use ($unitId) {
                 $q->where('unit_pelapor_id', $unitId)
-                  ->orWhere('unit_terkait_id', $unitId);
+                    ->orWhere('unit_terkait_id', $unitId);
             });
         }
         if ($grading) {
@@ -57,8 +58,8 @@ class IkpIncidentController extends Controller
         if ($search) {
             $query->where(function ($q) use ($search) {
                 $q->where('nomor_laporan', 'like', "%{$search}%")
-                  ->orWhere('insiden', 'like', "%{$search}%")
-                  ->orWhere('kronologi', 'like', "%{$search}%");
+                    ->orWhere('insiden', 'like', "%{$search}%")
+                    ->orWhere('kronologi', 'like', "%{$search}%");
             });
         }
 
@@ -76,7 +77,7 @@ class IkpIncidentController extends Controller
         $sentinelCount = (clone $baseStatsQuery)->where('jenis_insiden', 'Sentinel')->count();
         $highRiskCount = (clone $baseStatsQuery)->whereIn('grading', ['merah', 'kuning'])->count();
         $completedCount = (clone $baseStatsQuery)->where('status', 'selesai')->count();
-        
+
         $evaluatedCount = (clone $baseStatsQuery)->whereIn('kriteria_waktu_penyelesaian', ['sesuai', 'tidak_sesuai'])->count();
         $onTimeCount = (clone $baseStatsQuery)->where('kriteria_waktu_penyelesaian', 'sesuai')->count();
         $complianceRate = $evaluatedCount > 0 ? round(($onTimeCount / $evaluatedCount) * 100, 1) : 100;
@@ -129,29 +130,31 @@ class IkpIncidentController extends Controller
     /**
      * Simpan laporan IKP baru ke database.
      */
-    public function store(Request $request)
-    {
+    public function store(
+        Request $request,
+        PrivateEvidenceStorage $evidenceStorage,
+    ): RedirectResponse {
         $validated = $request->validate([
-            'nomor_laporan'               => 'required|string|max:50|unique:patient_safety_incidents,nomor_laporan',
-            'tanggal_laporan'             => 'required|date',
-            'tanggal_kejadian'            => 'required|date',
-            'tipe_insiden'                => 'required|string|max:100',
-            'insiden'                     => 'required|string|max:255',
-            'kronologi'                   => 'required|string',
-            'jenis_insiden'               => 'required|in:KTC,KTD,KNC,KPC,Sentinel',
-            'grading'                     => 'required|in:biru,hijau,kuning,merah',
-            'unit_pelapor_id'             => 'required|exists:units,id',
-            'unit_terkait_id'             => 'nullable|exists:units,id',
-            'tipe_penyelesaian'           => 'nullable|in:investigasi_sederhana,rca',
-            'tanggal_selesai_penyelesaian'=> 'nullable|date|after_or_equal:tanggal_laporan',
-            'rencana_tindak_lanjut'       => 'nullable|string',
-            'penanggung_jawab_rtl'        => 'nullable|string|max:150',
-            'status'                      => 'nullable|in:draft,dilaporkan,investigasi,selesai',
-            'bukti_rtl'                   => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
+            'nomor_laporan' => 'required|string|max:50|unique:patient_safety_incidents,nomor_laporan',
+            'tanggal_laporan' => 'required|date',
+            'tanggal_kejadian' => 'required|date',
+            'tipe_insiden' => 'required|string|max:100',
+            'insiden' => 'required|string|max:255',
+            'kronologi' => 'required|string',
+            'jenis_insiden' => 'required|in:KTC,KTD,KNC,KPC,Sentinel',
+            'grading' => 'required|in:biru,hijau,kuning,merah',
+            'unit_pelapor_id' => 'required|exists:units,id',
+            'unit_terkait_id' => 'nullable|exists:units,id',
+            'tipe_penyelesaian' => 'nullable|in:investigasi_sederhana,rca',
+            'tanggal_selesai_penyelesaian' => 'nullable|date|after_or_equal:tanggal_laporan',
+            'rencana_tindak_lanjut' => 'nullable|string',
+            'penanggung_jawab_rtl' => 'nullable|string|max:150',
+            'status' => 'nullable|in:draft,dilaporkan,investigasi,selesai',
+            'bukti_rtl' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
         ]);
 
         if ($request->hasFile('bukti_rtl')) {
-            $path = $request->file('bukti_rtl')->store('ikp_bukti', 'public');
+            $path = $evidenceStorage->store($request->file('bukti_rtl'), 'ikp_bukti');
             $validated['bukti_rtl_path'] = $path;
         }
 
@@ -169,8 +172,9 @@ class IkpIncidentController extends Controller
     /**
      * Tampilkan detail laporan IKP lengkap.
      */
-    public function show(PatientSafetyIncident $incident): Response
+    public function show(Request $request, PatientSafetyIncident $incident): Response
     {
+        $this->authorizeIncidentAccess($request->user(), $incident);
         $incident->load(['unitPelapor', 'unitTerkait', 'creator']);
 
         return Inertia::render('Ikp/Show', [
@@ -181,8 +185,9 @@ class IkpIncidentController extends Controller
     /**
      * Form edit laporan IKP atau pembaharuan investigasi/RTL.
      */
-    public function edit(PatientSafetyIncident $incident): Response
+    public function edit(Request $request, PatientSafetyIncident $incident): Response
     {
+        $this->authorizeIncidentAccess($request->user(), $incident);
         $units = Unit::aktif()->orderBy('nama')->get(['id', 'nama', 'kode']);
 
         return Inertia::render('Ikp/Form', [
@@ -197,43 +202,49 @@ class IkpIncidentController extends Controller
     /**
      * Update data laporan IKP dan resolusi.
      */
-    public function update(Request $request, PatientSafetyIncident $incident)
-    {
+    public function update(
+        Request $request,
+        PatientSafetyIncident $incident,
+        PrivateEvidenceStorage $evidenceStorage,
+    ): RedirectResponse {
+        $this->authorizeIncidentAccess($request->user(), $incident);
+
         $validated = $request->validate([
-            'nomor_laporan'               => "required|string|max:50|unique:patient_safety_incidents,nomor_laporan,{$incident->id}",
-            'tanggal_laporan'             => 'required|date',
-            'tanggal_kejadian'            => 'required|date',
-            'tipe_insiden'                => 'required|string|max:100',
-            'insiden'                     => 'required|string|max:255',
-            'kronologi'                   => 'required|string',
-            'jenis_insiden'               => 'required|in:KTC,KTD,KNC,KPC,Sentinel',
-            'grading'                     => 'required|in:biru,hijau,kuning,merah',
-            'unit_pelapor_id'             => 'required|exists:units,id',
-            'unit_terkait_id'             => 'nullable|exists:units,id',
-            'tipe_penyelesaian'           => 'nullable|in:investigasi_sederhana,rca',
-            'tanggal_selesai_penyelesaian'=> 'nullable|date',
+            'nomor_laporan' => "required|string|max:50|unique:patient_safety_incidents,nomor_laporan,{$incident->id}",
+            'tanggal_laporan' => 'required|date',
+            'tanggal_kejadian' => 'required|date',
+            'tipe_insiden' => 'required|string|max:100',
+            'insiden' => 'required|string|max:255',
+            'kronologi' => 'required|string',
+            'jenis_insiden' => 'required|in:KTC,KTD,KNC,KPC,Sentinel',
+            'grading' => 'required|in:biru,hijau,kuning,merah',
+            'unit_pelapor_id' => 'required|exists:units,id',
+            'unit_terkait_id' => 'nullable|exists:units,id',
+            'tipe_penyelesaian' => 'nullable|in:investigasi_sederhana,rca',
+            'tanggal_selesai_penyelesaian' => 'nullable|date',
             'kriteria_waktu_penyelesaian' => 'nullable|in:sesuai,tidak_sesuai,dalam_proses',
-            'rencana_tindak_lanjut'       => 'nullable|string',
-            'penanggung_jawab_rtl'        => 'nullable|string|max:150',
-            'status'                      => 'required|in:draft,dilaporkan,investigasi,selesai',
-            'bukti_rtl'                   => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
+            'rencana_tindak_lanjut' => 'nullable|string',
+            'penanggung_jawab_rtl' => 'nullable|string|max:150',
+            'status' => 'required|in:draft,dilaporkan,investigasi,selesai',
+            'bukti_rtl' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
         ]);
 
+        $previousFilePath = $incident->bukti_rtl_path;
         if ($request->hasFile('bukti_rtl')) {
-            if ($incident->bukti_rtl_path && Storage::disk('public')->exists($incident->bukti_rtl_path)) {
-                Storage::disk('public')->delete($incident->bukti_rtl_path);
-            }
-            $validated['bukti_rtl_path'] = $request->file('bukti_rtl')->store('ikp_bukti', 'public');
+            $validated['bukti_rtl_path'] = $evidenceStorage->store($request->file('bukti_rtl'), 'ikp_bukti');
         }
 
         $incident->fill($validated);
 
         // Evaluasi kriteria waktu jika tidak di-override secara manual
-        if (!$request->filled('kriteria_waktu_penyelesaian')) {
+        if (! $request->filled('kriteria_waktu_penyelesaian')) {
             $incident->kriteria_waktu_penyelesaian = $incident->evaluateKriteriaWaktu();
         }
 
         $incident->save();
+        if ($request->hasFile('bukti_rtl') && $previousFilePath) {
+            $evidenceStorage->delete($previousFilePath);
+        }
 
         return redirect()->route('ikp.show', $incident->id)
             ->with('success', "Laporan insiden {$incident->nomor_laporan} berhasil diperbarui.");
@@ -242,20 +253,25 @@ class IkpIncidentController extends Controller
     /**
      * Upload cepat berkas bukti RTL dari halaman detail.
      */
-    public function uploadBukti(Request $request, PatientSafetyIncident $incident)
-    {
+    public function uploadBukti(
+        Request $request,
+        PatientSafetyIncident $incident,
+        PrivateEvidenceStorage $evidenceStorage,
+    ): RedirectResponse {
+        $this->authorizeIncidentAccess($request->user(), $incident);
+
         $request->validate([
             'bukti_rtl' => 'required|file|mimes:pdf,jpg,jpeg,png|max:5120',
         ]);
 
-        if ($incident->bukti_rtl_path && Storage::disk('public')->exists($incident->bukti_rtl_path)) {
-            Storage::disk('public')->delete($incident->bukti_rtl_path);
-        }
-
-        $path = $request->file('bukti_rtl')->store('ikp_bukti', 'public');
+        $path = $evidenceStorage->store($request->file('bukti_rtl'), 'ikp_bukti');
+        $previousFilePath = $incident->bukti_rtl_path;
         $incident->update([
             'bukti_rtl_path' => $path,
         ]);
+        if ($previousFilePath) {
+            $evidenceStorage->delete($previousFilePath);
+        }
 
         return back()->with('success', 'Berkas bukti RTL berhasil diunggah.');
     }
@@ -263,11 +279,13 @@ class IkpIncidentController extends Controller
     /**
      * Hapus laporan IKP.
      */
-    public function destroy(PatientSafetyIncident $incident)
-    {
-        if ($incident->bukti_rtl_path && Storage::disk('public')->exists($incident->bukti_rtl_path)) {
-            Storage::disk('public')->delete($incident->bukti_rtl_path);
-        }
+    public function destroy(
+        Request $request,
+        PatientSafetyIncident $incident,
+        PrivateEvidenceStorage $evidenceStorage,
+    ): RedirectResponse {
+        $this->authorizeIncidentAccess($request->user(), $incident);
+        $evidenceStorage->delete($incident->bukti_rtl_path);
 
         $nomor = $incident->nomor_laporan;
         $incident->delete();
@@ -275,5 +293,20 @@ class IkpIncidentController extends Controller
         return redirect()->route('ikp.index')
             ->with('success', "Laporan insiden {$nomor} berhasil dihapus.");
     }
-}
 
+    private function authorizeIncidentAccess(User $user, PatientSafetyIncident $incident): void
+    {
+        if ($user->isSuperAdmin() || $user->isKomiteMutu() || $user->isDireksi()) {
+            return;
+        }
+
+        $canViewUnitIncident = ($user->isPicUnit() || $user->isKepalaUnit()) &&
+            $user->unit_id !== null &&
+            in_array((int) $user->unit_id, [
+                (int) $incident->unit_pelapor_id,
+                (int) $incident->unit_terkait_id,
+            ], true);
+
+        abort_unless($canViewUnitIncident, 404);
+    }
+}

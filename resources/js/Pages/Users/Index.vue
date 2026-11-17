@@ -16,25 +16,6 @@ const applyFilter = () => {
     router.get(route('users.index'), { search: search.value, role: role.value, unit_id: unitId.value }, { preserveScroll: true, replace: true });
 };
 
-const confirmResetPassword = async (id, username, name) => {
-    const confirmed = await window.notify.confirm({
-        title: 'Reset Password Akun?',
-        html: `Apakah Anda yakin ingin me-reset password akun <b>@${username}</b> (${name}) kembali ke kata sandi bawaan: <strong class="font-mono text-amber-600 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">12345678</strong>?<br/><br/><span class="text-xs text-slate-500">Sistem akan mewajibkan pengguna untuk memperbarui kata sandi saat login berikutnya.</span>`,
-        icon: 'warning',
-        confirmButtonText: 'Ya, Reset Password',
-        cancelButtonText: 'Batal',
-        confirmButtonColor: '#d97706',
-    });
-    if (confirmed) {
-        router.post(route('users.reset-password', id), {}, {
-            preserveScroll: true,
-            onSuccess: () => {
-                window.notify?.toast?.success('Password Direset', `Password akun @${username} berhasil di-reset ke 12345678.`);
-            }
-        });
-    }
-};
-
 const confirmDelete = async (id, name, username) => {
     const confirmed = await window.notify.dangerConfirm({
         title: 'Hapus Akun Pengguna?',
@@ -83,7 +64,7 @@ const avatarColors = {
                 <div>
                     <h2 class="text-lg sm:text-xl font-bold text-gray-900 tracking-tight">Manajemen Pengguna & Profil Pejabat</h2>
                     <p class="text-xs text-gray-500 mt-1 max-w-2xl">
-                        Kelola akun struktural rumah sakit dan identitas personil pejabat aktif (Nama Lengkap & NIP). Jika terjadi pergantian pejabat, Admin cukup memperbarui profil dan mereset password akun terkait tanpa membuat akun baru.
+                        Kelola akun struktural rumah sakit dan identitas personil pejabat aktif (Nama Lengkap & NIP). Jika terjadi pergantian pejabat, Admin cukup memperbarui profil akun tanpa membuat akun baru. Password sementara dapat ditetapkan melalui formulir edit.
                     </p>
                 </div>
 
@@ -220,15 +201,6 @@ const avatarColors = {
                                 <!-- Aksi -->
                                 <td class="px-4 py-3.5 align-top text-right whitespace-nowrap">
                                     <div class="flex items-center justify-end gap-1">
-                                        <!-- Tombol Reset Password Cepat -->
-                                        <button
-                                            @click="confirmResetPassword(user.id, user.username, user.name)"
-                                            class="p-1.5 text-gray-500 hover:text-amber-600 hover:bg-amber-50 rounded-lg transition-colors"
-                                            title="Reset Password ke Default (12345678)"
-                                        >
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
-                                        </button>
-
                                         <!-- Edit Profil & Akun -->
                                         <Link
                                             :href="route('users.edit', user.id)"

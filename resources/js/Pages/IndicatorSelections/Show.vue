@@ -532,7 +532,7 @@ const imuItems = computed(() => {
                             </div>
                             <div class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50 p-2 text-center">
                                 <img
-                                    :src="'/storage/' + selection.berkas_pendukung"
+                                    :src="route('evidence.show', { type: 'indicator-selection', record: selection.id })"
                                     alt="Foto / Berkas Pendukung Rapat"
                                     class="max-h-64 w-auto mx-auto object-contain rounded-lg shadow-2xs cursor-pointer hover:opacity-95 transition"
                                     @click="previewImageModal = true"
@@ -557,7 +557,7 @@ const imuItems = computed(() => {
                         <!-- Tombol Aksi Berkas: Buka / Unduh File (Read-Only di Show) -->
                         <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-slate-100">
                             <a
-                                :href="'/storage/' + selection.berkas_pendukung"
+                                :href="route('evidence.show', { type: 'indicator-selection', record: selection.id })"
                                 target="_blank"
                                 class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-semibold transition shadow-2xs"
                             >
@@ -668,9 +668,12 @@ const imuItems = computed(() => {
                 <button @click="previewImageModal = false" class="absolute top-4 right-4 bg-black/60 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-black transition z-10 font-bold">
                     ✕
                 </button>
-                <img :src="'/storage/' + selection.berkas_pendukung" class="max-h-[82vh] w-auto mx-auto object-contain rounded-lg" />
+                <img
+                    :src="route('evidence.show', { type: 'indicator-selection', record: selection.id })"
+                    class="mx-auto max-h-[82vh] w-auto rounded-lg object-contain"
+                />
                 <div class="text-center pt-2">
-                    <a :href="'/storage/' + selection.berkas_pendukung" target="_blank" class="text-xs text-indigo-600 hover:underline font-semibold">
+                    <a :href="route('evidence.show', { type: 'indicator-selection', record: selection.id })" target="_blank" class="text-xs text-indigo-600 hover:underline font-semibold">
                         Buka di Tab Baru / Download Gambar Asli
                     </a>
                 </div>

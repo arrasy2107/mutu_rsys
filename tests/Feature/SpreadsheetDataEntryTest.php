@@ -2961,7 +2961,7 @@ it('includes exempt entries in PDF reports and excludes rejected entries', funct
             ->update(['status' => $record['status']]);
     }
 
-    Storage::fake('public');
+    Storage::fake('private');
     $pdf = Mockery::mock(PDF::class);
     $pdf->shouldReceive('setPaper')->once()->with('a4', 'landscape')->andReturnSelf();
     $pdf->shouldReceive('output')->once()->andReturn('test-pdf');
@@ -2985,7 +2985,7 @@ it('includes exempt entries in PDF reports and excludes rejected entries', funct
     $response->assertRedirect()->assertSessionHasNoErrors();
     $log = ReportLog::firstOrFail();
     $response->assertRedirect(route('reports.download', $log));
-    Storage::disk('public')->assertExists($log->file_path);
+    Storage::disk('private')->assertExists($log->file_path);
     expect($reportData)->toHaveCount(1)
         ->and($reportData[0]['capaian'])->toBe(75.0);
 });

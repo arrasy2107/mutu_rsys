@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
@@ -19,8 +20,9 @@ return new class extends Migration
         });
 
         DB::table('data_entries')
-            ->where('status', 'draft')
-            ->where('denominator', '>', 0)
+            ->select('data_entries.id as id')
+            ->where('data_entries.status', 'draft')
+            ->where('data_entries.denominator', '>', 0)
             ->whereExists(function ($query): void {
                 $query->selectRaw('1')
                     ->from('validations as validation')
@@ -46,7 +48,11 @@ return new class extends Migration
                             ->whereColumn('later_revision.id', '>', 'validation.id');
                     });
             })
-            ->update(['status' => 'exempt']);
+            ->chunkById(500, function (Collection $entries): void {
+                DB::table('data_entries')
+                    ->whereIn('id', $entries->pluck('id'))
+                    ->update(['status' => 'exempt']);
+            }, column: 'data_entries.id', alias: 'id');
 
         Schema::table('validations', function (Blueprint $table) {
             $table->foreignId('actor_id')->nullable()->after('validator_id')->constrained('users')->nullOnDelete();

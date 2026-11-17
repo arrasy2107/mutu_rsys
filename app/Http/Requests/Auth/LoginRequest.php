@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Auth;
 
+use App\Models\User;
 use Illuminate\Auth\Events\Lockout;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
@@ -42,9 +43,9 @@ class LoginRequest extends FormRequest
     {
         return [
             'username.required' => 'Nama pengguna atau email wajib diisi.',
-            'username.string'   => 'Format nama pengguna tidak valid.',
+            'username.string' => 'Format nama pengguna tidak valid.',
             'password.required' => 'Kata sandi akun wajib diisi.',
-            'password.string'   => 'Format kata sandi tidak valid.',
+            'password.string' => 'Format kata sandi tidak valid.',
         ];
     }
 
@@ -62,7 +63,7 @@ class LoginRequest extends FormRequest
         $field = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
 
         // Check if user exists
-        $user = \App\Models\User::where($field, $login)->first();
+        $user = User::where($field, $login)->first();
 
         if (! $user) {
             RateLimiter::hit($this->throttleKey());
@@ -86,7 +87,7 @@ class LoginRequest extends FormRequest
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
-                'password' => 'Kata sandi yang Anda masukkan salah. Periksa kembali atau gunakan password default (12345678).',
+                'password' => 'Kata sandi yang Anda masukkan salah. Periksa kembali.',
             ]);
         }
 
@@ -119,6 +120,7 @@ class LoginRequest extends FormRequest
     public function throttleKey(): string
     {
         $login = $this->input('username') ?? $this->input('email') ?? '';
+
         return Str::transliterate(Str::lower($login).'|'.$this->ip());
     }
 }

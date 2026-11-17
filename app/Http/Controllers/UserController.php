@@ -6,6 +6,7 @@ use App\Models\Unit;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -15,26 +16,24 @@ class UserController extends Controller
     {
         $users = User::query()
             ->with('unit')
-            ->when($request->search, fn($q, $s) =>
-                $q->where(fn($sub) =>
-                    $sub->where('name', 'like', "%{$s}%")
-                        ->orWhere('username', 'like', "%{$s}%")
-                        ->orWhere('nama_lengkap', 'like', "%{$s}%")
-                        ->orWhere('nip', 'like', "%{$s}%")
-                        ->orWhere('email', 'like', "%{$s}%")
-                )
+            ->when($request->search, fn ($q, $s) => $q->where(fn ($sub) => $sub->where('name', 'like', "%{$s}%")
+                ->orWhere('username', 'like', "%{$s}%")
+                ->orWhere('nama_lengkap', 'like', "%{$s}%")
+                ->orWhere('nip', 'like', "%{$s}%")
+                ->orWhere('email', 'like', "%{$s}%")
             )
-            ->when($request->role, fn($q, $r) => $q->where('role', $r))
-            ->when($request->unit_id, fn($q, $u) => $q->where('unit_id', $u))
+            )
+            ->when($request->role, fn ($q, $r) => $q->where('role', $r))
+            ->when($request->unit_id, fn ($q, $u) => $q->where('unit_id', $u))
             ->orderBy('name')
             ->paginate(20)
             ->withQueryString();
 
         return Inertia::render('Users/Index', [
-            'users'   => $users,
-            'units'   => Unit::aktif()->get(),
+            'users' => $users,
+            'units' => Unit::aktif()->get(),
             'filters' => $request->only(['search', 'role', 'unit_id']),
-            'roles'   => $this->getRoles(),
+            'roles' => $this->getRoles(),
         ]);
     }
 
@@ -49,30 +48,31 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'username'     => 'required|string|max:50|alpha_dash|unique:users,username',
-            'name'         => 'required|string|max:255',
+            'username' => 'required|string|max:50|alpha_dash|unique:users,username',
+            'name' => 'required|string|max:255',
             'nama_lengkap' => 'nullable|string|max:255',
-            'nip'          => 'nullable|string|max:50',
-            'email'        => 'nullable|email|unique:users,email',
-            'role'         => 'required|in:superadmin,komite_mutu,kepala_unit,pic_unit,direksi',
-            'unit_id'      => 'nullable|exists:units,id',
-            'aktif'        => 'boolean',
+            'nip' => 'nullable|string|max:50',
+            'email' => 'nullable|email|unique:users,email',
+            'role' => 'required|in:superadmin,komite_mutu,kepala_unit,pic_unit,direksi',
+            'unit_id' => 'nullable|exists:units,id',
+            'aktif' => 'boolean',
+            'password' => ['required', 'confirmed', Password::min(12)->mixedCase()->numbers()],
         ]);
 
-        $validated['password'] = Hash::make('12345678'); // default
+        $validated['password'] = Hash::make($validated['password']);
         $validated['must_change_password'] = true;
         $validated['aktif'] = $request->boolean('aktif', true);
 
         User::create($validated);
 
         return redirect()->route('users.index')
-            ->with('success', "Pengguna '{$validated['username']}' berhasil ditambahkan. Password default: 12345678");
+            ->with('success', "Pengguna '{$validated['username']}' berhasil ditambahkan. Sampaikan password sementara secara aman; pengguna wajib menggantinya saat login pertama.");
     }
 
     public function edit(User $user): Response
     {
         return Inertia::render('Users/Edit', [
-            'user'  => $user->load('unit'),
+            'user' => $user->load('unit'),
             'units' => Unit::aktif()->get(),
             'roles' => $this->getRoles(),
         ]);
@@ -81,38 +81,28 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $validated = $request->validate([
-            'username'     => 'required|string|max:50|alpha_dash|unique:users,username,' . $user->id,
-            'name'         => 'required|string|max:255',
+            'username' => 'required|string|max:50|alpha_dash|unique:users,username,'.$user->id,
+            'name' => 'required|string|max:255',
             'nama_lengkap' => 'nullable|string|max:255',
-            'nip'          => 'nullable|string|max:50',
-            'email'        => 'nullable|email|unique:users,email,' . $user->id,
-            'password'     => 'nullable|string|min:8|confirmed',
-            'role'         => 'required|in:superadmin,komite_mutu,kepala_unit,pic_unit,direksi',
-            'unit_id'      => 'nullable|exists:units,id',
-            'aktif'        => 'boolean',
+            'nip' => 'nullable|string|max:50',
+            'email' => 'nullable|email|unique:users,email,'.$user->id,
+            'password' => ['nullable', 'confirmed', Password::min(12)->mixedCase()->numbers()],
+            'role' => 'required|in:superadmin,komite_mutu,kepala_unit,pic_unit,direksi',
+            'unit_id' => 'nullable|exists:units,id',
+            'aktif' => 'boolean',
         ]);
 
-        if (empty($validated['password'])) {
-            unset($validated['password']);
-        } else {
+        if (isset($validated['password'])) {
             $validated['password'] = Hash::make($validated['password']);
+            $validated['must_change_password'] = true;
+        } else {
+            unset($validated['password']);
         }
 
         $user->update($validated);
 
         return redirect()->route('users.index')
             ->with('success', "Data profil pengguna '{$user->username}' berhasil diperbarui.");
-    }
-
-    public function resetPassword(User $user)
-    {
-        $user->update([
-            'password'             => Hash::make('12345678'),
-            'must_change_password' => true,
-        ]);
-
-        return redirect()->back()
-            ->with('success', "Password akun '{$user->username}' ({$user->name}) berhasil di-reset ke default: 12345678. Pengguna wajib membuat password baru saat login berikutnya.");
     }
 
     public function destroy(User $user)

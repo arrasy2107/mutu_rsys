@@ -30,5 +30,6 @@ Thumbs.db
 !.env.example
 /database/*.sqlite
 /database/*.sqlite3
+/mutu_rsys.sql
 /storage/app/public/*
 !/storage/app/public/.gitignore

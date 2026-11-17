@@ -10,10 +10,10 @@ use App\Models\IndicatorPeriod;
 use App\Models\Unit;
 use App\Models\User;
 use App\Models\Validation;
+use App\Services\PrivateEvidenceStorage;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\ValidationException;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -2756,7 +2756,7 @@ class DataEntryController extends Controller
         ]);
     }
 
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request, PrivateEvidenceStorage $evidenceStorage): RedirectResponse
     {
         $user = $request->user();
 
@@ -2787,8 +2787,10 @@ class DataEntryController extends Controller
         $validated['user_id'] = $user->id;
 
         if ($request->hasFile('file_bukti')) {
-            $validated['file_bukti'] = $request->file('file_bukti')
-                ->store('data-entry/bukti', 'public');
+            $validated['file_bukti'] = $evidenceStorage->store(
+                $request->file('file_bukti'),
+                'data-entry/bukti',
+            );
         }
 
         DataEntry::create($validated);
@@ -2817,7 +2819,7 @@ class DataEntryController extends Controller
         ]);
     }
 
-    public function update(Request $request, DataEntry $dataEntry)
+    public function update(Request $request, DataEntry $dataEntry, PrivateEvidenceStorage $evidenceStorage)
     {
         $this->authorizeEntryManagement($request->user(), $dataEntry);
         abort_if(! in_array($dataEntry->status, ['draft', 'revision']), 403, 'Data tidak bisa diedit.');
@@ -2831,15 +2833,19 @@ class DataEntryController extends Controller
             'log_harian' => 'nullable|array',
         ]);
 
+        $previousFilePath = $dataEntry->file_bukti;
         if ($request->hasFile('file_bukti')) {
-            if ($dataEntry->file_bukti) {
-                Storage::disk('public')->delete($dataEntry->file_bukti);
-            }
-            $validated['file_bukti'] = $request->file('file_bukti')
-                ->store('data-entry/bukti', 'public');
+            $validated['file_bukti'] = $evidenceStorage->store(
+                $request->file('file_bukti'),
+                'data-entry/bukti',
+            );
         }
 
         $dataEntry->update($validated);
+
+        if ($request->hasFile('file_bukti') && $previousFilePath) {
+            $evidenceStorage->delete($previousFilePath);
+        }
 
         return redirect()->route('data-entry.show', $dataEntry)
             ->with('success', 'Data berhasil diperbarui.');
@@ -2858,13 +2864,16 @@ class DataEntryController extends Controller
         return back()->with('success', 'Data berhasil diajukan untuk validasi.');
     }
 
-    public function destroy(Request $request, DataEntry $dataEntry): RedirectResponse
-    {
+    public function destroy(
+        Request $request,
+        DataEntry $dataEntry,
+        PrivateEvidenceStorage $evidenceStorage,
+    ): RedirectResponse {
         $this->authorizeEntryManagement($request->user(), $dataEntry);
         abort_if($dataEntry->status !== 'draft', 403, 'Hanya data draft yang bisa dihapus.');
 
         if ($dataEntry->file_bukti) {
-            Storage::disk('public')->delete($dataEntry->file_bukti);
+            $evidenceStorage->delete($dataEntry->file_bukti);
         }
 
         $dataEntry->delete();

@@ -1,33 +1,34 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Auth\ForceChangePasswordController;
 use App\Http\Controllers\CustomFormFormatController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DataAnalysisController;
 use App\Http\Controllers\DataEntryController;
+use App\Http\Controllers\EvidenceController;
+use App\Http\Controllers\Hospital\HospitalAggregationController;
+use App\Http\Controllers\Hospital\HospitalAnalysisController;
+use App\Http\Controllers\Hospital\HospitalBenchmarkController;
+use App\Http\Controllers\Hospital\HospitalDataCapaianController;
+use App\Http\Controllers\Hospital\HospitalPdsaController;
+use App\Http\Controllers\Hospital\HospitalRtlController;
+use App\Http\Controllers\Hva\HvaController;
+use App\Http\Controllers\Ikp\IkpIncidentController;
+use App\Http\Controllers\Ikp\IkpMappingController;
 use App\Http\Controllers\IndicatorController;
 use App\Http\Controllers\IndicatorSelectionController;
-use App\Http\Controllers\SupervisiController;
+use App\Http\Controllers\Manrisk\ManriskController;
 use App\Http\Controllers\PdsaController;
 use App\Http\Controllers\PeriodController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\SupervisiController;
+use App\Http\Controllers\Unit\UnitRtlController;
 use App\Http\Controllers\UnitController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ValidationController;
-use App\Http\Controllers\Auth\ForceChangePasswordController;
-use App\Http\Controllers\Hospital\HospitalAggregationController;
-use App\Http\Controllers\Hospital\HospitalAnalysisController;
-use App\Http\Controllers\Hospital\HospitalPdsaController;
-use App\Http\Controllers\Hospital\HospitalDataCapaianController;
-use App\Http\Controllers\Hospital\HospitalRtlController;
-use App\Http\Controllers\Hospital\HospitalBenchmarkController;
-use App\Http\Controllers\Unit\UnitRtlController;
-use App\Http\Controllers\Ikp\IkpIncidentController;
-use App\Http\Controllers\Ikp\IkpMappingController;
-use App\Http\Controllers\Manrisk\ManriskController;
-use App\Http\Controllers\Hva\HvaController;
+use App\Http\Middleware\ForcePasswordChange;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 // Redirect root ke login
 Route::get('/', function () {
@@ -35,7 +36,11 @@ Route::get('/', function () {
 });
 
 // ─── Authenticated Routes ─────────────────────────────────────────────────────
-Route::middleware(['auth', \App\Http\Middleware\ForcePasswordChange::class])->group(function () {
+Route::middleware(['auth', ForcePasswordChange::class])->group(function () {
+    Route::get('/evidence/{type}/{record}', [EvidenceController::class, 'show'])
+        ->where('type', 'data-entry|validation|indicator-selection|pdsa|ikp')
+        ->whereNumber('record')
+        ->name('evidence.show');
 
     // Force Change Password (wajib sebelum akses modul lain)
     Route::get('/ganti-password', [ForceChangePasswordController::class, 'show'])->name('password.force-change');
@@ -71,8 +76,9 @@ Route::middleware(['auth', \App\Http\Middleware\ForcePasswordChange::class])->gr
     Route::resource('units', UnitController::class);
 
     // ─── Manajemen User ────────────────────────────────────────────────────────
-    Route::resource('users', UserController::class)->except(['show']);
-    Route::post('users/{user}/reset-password', [UserController::class, 'resetPassword'])->name('users.reset-password');
+    Route::middleware('can:manage-users')->group(function () {
+        Route::resource('users', UserController::class)->except(['show']);
+    });
 
     // ─── Entri Data (Form Pengumpul Data / Tally Sheet) ───────────────────────
     Route::prefix('data-entry')->name('data-entry.')->group(function () {

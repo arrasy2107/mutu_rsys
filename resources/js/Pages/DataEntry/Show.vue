@@ -110,8 +110,11 @@ const isTargetMet = (cap, target, op) => op === '>=' ? parseFloat(cap) >= parseF
                 </div>
 
                 <div v-if="entry.file_bukti" class="mt-4">
-                    <a :href="`/storage/${entry.file_bukti}`" target="_blank"
-                        class="inline-flex items-center gap-2 px-3 py-2 bg-indigo-50 text-indigo-700 text-sm rounded-lg hover:bg-indigo-100">
+                    <a
+                        :href="route('evidence.show', { type: 'data-entry', record: entry.id })"
+                        target="_blank"
+                        class="inline-flex items-center gap-2 rounded-lg bg-indigo-50 px-3 py-2 text-sm text-indigo-700 hover:bg-indigo-100"
+                    >
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
                         Lihat File Bukti
                     </a>

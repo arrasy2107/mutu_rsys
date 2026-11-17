@@ -1,20 +1,26 @@
 <script setup>
 import { Head, useForm, usePage } from '@inertiajs/vue3';
 import { ref, onMounted } from 'vue';
+import { appUrl } from '@/Utils/appUrl';
 
 defineProps({ status: String });
 
 const page = usePage();
 const form = useForm({ username: '', password: '', remember: false });
 const showPass = ref(false);
+const brandingBackgroundImage = `url("${appUrl('images/pic_rsys.jpeg')}")`;
 
-const submit = () => form.post(route('login'), {
-    onError: (errors) => {
-        const errorMsg = errors.password || errors.username || 'Periksa kembali data masukan Anda.';
-        window.notify?.toast?.error('Gagal Masuk', errorMsg);
-    },
-    onFinish: () => form.reset('password')
-});
+const submit = () =>
+    form.post(route('login'), {
+        onError: (errors) => {
+            const errorMsg =
+                errors.password ||
+                errors.username ||
+                'Periksa kembali data masukan Anda.';
+            window.notify?.toast?.error('Gagal Masuk', errorMsg);
+        },
+        onFinish: () => form.reset('password'),
+    });
 
 onMounted(() => {
     const flash = page.props.flash;
@@ -36,7 +42,10 @@ onMounted(() => {
     <div class="min-h-screen flex bg-gradient-to-br from-blue-950 via-blue-900 to-slate-900">
 
         <!-- ─── Left Panel: Branding ───────────────────────────────────────── -->
-        <div class="hidden lg:flex lg:w-1/2 flex-col justify-between p-12 relative overflow-hidden bg-[url('/images/pic_rsys.jpeg')] bg-cover bg-center">
+        <div
+            class="relative hidden flex-col justify-between overflow-hidden bg-cover bg-center p-12 lg:flex lg:w-1/2"
+            :style="{ backgroundImage: brandingBackgroundImage }"
+        >
             <!-- Background decoration & Overlay -->
             <div class="absolute inset-0 bg-blue-950/80 mix-blend-multiply pointer-events-none"></div>
             <div class="absolute inset-0 pointer-events-none">
@@ -48,7 +57,11 @@ onMounted(() => {
             <div class="relative">
                 <div class="flex items-center gap-4">
                     <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-xl overflow-hidden">
-                        <img src="/images/logo_rsys.png" alt="Logo Rumah Sakit" class="w-full h-full object-contain p-1" />
+                        <img
+                            :src="appUrl('images/logo_rsys.png')"
+                            alt="Logo Rumah Sakit"
+                            class="h-full w-full object-contain p-1"
+                        />
                     </div>
                     <div>
                         <p class="text-white font-bold text-xl leading-tight">MUTU RSYS</p>
@@ -101,7 +114,11 @@ onMounted(() => {
                 <!-- Mobile Logo -->
                 <div class="flex items-center gap-3 mb-8 lg:hidden">
                     <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-md overflow-hidden">
-                        <img src="/images/logo_rsys.png" alt="Logo RS" class="w-full h-full object-contain p-0.5" />
+                        <img
+                            :src="appUrl('images/logo_rsys.png')"
+                            alt="Logo RS"
+                            class="h-full w-full object-contain p-0.5"
+                        />
                     </div>
                     <div>
                         <p class="text-white font-bold leading-none">MUTU RSYS</p>
@@ -187,13 +204,6 @@ onMounted(() => {
                         </button>
                     </form>
 
-                    <!-- Default password hint -->
-                    <div class="mt-5 p-3 bg-amber-400/10 border border-amber-400/20 rounded-lg">
-                        <p class="text-amber-300 text-xs flex items-center gap-1.5">
-                            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
-                            Gunakan password default <strong class="font-mono">12345678</strong> untuk login pertama kali.
-                        </p>
-                    </div>
                 </div>
 
                 <p class="mt-6 text-center text-blue-500/60 text-xs">

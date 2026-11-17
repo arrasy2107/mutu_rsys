@@ -307,7 +307,11 @@ const getStatusBadge = (status) => {
                                 </td>
                                 <td class="py-3 px-4 text-center">
                                     <div v-if="item.bukti_rtl">
-                                        <a :href="'/storage/' + item.bukti_rtl" target="_blank" class="inline-flex items-center gap-1 px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-lg text-[11px] font-medium hover:bg-emerald-100 transition shadow-xs">
+                                        <a
+                                            :href="route('evidence.show', { type: 'pdsa', record: item.id })"
+                                            target="_blank"
+                                            class="shadow-xs inline-flex items-center gap-1 rounded-lg border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[11px] font-medium text-emerald-700 transition hover:bg-emerald-100"
+                                        >
                                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
                                             <span>Unduh Bukti</span>
                                         </a>

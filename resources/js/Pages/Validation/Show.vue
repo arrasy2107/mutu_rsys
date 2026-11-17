@@ -952,9 +952,22 @@ const printValidationSheet = () => {
                     </table>
                 </div>
 
-                <p class="text-[11px] text-slate-400 italic">
-                    * Lampiran data imut yang divalidasi dan hasil validasinya.
-                </p>
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                    <p class="text-[11px] text-slate-400 italic">
+                        * Lampiran data imut yang divalidasi dan hasil validasinya.
+                    </p>
+                    <a
+                        v-if="entry.latest_validation.lampiran_file"
+                        :href="route('evidence.show', {
+                            type: 'validation',
+                            record: entry.latest_validation.id,
+                        })"
+                        target="_blank"
+                        class="text-xs font-semibold text-indigo-600 hover:underline"
+                    >
+                        Buka lampiran validasi
+                    </a>
+                </div>
 
                 <!-- Tanda Tangan Pengesahan (Resmi Standar RS) -->
                 <div class="mt-4 pt-4 border-t border-slate-200 grid grid-cols-2 gap-6 text-center text-xs">

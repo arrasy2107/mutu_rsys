@@ -7,9 +7,12 @@ use App\Models\Indicator;
 use App\Models\PdsaRecord;
 use App\Models\ReportLog;
 use App\Models\Unit;
+use App\Services\PrivateEvidenceStorage;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Inertia\Inertia;
 use Inertia\Response;
 use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
@@ -18,6 +21,7 @@ use PhpOffice\PhpSpreadsheet\Style\Border;
 use PhpOffice\PhpSpreadsheet\Style\Color;
 use PhpOffice\PhpSpreadsheet\Style\Fill;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class ReportController extends Controller
 {
@@ -35,8 +39,10 @@ class ReportController extends Controller
         ]);
     }
 
-    public function generate(Request $request)
-    {
+    public function generate(
+        Request $request,
+        PrivateEvidenceStorage $evidenceStorage,
+    ): RedirectResponse {
         $validated = $request->validate([
             'jenis' => 'required|in:bulanan,triwulan,semesteran,tahunan',
             'tahun' => 'required|integer|min:2020',
@@ -74,9 +80,9 @@ class ReportController extends Controller
                 'unit' => $unit,
             ])->setPaper('a4', 'landscape');
 
-            $filename = 'laporan-mutu-'.now()->format('YmdHis').'.pdf';
+            $filename = 'laporan-mutu-'.Str::uuid().'.pdf';
             $path = 'reports/'.$filename;
-            Storage::disk('public')->put($path, $pdf->output());
+            $evidenceStorage->put($path, $pdf->output());
         } else {
             // Excel export menggunakan PhpSpreadsheet
             $spreadsheet = new Spreadsheet;
@@ -291,15 +297,12 @@ class ReportController extends Controller
                 }
             }
 
-            $filename = 'laporan-mutu-'.now()->format('YmdHis').'.xlsx';
+            $filename = 'laporan-mutu-'.Str::uuid().'.xlsx';
             $path = 'reports/'.$filename;
 
-            if (! Storage::disk('public')->exists('reports')) {
-                Storage::disk('public')->makeDirectory('reports');
-            }
-
+            Storage::disk('private')->makeDirectory('reports');
             $writer = new Xlsx($spreadsheet);
-            $writer->save(Storage::disk('public')->path($path));
+            $writer->save($evidenceStorage->path($path));
         }
 
         // Simpan log
@@ -318,11 +321,15 @@ class ReportController extends Controller
             ->with('success', 'Laporan berhasil digenerate.');
     }
 
-    public function download(ReportLog $log)
-    {
-        abort_if(! $log->file_path || ! Storage::disk('public')->exists($log->file_path), 404);
+    public function download(
+        Request $request,
+        ReportLog $log,
+        PrivateEvidenceStorage $evidenceStorage,
+    ): StreamedResponse {
+        abort_unless((int) $log->user_id === (int) $request->user()->id, 404);
+        abort_if(! $log->file_path, 404);
 
-        return Storage::disk('public')->download($log->file_path);
+        return $evidenceStorage->response($log->file_path, true);
     }
 
     private function getBulanRange(array $validated): array

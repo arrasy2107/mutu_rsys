@@ -278,7 +278,7 @@ const printPage = () => {
                                 </div>
                             </div>
                             <a
-                                :href="'/storage/' + incident.bukti_rtl_path"
+                                :href="route('evidence.show', { type: 'ikp', record: incident.id })"
                                 target="_blank"
                                 class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold transition shadow-xs"
                             >

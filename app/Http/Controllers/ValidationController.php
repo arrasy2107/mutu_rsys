@@ -9,6 +9,7 @@ use App\Models\IndicatorPeriod;
 use App\Models\PdsaRecord;
 use App\Models\Unit;
 use App\Models\Validation;
+use App\Services\PrivateEvidenceStorage;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -541,8 +542,11 @@ class ValidationController extends Controller
     /**
      * Tetapkan hasil validasi oleh internal unit.
      */
-    public function approve(Request $request, DataEntry $dataEntry)
-    {
+    public function approve(
+        Request $request,
+        DataEntry $dataEntry,
+        PrivateEvidenceStorage $evidenceStorage,
+    ) {
         $user = $request->user();
         $isExecutive = $user->isDireksi();
         $isAdmin = $user->isSuperAdmin();
@@ -581,7 +585,7 @@ class ValidationController extends Controller
 
         $filePath = null;
         if ($request->hasFile('lampiran_file')) {
-            $filePath = $request->file('lampiran_file')->store('validations', 'public');
+            $filePath = $evidenceStorage->store($request->file('lampiran_file'), 'validations');
         }
 
         // Kalkulasi capaian validator

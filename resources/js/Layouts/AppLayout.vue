@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, watch, onMounted } from 'vue';
 import { Link, usePage, router } from '@inertiajs/vue3';
+import { appUrl } from '@/Utils/appUrl';
 
 const page = usePage();
 const user = computed(() => page.props.auth.user);
@@ -468,7 +469,11 @@ const confirmLogout = async () => {
             <!-- Logo RS & Brand Header -->
             <div class="relative z-10 flex items-center gap-3 px-4 py-4 border-b border-white/10 bg-white/5 backdrop-blur-md">
                 <div class="flex-shrink-0 w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-blue-950/50 overflow-hidden p-1 border border-white/20">
-                    <img src="/images/logo_rsys.png" alt="Logo RS" class="w-full h-full object-contain" />
+                    <img
+                        :src="appUrl('images/logo_rsys.png')"
+                        alt="Logo RS"
+                        class="h-full w-full object-contain"
+                    />
                 </div>
                 <div v-if="sidebarOpen" class="overflow-hidden">
                     <div class="flex items-center gap-1.5">

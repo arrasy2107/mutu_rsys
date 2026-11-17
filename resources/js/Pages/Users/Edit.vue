@@ -1,6 +1,6 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
-import { useForm, Link, router } from '@inertiajs/vue3';
+import { useForm, Link } from '@inertiajs/vue3';
 
 const props = defineProps({ user: Object, units: Array, roles: Array });
 
@@ -23,24 +23,6 @@ const submit = () => form.put(route('users.update', props.user.id), {
     }
 });
 
-const confirmResetPassword = async () => {
-    const confirmed = await window.notify.confirm({
-        title: 'Reset Password Akun?',
-        html: `Apakah Anda yakin ingin me-reset password untuk akun <b>@${props.user.username}</b> (${props.user.name}) ke default: <strong class="font-mono text-amber-600 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">12345678</strong>?<br/><br/><span class="text-xs text-slate-500">Pengguna wajib membuat password baru saat login berikutnya.</span>`,
-        icon: 'warning',
-        confirmButtonText: 'Ya, Reset Password',
-        cancelButtonText: 'Batal',
-        confirmButtonColor: '#d97706',
-    });
-    if (confirmed) {
-        router.post(route('users.reset-password', props.user.id), {}, {
-            preserveScroll: true,
-            onSuccess: () => {
-                window.notify?.toast?.success('Password Direset', `Password akun @${props.user.username} berhasil di-reset ke 12345678.`);
-            }
-        });
-    }
-};
 </script>
 
 <template>
@@ -63,16 +45,6 @@ const confirmResetPassword = async () => {
                         </p>
                     </div>
 
-                    <!-- Tombol Reset Password Cepat -->
-                    <button
-                        type="button"
-                        @click="confirmResetPassword"
-                        class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200 rounded-lg text-xs font-semibold transition-colors"
-                        title="Kembalikan password ke default 12345678"
-                    >
-                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
-                        <span>Reset Password (12345678)</span>
-                    </button>
                 </div>
 
                 <form @submit.prevent="submit" class="p-6 space-y-6">
@@ -150,15 +122,17 @@ const confirmResetPassword = async () => {
                             <p v-if="form.errors.email" class="text-xs text-rose-500 mt-1">{{ form.errors.email }}</p>
                         </div>
 
-                        <!-- Manual Password Change -->
+                        <!-- Temporary password -->
                         <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200 space-y-3">
-                            <p class="text-xs font-bold text-gray-700">Ubah Password Manual (Opsional):</p>
+                            <p class="text-xs font-bold text-gray-700">Password Sementara (Opsional)</p>
+                            <p class="text-[11px] text-gray-500">Kosongkan jika tidak ingin mengubah password. Tetapkan password sementara yang berbeda untuk setiap akun: minimal 12 karakter, dengan huruf besar, huruf kecil, dan angka. Pengguna wajib menggantinya saat login berikutnya.</p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                                 <div>
                                     <input
                                         v-model="form.password"
                                         type="password"
-                                        placeholder="Password baru (min. 8 karakter)"
+                                        autocomplete="new-password"
+                                        placeholder="Password sementara baru"
                                         class="w-full text-xs border-gray-200 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
                                     />
                                     <p v-if="form.errors.password" class="text-xs text-rose-500 mt-1">{{ form.errors.password }}</p>

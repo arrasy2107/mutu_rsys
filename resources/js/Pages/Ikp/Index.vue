@@ -460,7 +460,7 @@ const formatDate = (val) => {
                                 <td class="p-3.5 text-center">
                                     <a
                                         v-if="item.bukti_rtl_path"
-                                        :href="'/storage/' + item.bukti_rtl_path"
+                                        :href="route('evidence.show', { type: 'ikp', record: item.id })"
                                         target="_blank"
                                         class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 hover:text-blue-800 bg-blue-50 px-2 py-1 rounded-lg border border-blue-200"
                                         title="Lihat Bukti RTL"

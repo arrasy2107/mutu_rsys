@@ -1,20 +1,22 @@
 <script setup>
 import { Head, useForm } from '@inertiajs/vue3';
 import { ref } from 'vue';
+import { appUrl } from '@/Utils/appUrl';
 
-const props = defineProps({ userName: String });
+defineProps({ userName: String });
 
 const form = useForm({ password: '', password_confirmation: '' });
 const showPass = ref(false);
 const showConfirm = ref(false);
+const brandingBackgroundImage = `url("${appUrl('images/pic_rsys.jpeg')}")`;
 
 const strength = ref(0);
 const checkStrength = (val) => {
     let s = 0;
-    if (val.length >= 8)       s++;
-    if (/[A-Z]/.test(val))    s++;
-    if (/[0-9]/.test(val))    s++;
-    if (/[^A-Za-z0-9]/.test(val)) s++;
+    if (val.length >= 12) s++;
+    if (/[A-Z]/.test(val)) s++;
+    if (/[a-z]/.test(val)) s++;
+    if (/[0-9]/.test(val)) s++;
     strength.value = s;
 };
 
@@ -34,7 +36,10 @@ const submit = () => form.post(route('password.force-change.update'), {
     <div class="min-h-screen flex bg-gradient-to-br from-blue-950 via-blue-900 to-slate-900">
 
         <!-- ─── Left Panel: Branding ───────────────────────────────────────── -->
-        <div class="hidden lg:flex lg:w-1/2 flex-col justify-between p-12 relative overflow-hidden bg-[url('/images/pic_rsys.jpeg')] bg-cover bg-center">
+        <div
+            class="relative hidden flex-col justify-between overflow-hidden bg-cover bg-center p-12 lg:flex lg:w-1/2"
+            :style="{ backgroundImage: brandingBackgroundImage }"
+        >
             <!-- Background decoration & Overlay -->
             <div class="absolute inset-0 bg-blue-950/80 mix-blend-multiply pointer-events-none"></div>
             <div class="absolute inset-0 pointer-events-none">
@@ -46,7 +51,11 @@ const submit = () => form.post(route('password.force-change.update'), {
             <div class="relative">
                 <div class="flex items-center gap-4">
                     <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-xl overflow-hidden">
-                        <img src="/images/logo_rsys.png" alt="Logo Rumah Sakit" class="w-full h-full object-contain p-1" />
+                        <img
+                            :src="appUrl('images/logo_rsys.png')"
+                            alt="Logo Rumah Sakit"
+                            class="h-full w-full object-contain p-1"
+                        />
                     </div>
                     <div>
                         <p class="text-white font-bold text-xl leading-tight">MUTU RSYS</p>
@@ -70,14 +79,14 @@ const submit = () => form.post(route('password.force-change.update'), {
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-sky-300">Prioritas Utama</span>
                     </h1>
                     <p class="mt-4 text-blue-200 text-base leading-relaxed max-w-md">
-                        Demi keamanan data mutu rumah sakit, Anda diwajibkan mengganti password default sebelum menggunakan sistem.
+                        Demi keamanan data mutu rumah sakit, Anda diwajibkan mengganti password sementara sebelum menggunakan sistem.
                     </p>
                 </div>
 
                 <!-- Tips -->
                 <div class="space-y-3">
                     <p class="text-blue-100 text-sm font-semibold">Tips membuat password kuat:</p>
-                    <div v-for="tip in ['Minimal 8 karakter', 'Kombinasi huruf besar & kecil', 'Tambahkan angka (0-9)', 'Gunakan karakter khusus (!@#$%)']"
+                    <div v-for="tip in ['Minimal 12 karakter', 'Gunakan huruf besar (A-Z)', 'Gunakan huruf kecil (a-z)', 'Tambahkan angka (0-9)']"
                         :key="tip" class="flex items-center gap-2.5 text-blue-300 text-sm">
                         <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                         {{ tip }}
@@ -95,7 +104,11 @@ const submit = () => form.post(route('password.force-change.update'), {
                 <!-- Mobile Logo -->
                 <div class="flex items-center gap-3 mb-8 lg:hidden">
                     <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-md overflow-hidden">
-                        <img src="/images/logo_rsys.png" alt="Logo RS" class="w-full h-full object-contain p-0.5" />
+                        <img
+                            :src="appUrl('images/logo_rsys.png')"
+                            alt="Logo RS"
+                            class="h-full w-full object-contain p-0.5"
+                        />
                     </div>
                     <div>
                         <p class="text-white font-bold leading-none">MUTU RSYS</p>

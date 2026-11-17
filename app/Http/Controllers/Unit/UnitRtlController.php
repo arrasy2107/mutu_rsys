@@ -5,8 +5,9 @@ namespace App\Http\Controllers\Unit;
 use App\Http\Controllers\Controller;
 use App\Models\PdsaRecord;
 use App\Models\Unit;
+use App\Services\PrivateEvidenceStorage;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -25,33 +26,32 @@ class UnitRtlController extends Controller
         $query = PdsaRecord::query()
             ->with(['indicator', 'unit', 'user', 'period', 'reviewedBy'])
             ->whereNotNull('rekomendasi_tindak_lanjut')
-            ->when(!$user->isSuperAdmin() && !$user->isKomiteMutu(), fn($q) =>
-                $q->where('unit_id', $user->unit_id)
+            ->when(! $user->isSuperAdmin() && ! $user->isKomiteMutu(), fn ($q) => $q->where('unit_id', $user->unit_id)
             )
-            ->when($unitId, fn($q, $u) => $q->where('unit_id', $u))
-            ->when($tahun, fn($q, $y) => $q->whereHas('period', fn($p) => $p->where('tahun', $y)))
-            ->when($status, fn($q, $s) => $q->where('status', $s));
+            ->when($unitId, fn ($q, $u) => $q->where('unit_id', $u))
+            ->when($tahun, fn ($q, $y) => $q->whereHas('period', fn ($p) => $p->where('tahun', $y)))
+            ->when($status, fn ($q, $s) => $q->where('status', $s));
 
         $records = $query->latest()->paginate(25)->withQueryString();
 
         // Calculate RTL Summary Stats
         $allRtl = (clone $query)->get();
         $stats = [
-            'total'     => $allRtl->count(),
-            'selesai'   => $allRtl->where('status', 'reviewed')->count(),
-            'berjalan'  => $allRtl->whereIn('status', ['submitted', 'in_progress'])->count(),
-            'draft'     => $allRtl->where('status', 'draft')->count(),
-            'ada_bukti' => $allRtl->filter(fn($r) => !empty($r->bukti_rtl))->count(),
+            'total' => $allRtl->count(),
+            'selesai' => $allRtl->where('status', 'reviewed')->count(),
+            'berjalan' => $allRtl->whereIn('status', ['submitted', 'in_progress'])->count(),
+            'draft' => $allRtl->where('status', 'draft')->count(),
+            'ada_bukti' => $allRtl->filter(fn ($r) => ! empty($r->bukti_rtl))->count(),
         ];
 
         return Inertia::render('Unit/Rtl/Index', [
             'records' => $records,
-            'stats'   => $stats,
-            'units'   => Unit::aktif()->get(['id', 'nama', 'kode']),
+            'stats' => $stats,
+            'units' => Unit::aktif()->get(['id', 'nama', 'kode']),
             'filters' => [
                 'unit_id' => $unitId ? (int) $unitId : '',
-                'tahun'   => $tahun,
-                'status'  => $status ?? '',
+                'tahun' => $tahun,
+                'status' => $status ?? '',
             ],
         ]);
     }
@@ -59,10 +59,13 @@ class UnitRtlController extends Controller
     /**
      * Upload proof file for RTL (PDF, Image).
      */
-    public function uploadBukti(Request $request, PdsaRecord $pdsa)
-    {
+    public function uploadBukti(
+        Request $request,
+        PdsaRecord $pdsa,
+        PrivateEvidenceStorage $evidenceStorage,
+    ): RedirectResponse {
         $user = $request->user();
-        if (!$user->isSuperAdmin() && !$user->isKomiteMutu() && $pdsa->unit_id !== $user->unit_id) {
+        if (! $user->isSuperAdmin() && ! $user->isKomiteMutu() && $pdsa->unit_id !== $user->unit_id) {
             abort(403, 'Anda tidak memiliki hak akses untuk mengunggah bukti RTL unit ini.');
         }
 
@@ -72,15 +75,14 @@ class UnitRtlController extends Controller
         ]);
 
         if ($request->hasFile('berkas')) {
-            // Delete old file if exists
-            if ($pdsa->bukti_rtl && Storage::disk('public')->exists($pdsa->bukti_rtl)) {
-                Storage::disk('public')->delete($pdsa->bukti_rtl);
-            }
-
-            $path = $request->file('berkas')->store('bukti_rtl', 'public');
+            $path = $evidenceStorage->store($request->file('berkas'), 'bukti_rtl');
+            $previousFilePath = $pdsa->bukti_rtl;
             $pdsa->update([
                 'bukti_rtl' => $path,
             ]);
+            if ($previousFilePath) {
+                $evidenceStorage->delete($previousFilePath);
+            }
         }
 
         return back()->with('success', 'Berkas bukti RTL berhasil diunggah.');
